@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "target": "ESNext",
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -15,12 +11,19 @@
     "noFallthroughCasesInSwitch": true,
     "module": "esnext",
     "moduleResolution": "node",
+    "moduleDetection": "force",
+    "downlevelIteration": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
+    "noImplicitAny": true,
+    "noImplicitThis": false,
     "jsx": "react-jsx"
   },
-  "include": [
-    "src"
-  ]
+  "ts-node": {
+    "esm": true
+  },
+  "types": ["node"],
+  "typeRoots": ["./node_modules/@types", "@types"],
+  "include": ["src/**/*", "assets/img/**/*", "assets/icon/**/*"]
 }
