@@ -5,16 +5,26 @@ import Btn from "./Component/btn/Btn";
 import Gnb from "./Component/gnb/Gnb";
 
 function App() {
+  const inputElement = document.querySelector<HTMLInputElement>(".text");
+  if (inputElement) {
+    inputElement.addEventListener("keydown", (event: KeyboardEvent) => {
+      if (event.code === "Slash") {
+        event.preventDefault(); // '/' 문자가 입력되지 않도록 preventDefault
+        inputElement.focus(); // input 요소에 포커스 설정
+        console.log("hi");
+      }
+    });
+  }
   return (
     <div
       style={{
-        width: "100vw",
+        width: "100%",
         height: "300vh",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
         flexDirection: "column",
-        background: "#999",
+        background: "#141225",
         gap: "30px",
       }}
     >

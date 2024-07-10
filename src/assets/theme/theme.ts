@@ -90,6 +90,7 @@ const colors = {
   mocup_line: "#D1D1D1",
   mocup_text: "#929292",
   transparent: "transparent",
+  popup_B01: "#4F4B67",
 };
 
 const theme = {

@@ -11,7 +11,7 @@ const StyledBtn = styled.button<StyledProps>`
   align-items: center;
   background-color: ${({ bgColor }) => bgColor};
   border-radius: 6px;
-  font-weight: bold;
+  font-weight: 700;
   transition: all 0.5s linear;
   &:hover {
     background-color: ${({ theme }) => theme.colors.secondary_V};

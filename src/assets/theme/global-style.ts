@@ -1,35 +1,12 @@
 import { createGlobalStyle } from "styled-components";
 export const GlobalStyle = createGlobalStyle`
 
-  @font-face {
-  font-family: "Pretendard GOV";
-  font-weight: 400;
-  font-style: normal;
-  src:  url("../fonts/PretendardGOV-Regular.subset.woff")
-    format("woff");
-}
 
-/* Medium */
-@font-face {
-  font-family: "Pretendard GOV";
-  font-weight: 500;
-  font-style: normal;
-  src:  url("../fonts/PretendardGOV-Medium.subset.woff")
-    format("woff");
-}
-
-/* Bold */
-@font-face {
-  font-family: "Pretendard GOV";
-  font-weight: 700;
-  font-style: normal;
-  src:  url("../fonts/PretendardGOV-Bold.subset.woff")
-    format("woff");
-}
-
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-gov-dynamic-subset.min.css");
   * {
-  font-family: "Pretendard GOV", sans-serif ;
+font-family: "Pretendard GOV Variable", "Pretendard GOV", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   }
+  
   body,
 div,
 p,
@@ -91,8 +68,8 @@ button {
     cursor: pointer;
     border: none;
     outline:none;
-    color:${({ theme }) => theme.colors.White}
-    
+    color:${({ theme }) => theme.colors.White};
+    font-family: "Pretendard GOV Variable", "Pretendard GOV", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
 &::-webkit-scrollbar {
       /** 스크롤바의 너비 */
@@ -110,5 +87,9 @@ button {
     &::-webkit-scrollbar-track {
       /** 스크롤바 뒷 배경 색상 */
       background: transparent;
+    }
+    a {
+      text-decoration:none;
+      color: inherit;
     }
 `;
