@@ -1,19 +1,18 @@
 import React from "react";
+import { StyledGnb, LogoContainer } from "./StyleGnb";
 
 //type
-type Size = "xs" | "sm" | "md" | "lg" | "xl" | "2xl";
-export type Props = {
-  size?: Size;
-  bgColor?: string;
-};
 
 const Gnb = () => {
   return (
-    <div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
+    <StyledGnb>
+      <LogoContainer>LOGO</LogoContainer>
+      <div>
+        <input type="text" />
+      </div>
+      <div>logo</div>
+      <div>logo</div>
+    </StyledGnb>
   );
 };
 

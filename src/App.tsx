@@ -2,21 +2,23 @@ import React from "react";
 import styled from "styled-components";
 import theme from "./assets/theme/theme";
 import Btn from "./Component/btn/Btn";
+import Gnb from "./Component/gnb/Gnb";
 
 function App() {
   return (
     <div
       style={{
         width: "100vw",
-        height: "100vh",
+        height: "300vh",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
         flexDirection: "column",
-        background: "#000",
+        background: "#999",
         gap: "30px",
       }}
     >
+      <Gnb />
       <Btn bgColor={theme.colors.primary_V} size="p15" text="Button" />
       <Btn bgColor={theme.colors.primary_V} size="p14" text="Connect" />
       <Btn bgColor={theme.colors.transparent} size="p15t" text="Button" />
