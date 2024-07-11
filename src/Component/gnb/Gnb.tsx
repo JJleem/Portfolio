@@ -10,9 +10,13 @@ import {
   Links,
   Inner,
 } from "./StyleGnb";
-import { Link } from "react-router-dom";
-
+import { toggleState } from "../../atom/atom";
+import { useRecoilState } from "recoil";
 const Gnb: React.FC = () => {
+  const [clickedToggle, setClickedToggle] = useRecoilState(toggleState);
+  const handleClick = () => {
+    setClickedToggle(!clickedToggle);
+  };
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -51,7 +55,7 @@ const Gnb: React.FC = () => {
           <Links to="/"></Links>
           <Links to="/"></Links>
           <Links to="/"></Links>
-          <Links to="/"></Links>
+          <Links to="/" onClick={handleClick} isClick={clickedToggle}></Links>
         </MenuWrap>
       </Inner>
     </StyledGnb>

@@ -57,6 +57,7 @@ const mediaSize = {
 /** 폰트 크기 */
 const fontSize = {
   p15: "15px",
+  p16: "16px",
   p14: "14px",
   p19: "19px",
   p20: "20px",
@@ -91,6 +92,8 @@ const colors = {
   mocup_text: "#929292",
   transparent: "transparent",
   popup_B01: "#4F4B67",
+  nav_BG: "#3d3755",
+  line: "#BCBCCC",
 };
 
 const theme = {

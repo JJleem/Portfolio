@@ -1,10 +1,15 @@
-import React from "react";
 import styled from "styled-components";
 import Logo from "../../assets/img/logo/logotest.png";
 import search from "../../assets/img/icon/search.png";
 import { Link } from "react-router-dom";
 import account from "../../assets/img/icon/account.png";
 import info from "../../assets/img/icon/info.png";
+import toggle from "../../assets/img/icon/toggle.png";
+import close from "../../assets/img/icon/close.png";
+type GasideProps = {
+  isClick?: boolean;
+};
+
 export const StyledGnb = styled.div`
   transition: all 0.5s linear;
   position: fixed;
@@ -16,7 +21,7 @@ export const StyledGnb = styled.div`
   padding: 0 35px;
   height: 73px;
   background-color: ${({ theme }) => theme.colors.transparent};
-  z-index: 9999;
+  z-index: 5;
   color: #fff;
   background-color: rgba(21, 18, 37, 0.7);
   backdrop-filter: blur(10px);
@@ -139,7 +144,7 @@ export const MenuWrap = styled.div`
   }
 `;
 
-export const Links = styled(Link)`
+export const Links = styled(Link)<GasideProps>`
   &:nth-child(1) {
     @media ${({ theme }) => theme.mediaSize.lg} {
       display: none;
@@ -189,10 +194,12 @@ export const Links = styled(Link)`
   &:last-child {
     display: none;
     @media ${({ theme }) => theme.mediaSize.lg} {
+      transition: all 0.5s;
       display: block;
       width: 28px;
       height: 28px;
-      background-image: url(${info});
+      background-image: ${({ isClick }) =>
+        isClick ? `url(${close})` : `url(${toggle})`};
       background-repeat: no-repeat;
       background-position: center;
       background-size: center;
