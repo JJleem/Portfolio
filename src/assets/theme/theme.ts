@@ -56,13 +56,15 @@ const mediaSize = {
 
 /** 폰트 크기 */
 const fontSize = {
+  p12: "12px",
   p15: "15px",
   p16: "16px",
   p14: "14px",
   p19: "19px",
   p20: "20px",
   p22: "22px",
-  "2xl": "1.5rem",
+  p11: "11px",
+  p13: "13px",
 };
 
 /** 그 외의 크기 */
@@ -94,6 +96,7 @@ const colors = {
   popup_B01: "#4F4B67",
   nav_BG: "#3d3755",
   line: "#BCBCCC",
+  footer_line: "#D9D9D9",
 };
 
 const theme = {

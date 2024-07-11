@@ -1,20 +1,21 @@
 import theme from "./assets/theme/theme";
 import Btn from "./Component/btn/Btn";
-
 import ExploreGnb from "./Component/gnb/ExploreGnb";
 import Gaside from "./Component/aside/Gaside";
 import Gnb from "./Component/gnb/Gnb";
 import Box from "./Component/box/Box";
 import vidieoplatform from "./assets/img/item/videoplatform.png";
 import login from "./assets/img/item/login.png";
+import Typescript from "./assets/img/skill/Typescript.png";
+import Footer from "./Component/footer/Footer";
 function App() {
   return (
     <>
       <Gaside />
       <div
         style={{
-          width: "100%",
-          height: "200vh",
+          width: "100vw",
+          height: "100vh",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
@@ -22,6 +23,7 @@ function App() {
           background: "#141225",
           gap: "30px",
           padding: "0 35px",
+          position: "relative",
         }}
       >
         <Gnb />
@@ -30,18 +32,20 @@ function App() {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-
-            gap: "30px",
+            width: "100vw",
+            height: "100%",
+            gap: "10px",
+            flexWrap: "wrap",
           }}
         >
-          <Box itemImg={vidieoplatform} transition="3" />
-          <Box itemImg={login} transition="1" />
+          <Box itemImg={vidieoplatform} transition="10" skill={Typescript} />
+          <Box itemImg={login} transition="5" skill={Typescript} />
         </div>
 
-        <div
+        {/* <div
           style={{ width: "100%", height: "300px", background: "#f00" }}
-        ></div>
-        <Btn bgColor={theme.colors.primary_V} size="p15" text="Button" />
+        ></div> */}
+        {/* <Btn bgColor={theme.colors.primary_V} size="p15" text="Button" />
         <Btn bgColor={theme.colors.primary_V} size="p14" text="Connect" />
         <Btn bgColor={theme.colors.transparent} size="p15t" text="Button" />
         <Btn
@@ -53,7 +57,8 @@ function App() {
           bgColor={theme.colors.transparent}
           size="p20t"
           text="COMMING SOON"
-        />
+        /> */}
+        <Footer />
       </div>
     </>
   );

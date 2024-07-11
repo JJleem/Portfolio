@@ -2,15 +2,35 @@ import styled from "styled-components";
 import vidieoplatform from "../../assets/img/item/videoplatform.png";
 import github from "../../assets/img/skill/Github.png";
 import { Link } from "react-router-dom";
+
 type ItemProps = {
   itemImg?: string;
   transition?: string;
+  skill?: string;
 };
 
 export const StyleBox = styled.div`
   width: 290px;
   height: 420px;
   border-radius: 10px;
+  transition: all 0.5s;
+  z-index: 2;
+  @media ${({ theme }) => theme.mediaSize.xl} {
+    width: 294px;
+    height: 424px;
+  }
+  @media ${({ theme }) => theme.mediaSize.lg} {
+    width: 314px;
+    height: 444px;
+  }
+  @media ${({ theme }) => theme.mediaSize.sm} {
+    width: 226px;
+    height: 356px;
+  }
+  @media ${({ theme }) => theme.mediaSize.xs} {
+    width: 172px;
+    height: 242px;
+  }
 `;
 export const ImgWrap = styled.div<ItemProps>`
   background: url(${({ itemImg }) => (itemImg ? `"${itemImg}"` : "")});
@@ -31,7 +51,7 @@ export const DescWrap = styled.div`
   height: 130px;
   border-radius: 0px 0px 10px 10px;
   background: ${({ theme }) => theme.colors.input_BOXbg};
-  padding: 15px;
+  padding: 15px 15px 40px 15px;
   position: relative;
   overflow: hidden;
   &:hover {
@@ -40,10 +60,28 @@ export const DescWrap = styled.div`
     }
   }
 `;
-export const TextWrap = styled.div`
+export const TextWrap = styled.div<ItemProps>`
   width: 100%;
   height: 100%;
-  border: 1px solid #f00;
+
+  color: ${({ theme }) => theme.colors.White};
+  font-size: ${({ theme }) => theme.fontSize.p19};
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+`;
+export const TextSkill = styled.div<ItemProps>`
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url(${({ skill }) => (skill ? `"${skill}"` : "")});
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: -4px;
+  right: -4px;
 `;
 export const InfoBtn = styled.div`
   width: 100%;

@@ -8,20 +8,25 @@ import {
   InfoItem,
   InfoLink,
   StyleBox,
+  TextSkill,
   TextWrap,
 } from "./StyleBox";
 import { Link } from "react-router-dom";
 
 type ItemProps = {
-  itemImg?: string;
+  itemImg: string;
   transition?: string;
+  skill: string;
 };
-const Box = ({ itemImg, transition }: ItemProps) => {
+const Box = ({ itemImg, transition, skill }: ItemProps) => {
   return (
     <StyleBox>
       <ImgWrap itemImg={itemImg} transition={transition} />
       <DescWrap>
-        <TextWrap>ads</TextWrap>
+        <TextWrap>
+          <TextSkill skill={skill} />
+          비디오 플랫폼
+        </TextWrap>
         <InfoBtn className="Info">
           <InfoItem>
             <InfoLink to="/">Detail</InfoLink>
@@ -30,7 +35,7 @@ const Box = ({ itemImg, transition }: ItemProps) => {
           <InfoItem>
             <InfoLink to="/">
               <Github />
-              Git hub
+              Github
             </InfoLink>
           </InfoItem>
         </InfoBtn>
