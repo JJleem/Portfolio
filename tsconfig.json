@@ -30,6 +30,7 @@
     "assets/img/**/*",
     "assets/icon/**/*",
     "assets/item/**/*",
-    "assets/skill/**/*"
+    "assets/skill/**/*",
+    "assets/bg/**/*"
   ]
 }

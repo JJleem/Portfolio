@@ -9,15 +9,4 @@ import { RecoilRoot } from "recoil";
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
-root.render(
-  <ThemeProvider theme={theme}>
-    <GlobalStyle />
-    <BrowserRouter>
-      <RecoilRoot>
-        <Routes>
-          <Route path="/" element={<App />} />
-        </Routes>
-      </RecoilRoot>
-    </BrowserRouter>
-  </ThemeProvider>
-);
+root.render(<App />);

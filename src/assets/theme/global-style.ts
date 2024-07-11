@@ -48,6 +48,7 @@ label,
     line-height: 1.5;
     letter-spacing: inherit;
 }
+
 input[type='text'],
 input[type='tel'],
 input[type='password'],
