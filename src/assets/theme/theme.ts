@@ -74,6 +74,8 @@ const fontSize = {
   p8: "8px",
   p32: "32px",
   p27: "27px",
+  p30: "30px",
+  p17: "17px",
 };
 
 /** 그 외의 크기 */
@@ -107,6 +109,7 @@ const colors = {
   line: "#BCBCCC",
   footer_line: "#D9D9D9",
   mainLine: "#403C5C",
+  datatitle: "#706d82",
 };
 
 const theme = {
