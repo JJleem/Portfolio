@@ -15,7 +15,7 @@ const Footer = () => {
       <Top></Top>
       <Bottom>
         <ListWrap>
-          <LogoContainer>LOGO</LogoContainer>
+          <LogoContainer>MOLT</LogoContainer>
           <ItemWrap>
             <li>
               <Link to="/">Terms</Link>

@@ -36,7 +36,7 @@ const Gnb: React.FC = () => {
 
   return (
     <StyledGnb>
-      <LogoContainer>LOGO</LogoContainer>
+      <LogoContainer>MOLT</LogoContainer>
       <Inner>
         <InputWrap>
           <GnbSearch />

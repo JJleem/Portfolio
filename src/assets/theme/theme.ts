@@ -66,6 +66,9 @@ const fontSize = {
   p11: "11px",
   p13: "13px",
   p25: "25px",
+  p45: "45px",
+  p28: "28px",
+  p18: "18px",
 };
 
 /** 그 외의 크기 */
@@ -98,6 +101,7 @@ const colors = {
   nav_BG: "#3d3755",
   line: "#BCBCCC",
   footer_line: "#D9D9D9",
+  mainLine: "#403C5C",
 };
 
 const theme = {

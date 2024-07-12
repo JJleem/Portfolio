@@ -12,7 +12,7 @@ const ExploreGnb: React.FC = () => {
   };
   return (
     <StyledGnb>
-      <LogoContainer>LOGO</LogoContainer>
+      <LogoContainer>MOLT</LogoContainer>
       <MenuWrap>
         <Links to="/">Explore</Links>
         <Links to="/">My</Links>

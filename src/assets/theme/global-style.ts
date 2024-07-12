@@ -1,10 +1,14 @@
 import { createGlobalStyle } from "styled-components";
+import bg from "../img/bg/testbg.png";
 export const GlobalStyle = createGlobalStyle`
 
 
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-gov-dynamic-subset.min.css");
   * {
 font-family: "Pretendard GOV Variable", "Pretendard GOV", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+margin:0;
+padding:0;
+
   }
   
   body,
@@ -48,7 +52,13 @@ label,
     line-height: 1.5;
     letter-spacing: inherit;
 }
-
+body {
+  overflow-x:hidden;
+  background: rgba(10, 6, 33, 0.9);
+  width:100vw;
+  
+  
+}
 input[type='text'],
 input[type='tel'],
 input[type='password'],
@@ -72,23 +82,35 @@ button {
     color:${({ theme }) => theme.colors.White};
     font-family: "Pretendard GOV Variable", "Pretendard GOV", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
+.scroll-container {
+  position: relative;
+  overflow-y: scroll;
+}
 &::-webkit-scrollbar {
       /** 스크롤바의 너비 */
-      width: 5px;
+      width: 3px;
+      overflow: hidden;
+
     }
     &::-webkit-scrollbar-thumb {
-      /** 스크롤바 길이 */
-      height: 25%;
-      /** 스크롤바의 색상 */
-      border:  1px solid ${({ theme }) => theme.colors.White};
-      background: transparent;
-      border-radius: 10px;
+      /* background-color: hsla(0,0%,68%,.5); */
+      border:  1px solid ${({ theme }) => theme.colors.Text_Gray};
+    border-radius: 5px;
+    height: 5px;
+
   
     }
     &::-webkit-scrollbar-track {
-      /** 스크롤바 뒷 배경 색상 */
-      background: transparent;
+      background-color: transparent;
+
+
     }
+
+
+
+    
+ 
+  
     a {
       text-decoration:none;
       color: inherit;

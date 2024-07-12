@@ -100,6 +100,22 @@ const StyledBtn = styled.button<StyledProps>`
             font-size: ${({ theme }) => theme.fontSize.p22};
           }
         `;
+      case "p15l":
+        return css`
+          width: 100%;
+          height: 42px;
+          font-size: ${({ theme }) => theme.fontSize.p15};
+          color: ${({ theme }) => theme.colors.White};
+          border-radius: 6;
+          /* border: 1px solid ${({ theme }) => theme.colors.Text_Gray}; */
+          @media ${({ theme }) => theme.mediaSize.md} {
+          }
+          @media ${({ theme }) => theme.mediaSize.sm} {
+          }
+          @media ${({ theme }) => theme.mediaSize.xs} {
+            font-size: ${({ theme }) => theme.fontSize.p22};
+          }
+        `;
     }
   }}
 `;
