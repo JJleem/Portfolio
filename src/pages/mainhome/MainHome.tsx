@@ -13,6 +13,8 @@ import {
   MainItemLogo,
   MainLogo,
   MainProjectWrap,
+  MainSub,
+  MainSubWrap,
   MainTitle,
   ProjectTitle,
   SubTitle,
@@ -26,87 +28,104 @@ import videoplatform from "../../assets/img/item/videoplatform.png";
 import typescript from "../../assets/img/skill/Typescript.png";
 import { ProjectWrap } from "../../Component/mainproject/StyleMainProject";
 import MainProject from "../../Component/mainproject/MainProject";
-
+import Gaside from "../../Component/aside/Gaside";
 const MainHome = () => {
   return (
     <HomeWrapper>
       <ExploreGnb />
-      <BgWrapper>
-        <HomeGrid>
-          <MainInfo>
-            <MainLogo />
-            <MainTitle>
-              <span>JJ</span>SPACE
-            </MainTitle>
-            <SubTitle>BOSagora NFT MARKET PLACE</SubTitle>
-            <MainDesc>
-              2024년 7월, JJSPACE 차원의 문이 열리기 시작했습니다! <br />
-              내가 보유한 NFT 및 자산 확인이 가능한 상태입니다.
-            </MainDesc>
-          </MainInfo>
-          <ItemWrapper>
-            <MainItem>
-              <MainItemLogo>
-                <Logo type="ts" />
-              </MainItemLogo>
-              <MainItemDesc>
-                BOASPACE는 <br />
-                보스아고라 메인넷 기반의 NFT 마켓플레이스입니다.
-              </MainItemDesc>
-            </MainItem>
-            <MainItem>
-              <MainItemLogo>
-                <Logo type="react" />
-              </MainItemLogo>
-              <MainItemDesc>
-                BOASPACE는 <br />
-                보스아고라 메인넷 기반의 NFT 마켓플레이스입니다.
-              </MainItemDesc>
-            </MainItem>
-            <MainItem>
-              <MainItemLogo>
-                <Logo type="js" />
-              </MainItemLogo>
-              <MainItemDesc>
-                BOASPACE는 <br />
-                보스아고라 메인넷 기반의 NFT 마켓플레이스입니다.
-              </MainItemDesc>
-            </MainItem>
-            <MainItem>
-              <MainItemLogo>
-                <Logo type="github" />
-              </MainItemLogo>
-              <MainItemDesc>
-                BOASPACE는 <br />
-                보스아고라 메인넷 기반의 NFT 마켓플레이스입니다.
-              </MainItemDesc>
-            </MainItem>
-            <MainItem>
-              <MainItemLogo>
-                <Logo />
-              </MainItemLogo>
-              <MainItemDesc>
-                BOASPACE는 <br />
-                보스아고라 메인넷 기반의 NFT 마켓플레이스입니다.
-              </MainItemDesc>
-            </MainItem>
-          </ItemWrapper>
+      <Gaside />
+      <BgWrapper></BgWrapper>
+      <HomeGrid>
+        <MainInfo>
+          <MainLogo />
+          <MainTitle>
+            <span>MOLT</span>SPACE
+          </MainTitle>
+          <SubTitle>Frontend LeemJaeJun Portfolio</SubTitle>
+          <MainDesc>
+            2024년 7월, MOLTSPACE 차원의 문이 열리기 시작했습니다! <br />
+            내가 보유한 NFT 및 자산 확인이 가능한 상태입니다.
+          </MainDesc>
+        </MainInfo>
+        <ItemWrapper>
+          <MainItem>
+            <MainItemLogo>
+              <Logo type="ts" />
+            </MainItemLogo>
+            <MainItemDesc>
+              BOASPACE는 <br />
+              보스아고라 메인넷 기반의 NFT 마켓플레이스입니다.
+            </MainItemDesc>
+          </MainItem>
+          <MainItem>
+            <MainItemLogo>
+              <Logo type="react" />
+            </MainItemLogo>
+            <MainItemDesc>
+              BOASPACE는 <br />
+              보스아고라 메인넷 기반의 NFT 마켓플레이스입니다.
+            </MainItemDesc>
+          </MainItem>
+          <MainItem>
+            <MainItemLogo>
+              <Logo type="js" />
+            </MainItemLogo>
+            <MainItemDesc>
+              BOASPACE는 <br />
+              보스아고라 메인넷 기반의 NFT 마켓플레이스입니다.
+            </MainItemDesc>
+          </MainItem>
+          <MainItem>
+            <MainItemLogo>
+              <Logo type="github" />
+            </MainItemLogo>
+            <MainItemDesc>
+              BOASPACE는 <br />
+              보스아고라 메인넷 기반의 NFT 마켓플레이스입니다.
+            </MainItemDesc>
+          </MainItem>
+          <MainItem>
+            <MainItemLogo>
+              <Logo />
+            </MainItemLogo>
+            <MainItemDesc>
+              BOASPACE는 <br />
+              보스아고라 메인넷 기반의 NFT 마켓플레이스입니다.
+            </MainItemDesc>
+          </MainItem>
+        </ItemWrapper>
+        <Btn
+          bgColor={theme.colors.primary_V}
+          text="CONNECT WALLET"
+          size="p15c"
+        />
+        <MainProjectWrap>
+          <FirstProjectWrap>
+            <ProjectTitle>
+              <span>NFT </span>Project
+            </ProjectTitle>
+            <MainProject></MainProject>
+          </FirstProjectWrap>
+          <MainProject></MainProject>
+        </MainProjectWrap>
+        <MainSubWrap>
+          <MainSub>
+            곧, BOASPACE의 차원의 문이 활짝 열릴 예정입니다! <br />
+            차원의 문이 활짝 열리면 <br />
+            <span>NFT 민팅, 판매, 전송, 거래</span>가 가능해집니다.
+          </MainSub>
+          <MainSub>
+            BOASPACE의 우주는 계속 진화합니다. <br /> 차별화된 다양한 편의기능이{" "}
+            <br /> 수시로 업데이트 될 예정입니다.
+          </MainSub>
           <Btn
             bgColor={theme.colors.primary_V}
             text="CONNECT WALLET"
             size="p15c"
           />
-          <MainProjectWrap>
-            <FirstProjectWrap>
-              <ProjectTitle>
-                <span>NFT </span>Project
-              </ProjectTitle>
-              <MainProject></MainProject>
-            </FirstProjectWrap>
-            <MainProject></MainProject>
-          </MainProjectWrap>
-        </HomeGrid>
-      </BgWrapper>
+        </MainSubWrap>
+      </HomeGrid>
+
       <Footer />
     </HomeWrapper>
   );

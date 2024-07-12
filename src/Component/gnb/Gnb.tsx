@@ -12,6 +12,7 @@ import {
 } from "./StyleGnb";
 import { toggleState } from "../../atom/atom";
 import { useRecoilState } from "recoil";
+import { Link } from "react-router-dom";
 const Gnb: React.FC = () => {
   const [clickedToggle, setClickedToggle] = useRecoilState(toggleState);
   const handleClick = () => {
@@ -36,7 +37,9 @@ const Gnb: React.FC = () => {
 
   return (
     <StyledGnb>
-      <LogoContainer>MOLT</LogoContainer>
+      <LogoContainer>
+        <Link to="/">MOLT</Link>
+      </LogoContainer>
       <Inner>
         <InputWrap>
           <GnbSearch />

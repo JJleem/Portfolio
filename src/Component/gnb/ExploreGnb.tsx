@@ -4,6 +4,7 @@ import { useRecoilState } from "recoil";
 import Btn from "../btn/Btn";
 import theme from "../../assets/theme/theme";
 import { toggleState } from "../../atom/atom";
+import { Link } from "react-router-dom";
 
 const ExploreGnb: React.FC = () => {
   const [clickedToggle, setClickedToggle] = useRecoilState(toggleState);
@@ -12,7 +13,9 @@ const ExploreGnb: React.FC = () => {
   };
   return (
     <StyledGnb>
-      <LogoContainer>MOLT</LogoContainer>
+      <LogoContainer>
+        <Link to="/">MOLT</Link>
+      </LogoContainer>
       <MenuWrap>
         <Links to="/">Explore</Links>
         <Links to="/">My</Links>

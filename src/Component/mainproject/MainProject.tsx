@@ -1,6 +1,8 @@
 import React from "react";
 import {
   DescWrap,
+  HidTitleWrap,
+  ImageSection,
   ImgWrap,
   Inner,
   Item,
@@ -57,7 +59,13 @@ const MainProject = () => {
             <Btn bgColor={theme.colors.primary_V} text="BUY NOW" size="p15l" />
           </ItemWrap>
         </DescWrap>
-        <ImgWrap></ImgWrap>
+        <ImageSection>
+          <HidTitleWrap>
+            <span>OVERVIEW</span>
+            #1 Videoplatform
+          </HidTitleWrap>
+          <ImgWrap></ImgWrap>
+        </ImageSection>
       </Inner>
     </ProjectWrap>
   );

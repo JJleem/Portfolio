@@ -15,6 +15,7 @@ export const StyledGnb = styled.div`
   top: 0;
   display: flex;
   gap: 58px;
+
   align-items: center;
   width: 100%;
   padding: 0 35px;
@@ -30,6 +31,7 @@ export const StyledGnb = styled.div`
   }
   @media ${({ theme }) => theme.mediaSize.xs} {
     justify-content: space-between;
+    padding: 0 15px;
   }
 `;
 

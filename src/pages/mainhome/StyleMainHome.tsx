@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 import bg from "../../assets/img/bg/testbg.png";
 import mainlogo from "../../assets/img/bg/mainlogo.png";
 import react from "../../assets/img/skill/React.png";
@@ -11,9 +11,18 @@ type Props = {
   transition?: string;
   skill?: string;
 };
+const ImgZ = keyframes`
+0% {
+  transform: translateZ(250px);
+}
+100% {
+  transform: translateZ(0px);
+}
+`;
 
 export const HomeWrapper = styled.div`
   width: 100vw;
+  perspective: 1000px;
   color: ${({ theme }) => theme.colors.White};
   position: relative;
 `;
@@ -24,22 +33,28 @@ export const BgWrapper = styled.div`
   background-position: top;
   background-size: center;
   background-repeat: no-repeat;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  animation-fill-mode: forwards;
+  animation: ${ImgZ} 5s ease-in-out;
+  position: absolute;
+  z-index: -1;
 `;
 export const HomeGrid = styled.div`
   width: 100%;
   height: 100%;
   padding: 0 35px;
   padding-bottom: 230px;
-  padding-top: 108px;
+  padding-top: 83px;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 58px;
+  gap: 48px;
   flex-direction: column;
 `;
 export const MainLogo = styled.div`
   width: 200px;
-  height: 200px;
+  height: 180px;
   background: url(${mainlogo});
   background-position: center;
   background-size: cover;
@@ -53,18 +68,41 @@ export const MainTitle = styled.div`
   span {
     font-weight: 700;
   }
+  @media ${({ theme }) => theme.mediaSize.md} {
+    font-size: 72px;
+  }
+  @media ${({ theme }) => theme.mediaSize.sm} {
+    font-size: 80px;
+  }
+  @media ${({ theme }) => theme.mediaSize.xs} {
+    font-size: 58px;
+  }
 `;
 export const SubTitle = styled.div`
   font-size: ${({ theme }) => theme.fontSize.p11};
   letter-spacing: 10px;
   font-weight: 500;
   margin-bottom: 40px;
+  @media ${({ theme }) => theme.mediaSize.md} {
+    font-size: ${({ theme }) => theme.fontSize.p9};
+    letter-spacing: 8px;
+  }
+  @media ${({ theme }) => theme.mediaSize.xs} {
+    font-size: ${({ theme }) => theme.fontSize.p8};
+    letter-spacing: 6px;
+  }
 `;
 export const MainDesc = styled.div`
   font-size: ${({ theme }) => theme.fontSize.p25};
   text-align: center;
   font-weight: 500;
   line-height: 40px;
+  @media ${({ theme }) => theme.mediaSize.md} {
+    font-size: ${({ theme }) => theme.fontSize.p22};
+  }
+  @media ${({ theme }) => theme.mediaSize.xs} {
+    font-size: ${({ theme }) => theme.fontSize.p24};
+  }
 `;
 
 export const MainInfo = styled.div`
@@ -72,7 +110,6 @@ export const MainInfo = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-
   flex-direction: column;
 `;
 export const ItemWrapper = styled.div`
@@ -235,5 +272,43 @@ export const ProjectTitle = styled.div`
   font-size: ${({ theme }) => theme.fontSize.p45};
   span {
     font-weight: 700;
+  }
+`;
+export const MainSub = styled.div`
+  text-align: center;
+  font-size: ${({ theme }) => theme.fontSize.p27};
+  span {
+    font-weight: 700;
+    color: ${({ theme }) => theme.colors.secondary_V};
+  }
+  br {
+    &:last-child {
+      display: none;
+    }
+  }
+  @media ${({ theme }) => theme.mediaSize.md} {
+    font-size: ${({ theme }) => theme.fontSize.p25};
+  }
+  @media ${({ theme }) => theme.mediaSize.sm} {
+    font-size: ${({ theme }) => theme.fontSize.p20};
+    br {
+      &:last-child {
+        display: block;
+      }
+    }
+  }
+`;
+export const MainSubWrap = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 32px;
+  div {
+    &:nth-of-type(2) {
+      margin-bottom: 50px;
+    }
   }
 `;

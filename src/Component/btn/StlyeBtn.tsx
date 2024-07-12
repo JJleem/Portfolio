@@ -113,7 +113,7 @@ const StyledBtn = styled.button<StyledProps>`
           @media ${({ theme }) => theme.mediaSize.sm} {
           }
           @media ${({ theme }) => theme.mediaSize.xs} {
-            font-size: ${({ theme }) => theme.fontSize.p22};
+            font-size: ${({ theme }) => theme.fontSize.p19};
           }
         `;
     }

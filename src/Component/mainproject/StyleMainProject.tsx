@@ -6,23 +6,55 @@ export const ProjectWrap = styled.div`
   border-radius: 20px;
   padding: 50px 50px 50px 50px;
   background: ${({ theme }) => theme.colors.BG_MainBox};
+  @media ${({ theme }) => theme.mediaSize.xl} {
+    width: 1060px;
+  }
+  @media ${({ theme }) => theme.mediaSize.md} {
+    width: 804px;
+    height: 430px;
+  }
+  @media ${({ theme }) => theme.mediaSize.md} {
+    padding: 30px;
+  }
+  @media ${({ theme }) => theme.mediaSize.sm} {
+    width: 544px;
+    height: 1007px;
+  }
+  @media ${({ theme }) => theme.mediaSize.xs} {
+    width: 372px;
+    height: 1052px;
+  }
 `;
 export const Inner = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
-
+  justify-content: center;
+  align-items: center;
   gap: 50px;
+  @media ${({ theme }) => theme.mediaSize.sm} {
+    flex-direction: column-reverse;
+  }
+  @media ${({ theme }) => theme.mediaSize.xs} {
+    gap: 10px;
+  }
 `;
 export const DescWrap = styled.div`
   width: 50%;
 
   display: flex;
   flex-direction: column;
+
   gap: 30px;
+  @media ${({ theme }) => theme.mediaSize.md} {
+    gap: 17px;
+  }
+  @media ${({ theme }) => theme.mediaSize.sm} {
+    width: 100%;
+  }
 `;
 export const ImgWrap = styled.div`
-  width: 50%;
+  width: 100%;
   height: 100%;
   background: url(${videoplatform});
   background-position: top;
@@ -38,6 +70,49 @@ export const TitleWrap = styled.div`
     font-size: ${({ theme }) => theme.fontSize.p14};
     color: ${({ theme }) => theme.colors.Text_Gray};
   }
+  @media ${({ theme }) => theme.mediaSize.md} {
+    font-size: ${({ theme }) => theme.fontSize.p24};
+    span {
+      font-size: ${({ theme }) => theme.fontSize.p12};
+    }
+  }
+
+  @media ${({ theme }) => theme.mediaSize.xs} {
+    display: none;
+  }
+`;
+export const HidTitleWrap = styled.div`
+  display: none;
+  @media ${({ theme }) => theme.mediaSize.xs} {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-weight: 700;
+    font-size: ${({ theme }) => theme.fontSize.p32};
+    span {
+      font-size: ${({ theme }) => theme.fontSize.p18};
+      color: ${({ theme }) => theme.colors.Text_Gray};
+    }
+  }
+`;
+
+export const ImageSection = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  flex-direction: column;
+
+  border-radius: 20px;
+  @media ${({ theme }) => theme.mediaSize.xs} {
+    gap: 22px;
+    width: 100%;
+    height: 50%;
+    justify-content: space-between;
+    align-items: start;
+    flex-direction: column;
+  }
 `;
 export const ItemWrap = styled.div`
   width: 100%;
@@ -46,6 +121,12 @@ export const ItemWrap = styled.div`
   gap: 22px;
   display: flex;
   flex-direction: column;
+  @media ${({ theme }) => theme.mediaSize.md} {
+    gap: 14px;
+  }
+  @media ${({ theme }) => theme.mediaSize.xs} {
+    gap: 22px;
+  }
 `;
 export const ItemList = styled.div`
   width: 100%;
@@ -54,8 +135,6 @@ export const ItemList = styled.div`
   align-items: center;
   flex-direction: column;
   gap: 10px;
-
-  flex: 1;
 `;
 export const Item = styled.div`
   width: 100%;
@@ -77,12 +156,30 @@ export const Item = styled.div`
       font-weight: 700;
     }
   }
+  @media ${({ theme }) => theme.mediaSize.md} {
+    padding: 9px 0;
+  }
+  @media ${({ theme }) => theme.mediaSize.xs} {
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 5px;
+  }
 `;
 export const ItemTitle = styled.div`
   font-size: ${({ theme }) => theme.fontSize.p18};
   color: ${({ theme }) => theme.colors.secondary_V};
+  @media ${({ theme }) => theme.mediaSize.md} {
+    font-size: ${({ theme }) => theme.fontSize.p14};
+  }
 `;
-export const ItemDesc = styled.span``;
+export const ItemDesc = styled.span`
+  word-spacing: -2px;
+  font-size: ${({ theme }) => theme.fontSize.p14};
+  @media ${({ theme }) => theme.mediaSize.md} {
+    font-size: ${({ theme }) => theme.fontSize.p14};
+  }
+`;
 export const LogoList = styled.div`
   display: flex;
   justify-content: center;
