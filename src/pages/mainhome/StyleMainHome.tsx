@@ -22,9 +22,12 @@ const ImgZ = keyframes`
 
 export const HomeWrapper = styled.div`
   width: 100vw;
+  height: 100%;
   perspective: 1000px;
   color: ${({ theme }) => theme.colors.White};
   position: relative;
+  transition: all 0s;
+  overflow: hidden;
 `;
 export const BgWrapper = styled.div`
   width: 100%;
@@ -38,7 +41,7 @@ export const BgWrapper = styled.div`
   animation-fill-mode: forwards;
   animation: ${ImgZ} 5s ease-in-out;
   position: absolute;
-  z-index: -1;
+  z-index: -99999 !important;
 `;
 export const HomeGrid = styled.div`
   width: 100%;

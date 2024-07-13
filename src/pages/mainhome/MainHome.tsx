@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   BgWrapper,
   FirstProjectWrap,
@@ -26,15 +26,23 @@ import theme from "../../assets/theme/theme";
 import Box from "../../Component/box/Box";
 import videoplatform from "../../assets/img/item/videoplatform.png";
 import typescript from "../../assets/img/skill/Typescript.png";
-import { ProjectWrap } from "../../Component/mainproject/StyleMainProject";
 import MainProject from "../../Component/mainproject/MainProject";
 import Gaside from "../../Component/aside/Gaside";
+import { useNavigate } from "react-router-dom";
+import { useRecoilState } from "recoil";
+import { locationState } from "../../atom/atom";
+import { useLocation } from "react-router-dom";
+import Gnb from "../../Component/gnb/Gnb";
 const MainHome = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const goConnect = () => {
+    navigate("/collection");
+  };
+
   return (
     <HomeWrapper>
-      <ExploreGnb />
-      <Gaside />
-      <BgWrapper></BgWrapper>
+      <BgWrapper />
       <HomeGrid>
         <MainInfo>
           <MainLogo />
@@ -98,6 +106,7 @@ const MainHome = () => {
           bgColor={theme.colors.primary_V}
           text="CONNECT WALLET"
           size="p15c"
+          onClick={goConnect}
         />
         <MainProjectWrap>
           <FirstProjectWrap>
@@ -122,32 +131,13 @@ const MainHome = () => {
             bgColor={theme.colors.primary_V}
             text="CONNECT WALLET"
             size="p15c"
+            onClick={goConnect}
           />
         </MainSubWrap>
       </HomeGrid>
-
       <Footer />
     </HomeWrapper>
   );
 };
 
 export default MainHome;
-
-{
-  /* <Box itemImg={videoplatform} skill={typescript} transition="10" />
-        <div>
-          <Btn bgColor={theme.colors.primary_V} size="p15" text="Button" />
-          <Btn bgColor={theme.colors.primary_V} size="p14" text="Connect" />
-          <Btn bgColor={theme.colors.transparent} size="p15t" text="Button" />
-          <Btn
-            bgColor={theme.colors.primary_V}
-            size="p15c"
-            text="CONNECT WALLET"
-          />
-          <Btn
-            bgColor={theme.colors.transparent}
-            size="p20t"
-            text="COMMING SOON"
-          />
-        </div> */
-}

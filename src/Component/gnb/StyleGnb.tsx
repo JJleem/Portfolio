@@ -6,6 +6,7 @@ import account from "../../assets/img/icon/account.png";
 import info from "../../assets/img/icon/info.png";
 import toggle from "../../assets/img/icon/toggle.png";
 import close from "../../assets/img/icon/close.png";
+
 type GasideProps = {
   isClick?: boolean;
 };
@@ -21,7 +22,7 @@ export const StyledGnb = styled.div`
   padding: 0 35px;
   height: 73px;
   background-color: ${({ theme }) => theme.colors.transparent};
-  z-index: 5;
+  z-index: 10;
   color: #fff;
   background-color: rgba(21, 18, 37, 0.7);
   backdrop-filter: blur(10px);

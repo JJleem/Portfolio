@@ -1,13 +1,24 @@
 import styled from "styled-components";
 import more from "../../assets/img/icon/expand_more.png";
 import theme from "../../assets/theme/theme";
+import filter from "../../assets/img/icon/filter_list.png";
+import column from "../../assets/img/icon/column.png";
+import row from "../../assets/img/icon/row.png";
+import ts from "../../assets/img/skill/Typescript.png";
+import check from "../../assets/img/icon/check.png";
 type Props = {
   isClick?: boolean;
+  isFilter?: boolean;
+};
+type logoProps = {
+  logo: string;
 };
 
 export const Container = styled.div`
   width: 100vw;
-  height: 100vh;
+  height: 100%;
+  position: relative;
+  padding-bottom: 100px;
 `;
 export const Section = styled.div`
   width: 100%;
@@ -27,7 +38,8 @@ export const BottomCover = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 58px;
+  gap: 40px;
+  background: ${({ theme }) => theme.colors.BG_V};
 `;
 export const Profile = styled.div`
   width: 180px;
@@ -112,7 +124,227 @@ export const Tab = styled.div<Props>`
 export const InputWrap = styled.div`
   display: flex;
   width: 100%;
+
+  height: 53px;
+  gap: 12px;
+  margin-top: -20px;
+  align-items: center;
+  justify-content: space-between;
 `;
-export const LogoContainer = styled.div``;
-export const Logo = styled.div``;
-export const SearchInput = styled.input``;
+export const LogoContainer = styled.div<Props>`
+  transition: all 0.5s;
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  border: 2px solid ${({ theme }) => theme.colors.popup_B01};
+  background: ${({ isFilter }) =>
+    isFilter ? `${theme.colors.popup_B01}` : `${theme.colors.transparent}`};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+`;
+export const Logo = styled.div`
+  width: 24px;
+  height: 24px;
+  background-image: url(${filter});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: center;
+`;
+export const SearchInput = styled.input`
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  border: 2px solid ${({ theme }) => theme.colors.popup_B01};
+  background-color: ${({ theme }) => theme.colors.transparent};
+  color: ${({ theme }) => theme.colors.White};
+  padding: 10px 10px 10px 20px;
+  font-size: ${({ theme }) => theme.fontSize.p15};
+`;
+export const BtnContainer = styled.div`
+  width: 103px;
+  height: 50px;
+  border: 2px solid ${({ theme }) => theme.colors.popup_B01};
+  border-radius: 8px;
+  display: flex;
+  @media ${({ theme }) => theme.mediaSize.sm} {
+    width: 120px;
+  }
+`;
+export const Column = styled.button<Props>`
+  transition: all 0.5s;
+  width: 50%;
+  height: 100%;
+  position: relative;
+  border-radius: 6px 0px 0px 6px;
+  background: ${({ isFilter }) =>
+    isFilter ? `${theme.colors.popup_B01}` : `${theme.colors.transparent}`};
+
+  cursor: pointer;
+  z-index: 5;
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-image: url(${column});
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    z-index: -1;
+  }
+`;
+export const Row = styled.button<Props>`
+  transition: all 0.5s;
+  width: 50%;
+  height: 100%;
+  position: relative;
+  border-radius: 0px 6px 6px 0px;
+  cursor: pointer;
+  z-index: 5;
+  background: ${({ isFilter }) =>
+    isFilter ? `${theme.colors.transparent}` : `${theme.colors.popup_B01}`};
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-image: url(${row});
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    z-index: -1;
+  }
+`;
+export const ItemWrap = styled.ul`
+  display: grid;
+
+  width: 100%;
+  height: fit-content;
+  overflow: hidden;
+
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 25px;
+
+  justify-content: center;
+  align-items: center;
+
+  @media ${({ theme }) => theme.mediaSize.xl} {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+  }
+  @media ${({ theme }) => theme.mediaSize.lg} {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+  }
+  @media ${({ theme }) => theme.mediaSize.md} {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+  @media ${({ theme }) => theme.mediaSize.sm} {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+    gap: 20px;
+  }
+`;
+export const ItemList = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+`;
+export const SkillTitle = styled.div`
+  width: 100%;
+
+  font-size: ${({ theme }) => theme.fontSize.p32};
+  color: ${({ theme }) => theme.colors.White};
+  font-weight: 700;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  background: ${({ theme }) => theme.colors.input_BOXbg};
+  padding: 15px 15px;
+  border-radius: 8px;
+
+  span {
+    background-image: url(${ts});
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 48px;
+    height: 48px;
+  }
+
+  @media ${({ theme }) => theme.mediaSize.sm} {
+    font-size: ${({ theme }) => theme.fontSize.p25};
+    span {
+      width: 30px;
+      height: 30px;
+    }
+  }
+`;
+export const ItemContainer = styled.div`
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+`;
+export const ItemSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+`;
+export const FilterSection = styled.div<Props>`
+  width: 100%;
+  margin-top: -25px;
+  color: ${({ theme }) => theme.colors.White};
+  font-size: ${({ theme }) => theme.fontSize.p14};
+  padding: 20px 0px;
+  display: ${({ isFilter }) => (isFilter ? "block" : "none")};
+`;
+export const FilterList = styled.div<Props>`
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+  @media ${({ theme }) => theme.mediaSize.sm} {
+    justify-content: space-around;
+  }
+`;
+export const FilterItem = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+`;
+export const FilterLogo = styled.div<logoProps>`
+  width: 14px;
+  height: 14px;
+
+  margin-right: -2px;
+  background-image: url(${({ logo }) => logo});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+`;
+export const FilterTitle = styled.div``;
+export const FilterCheckBox = styled.div<Props>`
+  width: 14px;
+  height: 14px;
+  border: 1px solid ${({ theme }) => theme.colors.popup_B01};
+  cursor: pointer;
+
+  background-image: url(${({ isClick }) => (isClick ? `${check}` : "")});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: center;
+`;

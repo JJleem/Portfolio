@@ -8,25 +8,28 @@ import {
   InfoItem,
   InfoLink,
   StyleBox,
+  SubText,
   TextSkill,
   TextWrap,
 } from "./StyleBox";
-import { Link } from "react-router-dom";
 
 type ItemProps = {
   itemImg: string;
-  transition?: string;
+  transition: string;
   skill: string;
+  title: string;
+  sub: string;
 };
-const Box = ({ itemImg, transition, skill }: ItemProps) => {
+const Box = ({ itemImg, transition, skill, title, sub }: ItemProps) => {
   return (
     <StyleBox>
       <ImgWrap itemImg={itemImg} transition={transition} />
       <DescWrap>
         <TextWrap>
+          {title}
           <TextSkill skill={skill} />
-          비디오 플랫폼
         </TextWrap>
+        <SubText>{sub}</SubText>
         <InfoBtn className="Info">
           <InfoItem>
             <InfoLink to="/">Detail</InfoLink>

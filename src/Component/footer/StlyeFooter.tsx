@@ -5,6 +5,7 @@ export const StyleFooter = styled.div`
   height: 106px;
   position: absolute;
   bottom: 0;
+  z-index: 9999999;
   background: ${({ theme }) => theme.colors.transparent};
   @media ${({ theme }) => theme.mediaSize.sm} {
     height: 180px;

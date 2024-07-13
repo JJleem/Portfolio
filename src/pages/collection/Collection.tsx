@@ -21,14 +21,35 @@ import {
   LogoContainer,
   Logo,
   SearchInput,
+  BtnContainer,
+  Column,
+  Row,
+  ItemWrap,
+  ItemList,
+  SkillTitle,
+  ItemContainer,
+  ItemSection,
+  FilterSection,
+  FilterList,
+  FilterItem,
+  FilterTitle,
+  FilterCheckBox,
+  FilterLogo,
 } from "./StyleCollection";
 import { useState } from "react";
+import Box from "../../Component/box/Box";
+import videoplatform from "../../assets/img/item/videoplatform.png";
+import krds from "../../assets/img/item/krds.png";
+import ts from "../../assets/img/skill/Typescript.png";
+import react from "../../assets/img/skill/reactSmall.png";
+import js from "../../assets/img/skill/JavaScript.png";
 
 const Collection = () => {
   const [more, setMore] = useState(false);
   const handleMore = () => {
     setMore(!more);
   };
+
   const [tabs, setTabs] = useState({
     items: true,
     analytics: false,
@@ -45,16 +66,39 @@ const Collection = () => {
     }));
   };
 
+  const [check, setCheck] = useState({
+    typescript: false,
+    react: false,
+    javascript: false,
+  });
+
+  const handleCheck = (checks: string) => {
+    setCheck((prevCheck) => ({
+      ...prevCheck,
+      [checks]: true,
+      typescript: checks === "typescript",
+      react: checks === "react",
+      javascript: checks === "javascript",
+    }));
+  };
+  const [filter, setFilter] = useState(false);
+  const HandleFilter = () => {
+    setFilter(!filter);
+  };
+  const [filterSection, setFilterSection] = useState(false);
+  const HandleFilterSection = () => {
+    setFilterSection(!filterSection);
+  };
+
   return (
     <Container>
-      <Gnb />
       <Section>
         <TopCover></TopCover>
         <BottomCover>
           <Profile />
           <BottomSection>
             <TitleName>LEEM JAEJUN</TitleName>
-            <SubName>By KOPOKOVerse</SubName>
+            <SubName>MOLT</SubName>
             <Desc>
               Jenkins the Valet’s Writer’s Room is a collection of 6942 NFTs
               that unlock a members-only Web3 authenticated...
@@ -102,19 +146,129 @@ const Collection = () => {
               Activity
             </Tab>
           </TabList>
+
           <InputWrap>
-            <LogoContainer>
+            <LogoContainer
+              onClick={HandleFilterSection}
+              isFilter={filterSection}
+            >
               <Logo />
             </LogoContainer>
-            <SearchInput type="text" />
-            <select>
-              <option>Most viewed</option>
-              <option>Modasdasdst viewed</option>
-            </select>
-            <div></div>
-            <div></div>
+
+            <SearchInput
+              type="text"
+              placeholder="leemjaejun's projects , study examples"
+            />
+
+            <BtnContainer>
+              <Column onClick={HandleFilter} isFilter={filter} />
+              <Row onClick={HandleFilter} isFilter={filter} />
+            </BtnContainer>
           </InputWrap>
-          <div></div>
+
+          <ItemContainer>
+            <FilterSection isFilter={filterSection}>
+              <FilterList isFilter={filterSection}>
+                <FilterItem>
+                  <FilterLogo logo={ts}></FilterLogo>
+                  <FilterTitle>TYPESCRIPT</FilterTitle>
+                  <FilterCheckBox
+                    onClick={() => handleCheck("typescript")}
+                    isClick={check.typescript}
+                  ></FilterCheckBox>
+                </FilterItem>
+                <FilterItem>
+                  <FilterLogo logo={react}></FilterLogo>
+                  <FilterTitle>REACT</FilterTitle>
+                  <FilterCheckBox
+                    onClick={() => handleCheck("react")}
+                    isClick={check.react}
+                  ></FilterCheckBox>
+                </FilterItem>
+                <FilterItem>
+                  <FilterLogo logo={js}></FilterLogo>
+                  <FilterTitle>JAVASCRIPT</FilterTitle>
+                  <FilterCheckBox
+                    onClick={() => handleCheck("javascript")}
+                    isClick={check.javascript}
+                  ></FilterCheckBox>
+                </FilterItem>
+              </FilterList>
+            </FilterSection>
+
+            <ItemSection>
+              <ItemList>
+                <SkillTitle>
+                  <span></span>TYPESCRIPT
+                </SkillTitle>
+                <ItemWrap>
+                  <Box
+                    itemImg={videoplatform}
+                    skill={ts}
+                    title="비디오 플랫폼"
+                    transition="10"
+                    sub="TMDB API를 활용하여 작업한 비디오플랫폼 프로젝트입니다"
+                  />
+                  <Box
+                    itemImg={krds}
+                    skill={ts}
+                    title="KRDS"
+                    transition="10"
+                    sub="정부 UI/UX 가이드라인 사이트 KRDS 클론코딩 사이트 입니다."
+                  />
+                  <Box
+                    itemImg={krds}
+                    skill={ts}
+                    title="KRDS"
+                    transition="10"
+                    sub="정부 UI/UX 가이드라인 사이트 KRDS 클론코딩 사이트 입니다."
+                  />
+                  <Box
+                    itemImg={krds}
+                    skill={ts}
+                    title="KRDS"
+                    transition="10"
+                    sub="정부 UI/UX 가이드라인 사이트 KRDS 클론코딩 사이트 입니다."
+                  />
+                  <Box
+                    itemImg={krds}
+                    skill={ts}
+                    title="KRDS"
+                    transition="10"
+                    sub="정부 UI/UX 가이드라인 사이트 KRDS 클론코딩 사이트 입니다."
+                  />
+                  <Box
+                    itemImg={videoplatform}
+                    skill={ts}
+                    title="비디오 플랫폼"
+                    transition="10"
+                    sub="TMDB API를 활용하여 작업한 비디오플랫폼 프로젝트입니다"
+                  />
+                </ItemWrap>
+              </ItemList>
+              <ItemList>
+                <SkillTitle>
+                  <span></span>TYPESCRIPT
+                </SkillTitle>
+                <ItemWrap>
+                  <Box
+                    itemImg={videoplatform}
+                    skill={ts}
+                    title="비디오 플랫폼"
+                    transition="10"
+                    sub="TMDB API를 활용하여 작업한 비디오플랫폼 프로젝트입니다"
+                  />
+                  <Box
+                    itemImg={krds}
+                    skill={ts}
+                    title="KRDS"
+                    transition="10"
+                    sub="정부 UI/UX 가이드라인 사이트 KRDS 클론코딩 사이트 입니다."
+                  />
+                </ItemWrap>
+              </ItemList>
+            </ItemSection>
+          </ItemContainer>
         </BottomCover>
       </Section>
       <Footer />

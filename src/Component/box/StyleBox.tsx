@@ -9,27 +9,28 @@ type ItemProps = {
   skill?: string;
 };
 
-export const StyleBox = styled.div`
-  width: 290px;
-  height: 420px;
+export const StyleBox = styled.li`
+  width: 100%;
+  height: 100%;
   border-radius: 10px;
   transition: all 0.5s;
   z-index: 2;
+
   @media ${({ theme }) => theme.mediaSize.xl} {
-    width: 294px;
-    height: 424px;
+    width: 100%;
+    height: 100%;
   }
   @media ${({ theme }) => theme.mediaSize.lg} {
-    width: 314px;
-    height: 444px;
+    width: 100%;
+    height: 100%;
   }
   @media ${({ theme }) => theme.mediaSize.sm} {
-    width: 226px;
-    height: 356px;
+    width: 100%;
+    height: 100%;
   }
   @media ${({ theme }) => theme.mediaSize.xs} {
-    width: 172px;
-    height: 242px;
+    width: 100%;
+    height: 100%;
   }
 `;
 export const ImgWrap = styled.div<ItemProps>`
@@ -48,12 +49,15 @@ export const ImgWrap = styled.div<ItemProps>`
 `;
 export const DescWrap = styled.div`
   width: 100%;
-  height: 130px;
+  height: 120px;
   border-radius: 0px 0px 10px 10px;
   background: ${({ theme }) => theme.colors.input_BOXbg};
   padding: 15px 15px 40px 15px;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
   &:hover {
     .Info {
       bottom: 0px;
@@ -62,26 +66,28 @@ export const DescWrap = styled.div`
 `;
 export const TextWrap = styled.div<ItemProps>`
   width: 100%;
-  height: 100%;
+  height: fit-content;
 
   color: ${({ theme }) => theme.colors.White};
   font-size: ${({ theme }) => theme.fontSize.p19};
   text-align: center;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   position: relative;
+  gap: 10px;
+`;
+export const SubText = styled.div<ItemProps>`
+  font-size: ${({ theme }) => theme.fontSize.p13};
+  color: ${({ theme }) => theme.colors.secondary_V};
 `;
 export const TextSkill = styled.div<ItemProps>`
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   background-image: url(${({ skill }) => (skill ? `"${skill}"` : "")});
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  top: -4px;
-  right: -4px;
+  width: 19px;
+  height: 19px;
 `;
 export const InfoBtn = styled.div`
   width: 100%;

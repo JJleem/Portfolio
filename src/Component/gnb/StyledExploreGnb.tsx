@@ -11,17 +11,16 @@ type GasideProps = {
 };
 export const StyledGnb = styled.div`
   transition: all 0.5s linear;
-  position: fixed;
+  position: fixed !important;
   top: 0;
   display: flex;
   gap: 58px;
-
   align-items: center;
   width: 100%;
   padding: 0 35px;
   height: 73px;
   background-color: ${({ theme }) => theme.colors.transparent};
-  z-index: 5;
+  z-index: 999;
   color: #fff;
   background-color: rgba(21, 18, 37, 0.7);
   backdrop-filter: blur(10px);
