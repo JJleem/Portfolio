@@ -1,6 +1,7 @@
 import React from "react";
 import {
   DescWrap,
+  FilterText,
   Github,
   Hr,
   ImgWrap,
@@ -12,7 +13,8 @@ import {
   TextSkill,
   TextWrap,
 } from "./StyleBox";
-
+import { useRecoilState } from "recoil";
+import { filterState } from "../../atom/atom";
 type ItemProps = {
   itemImg: string;
   transition: string;
@@ -21,16 +23,18 @@ type ItemProps = {
   sub: string;
 };
 const Box = ({ itemImg, transition, skill, title, sub }: ItemProps) => {
+  const [filter, setFilter] = useRecoilState(filterState);
   return (
-    <StyleBox>
-      <ImgWrap itemImg={itemImg} transition={transition} />
-      <DescWrap>
-        <TextWrap>
+    <StyleBox isFilter={filter}>
+      <ImgWrap isFilter={filter} itemImg={itemImg} transition={transition} />
+      <DescWrap className="Desc" isFilter={filter}>
+        <TextWrap isFilter={filter}>
           {title}
           <TextSkill skill={skill} />
         </TextWrap>
-        <SubText>{sub}</SubText>
-        <InfoBtn className="Info">
+        <SubText isFilter={filter}>{sub}</SubText>
+        <FilterText isFilter={filter}>dassssssssas</FilterText>
+        <InfoBtn className="Info" isFilter={filter}>
           <InfoItem>
             <InfoLink to="/">Detail</InfoLink>
           </InfoItem>

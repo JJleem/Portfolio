@@ -1,20 +1,28 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import vidieoplatform from "../../assets/img/item/videoplatform.png";
 import github from "../../assets/img/skill/Github.png";
 import { Link } from "react-router-dom";
+import theme from "../../assets/theme/theme";
 
 type ItemProps = {
   itemImg?: string;
   transition?: string;
   skill?: string;
+  isFilter?: boolean;
 };
 
-export const StyleBox = styled.li`
+export const StyleBox = styled.li<ItemProps>`
   width: 100%;
   height: 100%;
   border-radius: 10px;
-  transition: all 0.5s;
+
   z-index: 2;
+
+  ${({ isFilter }) =>
+    isFilter &&
+    css`
+      display: flex;
+    `}
 
   @media ${({ theme }) => theme.mediaSize.xl} {
     width: 100%;
@@ -41,13 +49,25 @@ export const ImgWrap = styled.div<ItemProps>`
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
-  transition: all ${({ transition }) => transition && `${transition}`}s;
+  transition: background-position
+    ${({ transition }) => transition && `${transition}`}s;
+  ${({ isFilter }) =>
+    isFilter &&
+    css`
+      width: 50%;
+      border-radius: 10px 0px 0px 10px;
+    `}
   cursor: pointer;
   &:hover {
     background-position: bottom;
+    + .Desc {
+      .Info {
+        bottom: 0;
+      }
+    }
   }
 `;
-export const DescWrap = styled.div`
+export const DescWrap = styled.div<ItemProps>`
   width: 100%;
   height: 120px;
   border-radius: 0px 0px 10px 10px;
@@ -58,6 +78,12 @@ export const DescWrap = styled.div`
   display: flex;
   flex-direction: column;
   gap: 5px;
+  ${({ isFilter }) =>
+    isFilter &&
+    css`
+      height: 100%;
+      border-radius: 0px 10px 10px 10px;
+    `}
   &:hover {
     .Info {
       bottom: 0px;
@@ -67,19 +93,33 @@ export const DescWrap = styled.div`
 export const TextWrap = styled.div<ItemProps>`
   width: 100%;
   height: fit-content;
-
+  font-size: ${({ isFilter }) =>
+    isFilter ? `${theme.fontSize.p30}` : `${theme.fontSize.p19}`};
   color: ${({ theme }) => theme.colors.White};
-  font-size: ${({ theme }) => theme.fontSize.p19};
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: start;
   position: relative;
   gap: 10px;
+  @media ${({ theme }) => theme.mediaSize.sm} {
+    font-size: ${({ isFilter }) =>
+      isFilter ? `${theme.fontSize.p22}` : `${theme.fontSize.p19}`};
+  }
 `;
 export const SubText = styled.div<ItemProps>`
-  font-size: ${({ theme }) => theme.fontSize.p13};
+  ${({ isFilter }) =>
+    isFilter &&
+    css`
+      font-size: ${({ theme }) => theme.fontSize.p30};
+    `}
+  font-size: ${({ isFilter }) =>
+    isFilter ? `${theme.fontSize.p20}` : `${theme.fontSize.p12}`};
   color: ${({ theme }) => theme.colors.secondary_V};
+  @media ${({ theme }) => theme.mediaSize.sm} {
+    font-size: ${({ isFilter }) =>
+      isFilter ? `${theme.fontSize.p12}` : `${theme.fontSize.p12}`};
+  }
 `;
 export const TextSkill = styled.div<ItemProps>`
   background-repeat: no-repeat;
@@ -89,9 +129,22 @@ export const TextSkill = styled.div<ItemProps>`
   width: 19px;
   height: 19px;
 `;
-export const InfoBtn = styled.div`
+export const FilterText = styled.div<ItemProps>`
+  display: ${({ isFilter }) => (isFilter ? "block" : "none")};
+  color: ${({ theme }) => theme.colors.secondary_V};
+  font-size: ${({ theme }) => theme.fontSize.p17};
+  @media ${({ theme }) => theme.mediaSize.sm} {
+    font-size: ${({ theme }) => theme.fontSize.p14};
+  }
+`;
+export const InfoBtn = styled.div<ItemProps>`
   width: 100%;
-  height: 38px;
+  height: 30px;
+  ${({ isFilter }) =>
+    isFilter &&
+    css`
+      height: 40px;
+    `}
   border-radius: 0px 0px 10px 10px;
   background: ${({ theme }) => theme.colors.primary_V};
   position: absolute;

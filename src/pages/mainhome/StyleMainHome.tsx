@@ -23,7 +23,7 @@ const ImgZ = keyframes`
 export const HomeWrapper = styled.div`
   width: 100vw;
   height: 100%;
-  perspective: 1000px;
+  perspective: 1200px;
   color: ${({ theme }) => theme.colors.White};
   position: relative;
   transition: all 0s;
@@ -47,7 +47,7 @@ export const HomeGrid = styled.div`
   width: 100%;
   height: 100%;
   padding: 0 35px;
-  padding-bottom: 230px;
+  padding-bottom: 210px;
   padding-top: 83px;
   display: flex;
   justify-content: center;
@@ -57,7 +57,7 @@ export const HomeGrid = styled.div`
 `;
 export const MainLogo = styled.div`
   width: 200px;
-  height: 180px;
+  height: 200px;
   background: url(${mainlogo});
   background-position: center;
   background-size: cover;

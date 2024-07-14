@@ -43,7 +43,9 @@ import krds from "../../assets/img/item/krds.png";
 import ts from "../../assets/img/skill/Typescript.png";
 import react from "../../assets/img/skill/reactSmall.png";
 import js from "../../assets/img/skill/JavaScript.png";
-
+import { useRecoilState } from "recoil";
+import { filterState } from "../../atom/atom";
+import CloudAnimation from "../../assets/three/CloudAnimation";
 const Collection = () => {
   const [more, setMore] = useState(false);
   const handleMore = () => {
@@ -70,6 +72,7 @@ const Collection = () => {
     typescript: false,
     react: false,
     javascript: false,
+    all: true,
   });
 
   const handleCheck = (checks: string) => {
@@ -79,9 +82,10 @@ const Collection = () => {
       typescript: checks === "typescript",
       react: checks === "react",
       javascript: checks === "javascript",
+      all: checks === "all",
     }));
   };
-  const [filter, setFilter] = useState(false);
+  const [filter, setFilter] = useRecoilState(filterState);
   const HandleFilter = () => {
     setFilter(!filter);
   };
@@ -93,7 +97,9 @@ const Collection = () => {
   return (
     <Container>
       <Section>
-        <TopCover></TopCover>
+        <TopCover>
+          <CloudAnimation />
+        </TopCover>
         <BottomCover>
           <Profile />
           <BottomSection>
@@ -137,7 +143,7 @@ const Collection = () => {
               onClick={() => handleTabClick("analytics")}
               isClick={tabs.analytics}
             >
-              Analtics
+              Self-Introduction
             </Tab>
             <Tab
               onClick={() => handleTabClick("activity")}
@@ -165,110 +171,139 @@ const Collection = () => {
               <Row onClick={HandleFilter} isFilter={filter} />
             </BtnContainer>
           </InputWrap>
+          {tabs.items && (
+            <ItemContainer>
+              <FilterSection isFilter={filterSection}>
+                <FilterList isFilter={filterSection}>
+                  <FilterItem>
+                    <FilterTitle>ALL</FilterTitle>
+                    <FilterCheckBox
+                      onClick={() => handleCheck("all")}
+                      isClick={check.all}
+                    ></FilterCheckBox>
+                  </FilterItem>
+                  <FilterItem>
+                    <FilterLogo logo={ts}></FilterLogo>
+                    <FilterTitle>TYPESCRIPT</FilterTitle>
+                    <FilterCheckBox
+                      onClick={() => handleCheck("typescript")}
+                      isClick={check.typescript}
+                    ></FilterCheckBox>
+                  </FilterItem>
+                  <FilterItem>
+                    <FilterLogo logo={react}></FilterLogo>
+                    <FilterTitle>REACT</FilterTitle>
+                    <FilterCheckBox
+                      onClick={() => handleCheck("react")}
+                      isClick={check.react}
+                    ></FilterCheckBox>
+                  </FilterItem>
+                  <FilterItem>
+                    <FilterLogo logo={js}></FilterLogo>
+                    <FilterTitle>JAVASCRIPT</FilterTitle>
+                    <FilterCheckBox
+                      onClick={() => handleCheck("javascript")}
+                      isClick={check.javascript}
+                    ></FilterCheckBox>
+                  </FilterItem>
+                </FilterList>
+              </FilterSection>
 
-          <ItemContainer>
-            <FilterSection isFilter={filterSection}>
-              <FilterList isFilter={filterSection}>
-                <FilterItem>
-                  <FilterLogo logo={ts}></FilterLogo>
-                  <FilterTitle>TYPESCRIPT</FilterTitle>
-                  <FilterCheckBox
-                    onClick={() => handleCheck("typescript")}
-                    isClick={check.typescript}
-                  ></FilterCheckBox>
-                </FilterItem>
-                <FilterItem>
-                  <FilterLogo logo={react}></FilterLogo>
-                  <FilterTitle>REACT</FilterTitle>
-                  <FilterCheckBox
-                    onClick={() => handleCheck("react")}
-                    isClick={check.react}
-                  ></FilterCheckBox>
-                </FilterItem>
-                <FilterItem>
-                  <FilterLogo logo={js}></FilterLogo>
-                  <FilterTitle>JAVASCRIPT</FilterTitle>
-                  <FilterCheckBox
-                    onClick={() => handleCheck("javascript")}
-                    isClick={check.javascript}
-                  ></FilterCheckBox>
-                </FilterItem>
-              </FilterList>
-            </FilterSection>
-
-            <ItemSection>
-              <ItemList>
-                <SkillTitle>
-                  <span></span>TYPESCRIPT
-                </SkillTitle>
-                <ItemWrap>
-                  <Box
-                    itemImg={videoplatform}
-                    skill={ts}
-                    title="비디오 플랫폼"
-                    transition="10"
-                    sub="TMDB API를 활용하여 작업한 비디오플랫폼 프로젝트입니다"
-                  />
-                  <Box
-                    itemImg={krds}
-                    skill={ts}
-                    title="KRDS"
-                    transition="10"
-                    sub="정부 UI/UX 가이드라인 사이트 KRDS 클론코딩 사이트 입니다."
-                  />
-                  <Box
-                    itemImg={krds}
-                    skill={ts}
-                    title="KRDS"
-                    transition="10"
-                    sub="정부 UI/UX 가이드라인 사이트 KRDS 클론코딩 사이트 입니다."
-                  />
-                  <Box
-                    itemImg={krds}
-                    skill={ts}
-                    title="KRDS"
-                    transition="10"
-                    sub="정부 UI/UX 가이드라인 사이트 KRDS 클론코딩 사이트 입니다."
-                  />
-                  <Box
-                    itemImg={krds}
-                    skill={ts}
-                    title="KRDS"
-                    transition="10"
-                    sub="정부 UI/UX 가이드라인 사이트 KRDS 클론코딩 사이트 입니다."
-                  />
-                  <Box
-                    itemImg={videoplatform}
-                    skill={ts}
-                    title="비디오 플랫폼"
-                    transition="10"
-                    sub="TMDB API를 활용하여 작업한 비디오플랫폼 프로젝트입니다"
-                  />
-                </ItemWrap>
-              </ItemList>
-              <ItemList>
-                <SkillTitle>
-                  <span></span>TYPESCRIPT
-                </SkillTitle>
-                <ItemWrap>
-                  <Box
-                    itemImg={videoplatform}
-                    skill={ts}
-                    title="비디오 플랫폼"
-                    transition="10"
-                    sub="TMDB API를 활용하여 작업한 비디오플랫폼 프로젝트입니다"
-                  />
-                  <Box
-                    itemImg={krds}
-                    skill={ts}
-                    title="KRDS"
-                    transition="10"
-                    sub="정부 UI/UX 가이드라인 사이트 KRDS 클론코딩 사이트 입니다."
-                  />
-                </ItemWrap>
-              </ItemList>
-            </ItemSection>
-          </ItemContainer>
+              <ItemSection>
+                <ItemList isFilter={filter}>
+                  <SkillTitle isFilter={filter}>
+                    <span></span>TYPESCRIPT
+                  </SkillTitle>
+                  <ItemWrap isFilter={filter}>
+                    <Box
+                      itemImg={videoplatform}
+                      skill={ts}
+                      title="비디오 플랫폼"
+                      transition="10"
+                      sub="TMDB API를 활용하여 작업한 비디오플랫폼 프로젝트입니다"
+                    />
+                    <Box
+                      itemImg={krds}
+                      skill={ts}
+                      title="KRDS"
+                      transition="10"
+                      sub="정부 UI/UX 가이드라인 사이트 KRDS 클론코딩 사이트 입니다."
+                    />
+                    <Box
+                      itemImg={krds}
+                      skill={ts}
+                      title="KRDS"
+                      transition="10"
+                      sub="정부 UI/UX 가이드라인 사이트 KRDS 클론코딩 사이트 입니다."
+                    />
+                    <Box
+                      itemImg={krds}
+                      skill={ts}
+                      title="KRDS"
+                      transition="10"
+                      sub="정부 UI/UX 가이드라인 사이트 KRDS 클론코딩 사이트 입니다."
+                    />
+                    <Box
+                      itemImg={krds}
+                      skill={ts}
+                      title="KRDS"
+                      transition="10"
+                      sub="정부 UI/UX 가이드라인 사이트 KRDS 클론코딩 사이트 입니다."
+                    />
+                    <Box
+                      itemImg={videoplatform}
+                      skill={ts}
+                      title="비디오 플랫폼"
+                      transition="10"
+                      sub="TMDB API를 활용하여 작업한 비디오플랫폼 프로젝트입니다"
+                    />
+                  </ItemWrap>
+                </ItemList>
+                <ItemList>
+                  <SkillTitle>
+                    <span></span>React
+                  </SkillTitle>
+                  <ItemWrap>
+                    <Box
+                      itemImg={videoplatform}
+                      skill={ts}
+                      title="비디오 플랫폼"
+                      transition="10"
+                      sub="TMDB API를 활용하여 작업한 비디오플랫폼 프로젝트입니다"
+                    />
+                    <Box
+                      itemImg={krds}
+                      skill={ts}
+                      title="KRDS"
+                      transition="10"
+                      sub="정부 UI/UX 가이드라인 사이트 KRDS 클론코딩 사이트 입니다."
+                    />
+                  </ItemWrap>
+                </ItemList>
+                <ItemList>
+                  <SkillTitle>
+                    <span></span>Javascript
+                  </SkillTitle>
+                  <ItemWrap>
+                    <Box
+                      itemImg={videoplatform}
+                      skill={ts}
+                      title="비디오 플랫폼"
+                      transition="10"
+                      sub="TMDB API를 활용하여 작업한 비디오플랫폼 프로젝트입니다"
+                    />
+                    <Box
+                      itemImg={krds}
+                      skill={ts}
+                      title="KRDS"
+                      transition="10"
+                      sub="정부 UI/UX 가이드라인 사이트 KRDS 클론코딩 사이트 입니다."
+                    />
+                  </ItemWrap>
+                </ItemList>
+              </ItemSection>
+            </ItemContainer>
+          )}
         </BottomCover>
       </Section>
       <Footer />

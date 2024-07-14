@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import more from "../../assets/img/icon/expand_more.png";
 import theme from "../../assets/theme/theme";
 import filter from "../../assets/img/icon/filter_list.png";
@@ -11,7 +11,7 @@ type Props = {
   isFilter?: boolean;
 };
 type logoProps = {
-  logo: string;
+  logo?: string;
 };
 
 export const Container = styled.div`
@@ -19,6 +19,7 @@ export const Container = styled.div`
   height: 100%;
   position: relative;
   padding-bottom: 100px;
+  background: ${({ theme }) => theme.colors.BG_V};
 `;
 export const Section = styled.div`
   width: 100%;
@@ -28,8 +29,14 @@ export const Section = styled.div`
 `;
 export const TopCover = styled.div`
   width: 100%;
-  height: 700px;
+  height: 430px;
   background: ${({ theme }) => theme.colors.login_BOXline};
+  @media ${({ theme }) => theme.mediaSize.sm} {
+    height: 284px;
+  }
+  @media ${({ theme }) => theme.mediaSize.xs} {
+    height: 244px;
+  }
 `;
 export const BottomCover = styled.div`
   width: 100%;
@@ -39,7 +46,6 @@ export const BottomCover = styled.div`
   display: flex;
   flex-direction: column;
   gap: 40px;
-  background: ${({ theme }) => theme.colors.BG_V};
 `;
 export const Profile = styled.div`
   width: 180px;
@@ -49,6 +55,16 @@ export const Profile = styled.div`
   position: absolute;
   background: ${({ theme }) => theme.colors.line};
   top: -157px;
+  @media ${({ theme }) => theme.mediaSize.sm} {
+    width: 124px;
+    height: 124px;
+    top: -97px;
+  }
+  @media ${({ theme }) => theme.mediaSize.xs} {
+    width: 88px;
+    height: 88px;
+    top: -67px;
+  }
 `;
 export const BottomSection = styled.div`
   width: 100%;
@@ -91,6 +107,10 @@ export const DataList = styled.div`
   display: flex;
   align-items: center;
   gap: 25px;
+  @media ${({ theme }) => theme.mediaSize.sm} {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
 `;
 export const Data = styled.div`
   padding-right: 25px;
@@ -162,6 +182,9 @@ export const SearchInput = styled.input`
   color: ${({ theme }) => theme.colors.White};
   padding: 10px 10px 10px 20px;
   font-size: ${({ theme }) => theme.fontSize.p15};
+  @media ${({ theme }) => theme.mediaSize.md} {
+    font-size: ${({ theme }) => theme.fontSize.p11};
+  }
 `;
 export const BtnContainer = styled.div`
   width: 103px;
@@ -227,19 +250,15 @@ export const Row = styled.button<Props>`
     z-index: -1;
   }
 `;
-export const ItemWrap = styled.ul`
+export const ItemWrap = styled.ul<Props>`
   display: grid;
-
   width: 100%;
   height: fit-content;
   overflow: hidden;
-
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 25px;
-
   justify-content: center;
   align-items: center;
-
   @media ${({ theme }) => theme.mediaSize.xl} {
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
@@ -257,13 +276,24 @@ export const ItemWrap = styled.ul`
     grid-gap: 20px;
     gap: 20px;
   }
+  ${({ isFilter }) =>
+    isFilter &&
+    css`
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(1, 1fr);
+      grid-gap: 20px;
+      @media ${({ theme }) => theme.mediaSize.xl} {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+      }
+    `}
 `;
-export const ItemList = styled.div`
+export const ItemList = styled.div<Props>`
   display: flex;
   flex-direction: column;
   gap: 30px;
 `;
-export const SkillTitle = styled.div`
+export const SkillTitle = styled.div<Props>`
   width: 100%;
 
   font-size: ${({ theme }) => theme.fontSize.p32};
@@ -315,21 +345,34 @@ export const FilterList = styled.div<Props>`
   display: flex;
   align-items: center;
   gap: 30px;
-
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
   @media ${({ theme }) => theme.mediaSize.sm} {
-    justify-content: space-around;
+    justify-content: space-between;
+    gap: 8px;
+  }
+  @media ${({ theme }) => theme.mediaSize.sm} {
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: ${({ theme }) => theme.fontSize.p16};
   }
 `;
 export const FilterItem = styled.div`
+  width: 100%;
+
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 8px;
+  @media ${({ theme }) => theme.mediaSize.sm} {
+    justify-content: flex-start;
+    align-items: center;
+  }
 `;
 export const FilterLogo = styled.div<logoProps>`
   width: 14px;
   height: 14px;
-
   margin-right: -2px;
   background-image: url(${({ logo }) => logo});
   background-position: center;

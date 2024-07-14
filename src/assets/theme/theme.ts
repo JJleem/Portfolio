@@ -31,19 +31,6 @@ import { css } from "styled-components";
 //   gray: "",
 // };
 
-/** 검정 배경 */
-export const darkTheme = {
-  color: "#000000",
-  bgColor: "#FFFFFF",
-  gray: "#343434",
-};
-/** 흰색 배경 */
-export const lightTheme = {
-  color: "#FFFFFF",
-  bgColor: "#000000",
-  gray: "#D9D9D9",
-};
-
 /** 반응형 사이즈 */
 const mediaSize = {
   xs: "screen and (max-width: 428px)",

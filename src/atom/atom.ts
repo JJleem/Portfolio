@@ -9,3 +9,8 @@ export const locationState = atom({
   key: "location",
   default: false,
 });
+
+export const filterState = atom({
+  key: "filter",
+  default: false,
+});

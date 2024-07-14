@@ -58,7 +58,7 @@ const Gnb: React.FC = () => {
           <Links to="/"></Links>
           <Links to="/"></Links>
           <Links to="/"></Links>
-          <Links to="/" onClick={handleClick} isClick={clickedToggle}></Links>
+          <Links to="#" onClick={handleClick} isClick={clickedToggle}></Links>
         </MenuWrap>
       </Inner>
     </StyledGnb>
