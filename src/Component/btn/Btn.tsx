@@ -1,5 +1,6 @@
 import React from "react";
 import StyledBtn from "./StlyeBtn";
+import { Link } from "react-router-dom";
 
 type Size = "p15" | "p14" | "p15t" | "p15c" | "p20t" | "p15l";
 export type Props = {
@@ -7,13 +8,16 @@ export type Props = {
   bgColor: string;
   text: string;
   onClick?: () => void;
+  linkto?: string | any;
 };
 
-const Btn = ({ size, bgColor, text, onClick }: Props) => {
+const Btn = ({ size, bgColor, text, onClick, linkto }: Props) => {
   return (
-    <StyledBtn size={size} bgColor={bgColor} onClick={onClick}>
-      {text}
-    </StyledBtn>
+    <Link to={linkto}>
+      <StyledBtn size={size} bgColor={bgColor} onClick={onClick}>
+        {text}
+      </StyledBtn>
+    </Link>
   );
 };
 

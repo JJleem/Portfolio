@@ -1,0 +1,284 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "img": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/item/krds.png",
+      "title": "KRDS ",
+      "maintitle": "#1 KRDS",
+      "skill": "ts",
+      "language": "TYPESCRIPT",
+      "transition": "10",
+      "sub": "정부 UI/UX 가이드라인 사이트 KRDS 클론코딩 사이트 입니다.",
+      "mainsub": "정부 UI/UX 가이드라인 KRDS 클론코딩",
+      "projecttype": "개인 프로젝트",
+      "date": "24.07~24.07",
+      "library": {
+        "one": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/recoil.png",
+        "two": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Router.png",
+        "three": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Scss.png"
+      },
+      "github": "https://github.com/JJleem/KRDS",
+      "site": "https://krds-clonecoading-jjleem.web.app/"
+    },
+    {
+      "id": 2,
+      "img": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/item/videoplatform.png",
+      "title": "VideoPlatform",
+      "maintitle": "#2 VideoPlatform",
+      "skill": "ts",
+      "language": "TYPESCRIPT",
+      "transition": "10",
+      "sub": "TMDB API를 활용하여 작업한 비디오플랫폼 입니다.",
+      "mainsub": "TMDB API 활용 비디오 플랫폼",
+      "projecttype": "개인 프로젝트",
+      "date": "24.06~24.06",
+      "library": {
+        "one": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/query.png",
+        "two": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Styledcomponents.png",
+        "three": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Router.png"
+      },
+      "github": "https://github.com/JJleem/videoPlatform",
+      "site": "https://videoplatform-55aea.web.app"
+    },
+    {
+      "id": 3,
+      "img": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/item/global.png",
+      "title": "Global Map",
+      "maintitle": "#3 Global Map",
+      "skill": "ts",
+      "language": "TYPESCRIPT",
+      "transition": "7",
+      "sub": "Geojson을 활용한 전세계 나라 지도 및 정보입니다.",
+      "mainsub": "Geojson을 활용한 전세계 나라 지도 및 정보",
+      "projecttype": "개인 프로젝트",
+      "date": "24.05~24.05",
+      "library": {
+        "one": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/query.png",
+        "two": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Leaflet.png",
+        "three": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Styledcomponents.png"
+      },
+      "github": "https://github.com/JJleem/global",
+      "site": "https://globalmap-jjleem.web.app/"
+    },
+    {
+      "id": 4,
+      "img": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/item/login.png",
+      "title": "NAVER Login",
+      "maintitle": "#4 NAVER Login",
+      "skill": "ts",
+      "language": "TYPESCRIPT",
+      "transition": "5",
+      "sub": "react-hook-form을 활용한 네이버 회원가입창 구현입니다.",
+      "mainsub": " 네이버 회원가입창 구현",
+      "projecttype": "개인 프로젝트",
+      "date": "24.06~24.06",
+      "library": {
+        "one": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/hookform.png",
+        "two": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/yup.jpg",
+        "three": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Styledcomponents.png"
+      },
+      "github": "https://github.com/JJleem/login",
+      "site": "https://naverlogin-jjleem.web.app/"
+    },
+    {
+      "id": 5,
+      "img": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/item/kanbanboard.png",
+      "title": "D&D TODOLIST",
+      "maintitle": "#5 D&D TODOLIST",
+      "skill": "ts",
+      "language": "TYPESCRIPT",
+      "transition": "5",
+      "sub": "Drag & Drop 기능으로하는 TodoList 입니다.",
+      "mainsub": "Drag & Drop 기능 TodoList ",
+      "projecttype": "개인 프로젝트",
+      "date": "24.05~24.05",
+      "library": {
+        "one": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/dnd.png",
+        "two": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/recoil.png",
+        "three": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Styledcomponents.png"
+      },
+      "github": "https://github.com/JJleem/kanbanboard",
+      "site": "https://kanbanboard-jjleem.web.app/"
+    },
+    {
+      "id": 6,
+      "img": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/item/Bitcoin.png",
+      "title": "BITCOIN",
+      "maintitle": "#6 BITCOIN",
+      "skill": "ts",
+      "language": "TYPESCRIPT",
+      "transition": "5",
+      "sub": "BITCOIN 정보 및 시세 확인 사이트 입니다.",
+      "mainsub": "BITCOIN 정보 및 시세 확인 사이트",
+      "projecttype": "개인 프로젝트",
+      "date": "24.04~24.04",
+      "library": {
+        "one": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/query.png",
+        "two": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Router.png",
+        "three": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Styledcomponents.png"
+      },
+      "github": "#",
+      "site": "https://bitcoin-jjleem.web.app/"
+    },
+    {
+      "id": 7,
+      "img": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/item/Bitcoin.png",
+      "title": "MOLTSPACE",
+      "maintitle": "#7 MOLTSPACE",
+      "skill": "ts",
+      "language": "TYPESCRIPT",
+      "transition": "10",
+      "sub": "현재 보고계신 포트폴리오 사이트입니다.",
+      "mainsub": "현재 보고계신 포트폴리오 사이트",
+      "projecttype": "개인 프로젝트",
+      "date": "24.07~24.07",
+      "library": {
+        "one": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/recoil.png",
+        "two": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Router.png",
+        "three": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Styledcomponents.png"
+      },
+      "github": "https://github.com/JJleem/Portfolio",
+      "site": "#"
+    },
+    {
+      "id": 8,
+      "img": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/item/gecko.png",
+      "title": "BREEDING DIARY",
+      "maintitle": "#8 BREEDING DIARY",
+      "skill": "react",
+      "language": "REACT",
+      "transition": "10",
+      "sub": "react-router-dom을 적극 활용한 게코 사육일기입니다. ",
+      "mainsub": "react-router-dom을 적극 활용한 게코 사육일기",
+      "projecttype": "개인 프로젝트",
+      "date": "24.04~24.04",
+      "library": {
+        "one": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/bootstrap.png",
+        "two": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Router.png",
+        "three": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Styledcomponents.png"
+      },
+      "github": "https://github.com/JJleem/geckodiary",
+      "site": "https://geckodiary-jjleem.web.app/"
+    },
+    {
+      "id": 9,
+      "img": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/item/mbti.png",
+      "title": "MBTI",
+      "maintitle": "#9 MBTI",
+      "skill": "react",
+      "language": "REACT",
+      "transition": "7",
+      "sub": "MBTI 회사 성격 테스트 입니다.",
+      "mainsub": "MBTI 회사 성격 테스트",
+      "projecttype": "개인 프로젝트",
+      "date": "24.04~24.04",
+      "library": {
+        "one": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Router.png",
+        "two": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Styledcomponents.png",
+        "three": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/bootstrap.png"
+      },
+      "github": "https://github.com/JJleem/mbti",
+      "site": "https://mbti-jjleem.web.app/"
+    },
+    {
+      "id": 10,
+      "img": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/item/netflix.png",
+      "title": "NETFLIX",
+      "maintitle": "#10 NETFLIX",
+      "skill": "react",
+      "language": "REACT",
+      "transition": "5",
+      "sub": "REDUX 를 활용한 넷플릭스 클론코딩 사이트입니다.",
+      "mainsub": "REDUX 를 활용한 넷플릭스 클론코딩",
+      "projecttype": "개인 프로젝트",
+      "date": "24.04~24.05",
+      "library": {
+        "one": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Redux.png",
+        "two": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Router.png",
+        "three": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/TMDB.png"
+      },
+      "github": "https://github.com/JJleem/animate-netflix",
+      "site": "https://netflix-jjleem-e4b56.web.app/"
+    },
+    {
+      "id": 11,
+      "img": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/item/portfolio.png",
+      "title": "JJPORTFOLIO",
+      "maintitle": "#11 JJPORTFOLIO",
+      "skill": "react",
+      "language": "REACT",
+      "transition": "10",
+      "sub": "REACT로 작업한 첫번째 포트폴리오 입니다.",
+      "mainsub": "REACT로 작업한 첫번째 포트폴리오",
+      "projecttype": "개인 프로젝트",
+      "date": "24.05~24.06",
+      "library": {
+        "one": "react",
+        "two": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Styledcomponents.png",
+        "three": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/bootstrap.png"
+      },
+      "github": "https://github.com/JJleem/JJPortfolio",
+      "site": "https://jjportfolio-4bcc2.web.app/"
+    },
+    {
+      "id": 12,
+      "img": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/item/theventi.png",
+      "title": "THE VENTI",
+      "maintitle": "#12 THE VENTI",
+      "skill": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/JavaScript.png",
+      "language": "JAVASCRIPT",
+      "transition": "10",
+      "sub": "The Venti 클론코딩 협업 프로젝트 사이트 입니다.",
+      "mainsub": "The Venti 클론코딩 협업 프로젝트 사이트",
+      "projecttype": "팀 프로젝트",
+      "date": "24.03~24.03",
+      "library": {
+        "one": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Html.png",
+        "two": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Scss.png",
+        "three": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Github.png"
+      },
+      "github": "https://github.com/jbinyim/team-project-theventi",
+      "site": "https://theventi-d1217.web.app/common/common.html"
+    },
+    {
+      "id": 13,
+      "img": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/item/lotto.png",
+      "title": "LOTTO GENERATOR",
+      "maintitle": "#13 LOTTO GENERATOR",
+      "skill": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/JavaScript.png",
+      "language": "JAVASCRIPT",
+      "transition": "5",
+      "sub": "로또 황금번호 제조기 사이트 입니다.",
+      "mainsub": "로또 황금번호 제조기 사이트",
+      "projecttype": "개인 프로젝트",
+      "date": "24.03~24.03",
+      "library": {
+        "one": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/JavaScript.png",
+        "two": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Html.png",
+        "three": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Css.png"
+      },
+      "github": "https://github.com/JJleem/lotto",
+      "site": "https://lotto-generator-jjleem.web.app/"
+    },
+    {
+      "id": 14,
+      "img": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/item/slecto.png",
+      "title": "SELECTO 커피 매장찾기",
+      "maintitle": "#14 SELECTO 커피 매장찾기",
+      "skill": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/JavaScript.png",
+      "language": "JAVASCRIPT",
+      "transition": "5",
+      "sub": "SELECTO 커피 매장찾기 페이지 클론코딩 사이트입니다.",
+      "mainsub": "SELECTO 커피 매장찾기 페이지",
+      "projecttype": "개인 프로젝트",
+      "date": "24.03~24.03",
+      "library": {
+        "one": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/JavaScript.png",
+        "two": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Html.png",
+        "three": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Css.png"
+      },
+      "github": "https://github.com/JJleem/EZEN-FRONT-UIUX/tree/master/portfolio%20%EC%98%88%EC%A0%9C/portfolio%20%EC%98%88%EC%A0%9C/%EC%85%80%EB%A0%89%ED%86%A0%20%EB%A7%A4%EC%9E%A5%EC%B0%BE%EA%B8%B0",
+      "site": "https://selecto-map-jjleem.web.app/"
+    }
+  ]
+}

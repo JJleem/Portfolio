@@ -1,5 +1,25 @@
 import styled from "styled-components";
-import videoplatform from "../../assets/img/item/videoplatform.png";
+
+import recoil from "../../assets/img/skill/recoil.png";
+import router from "../../assets/img/skill/Router.png";
+import stylecomponent from "../../assets/img/skill/Styledcomponents.png";
+import leaflet from "../../assets/img/skill/Leaflet.png";
+import query from "../../assets/img/skill/query.png";
+import scss from "../../assets/img/skill/Scss.png";
+import hook from "../../assets/img/skill/hookform.png";
+import yup from "../../assets/img/skill/yup.jpg";
+import dnd from "../../assets/img/skill/dnd.png";
+import bootstrap from "../../assets/img/skill/bootstrap.png";
+import redux from "../../assets/img/skill/Redux.png";
+import tmdb from "../../assets/img/skill/tmdb.png";
+import html from "../../assets/img/skill/Html.png";
+import css from "../../assets/img/skill/Css.png";
+import git from "../../assets/img/skill/Github.png";
+import js from "../../assets/img/skill/JavaScript.png";
+type LogoProps = {
+  skill?: string;
+  img?: string;
+};
 export const ProjectWrap = styled.div`
   width: 1220px;
   height: 570px;
@@ -53,12 +73,12 @@ export const DescWrap = styled.div`
     width: 100%;
   }
 `;
-export const ImgWrap = styled.div`
+export const ImgWrap = styled.div<LogoProps>`
   width: 100%;
   height: 100%;
-  background: url(${videoplatform});
+  background: url(${({ img }) => `${img}`});
   background-position: top;
-  background-size: center;
+  background-size: cover;
   background-repeat: no-repeat;
   border-radius: 20px;
 `;
@@ -186,8 +206,13 @@ export const LogoList = styled.div`
   align-items: center;
   gap: 8px;
 `;
-export const Logo = styled.div`
+export const Logo = styled.div<LogoProps>`
+  display: flex;
   width: 25px;
   height: 25px;
-  background: #000;
+  background: url(${({ skill }) => `${skill}`});
+
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 `;

@@ -5,7 +5,7 @@ import type { Props } from "./Btn";
 
 type StyledProps = Pick<Props, "size" | "bgColor">;
 
-const StyledBtn = styled.button<StyledProps>`
+const StyledBtn = styled.div<StyledProps>`
   display: flex;
   justify-content: center;
   align-items: center;

@@ -18,56 +18,157 @@ import {
 import Btn from "../btn/Btn";
 import theme from "../../assets/theme/theme";
 
+import Db from "../../data/db.json";
+import recoil from "../../assets/img/skill/recoil.png";
+import router from "../../assets/img/skill/Router.png";
+import stylecomponent from "../../assets/img/skill/Styledcomponents.png";
+import leaflet from "../../assets/img/skill/Leaflet.png";
+import query from "../../assets/img/skill/query.png";
+import scss from "../../assets/img/skill/Scss.png";
+import hook from "../../assets/img/skill/hookform.png";
+import yup from "../../assets/img/skill/yup.jpg";
+import dnd from "../../assets/img/skill/dnd.png";
+import bootstrap from "../../assets/img/skill/bootstrap.png";
+import redux from "../../assets/img/skill/Redux.png";
+import tmdb from "../../assets/img/skill/tmdb.png";
+import html from "../../assets/img/skill/Html.png";
+import css from "../../assets/img/skill/Css.png";
+import git from "../../assets/img/skill/Github.png";
+import js from "../../assets/img/skill/JavaScript.png";
+
+import { numberState } from "../../atom/atom";
+import { newNumberState } from "../../atom/atom";
+import { useRecoilState } from "recoil";
 const MainProject = () => {
+  const filteredData = Db.items.map((item) => item);
+
+  const [randomNumber, setRandomNumber] = useRecoilState<number>(numberState);
+  const [newRandomNumber, setNewRandomNumber] =
+    useRecoilState<number>(newNumberState);
+
+  const generateNewNumbers = () => {
+    const newRandomNumber: number = Math.floor(Math.random() * 14);
+    const newNewRandomNumber: number = Math.floor(Math.random() * 14);
+
+    setRandomNumber(newRandomNumber);
+    setNewRandomNumber(newNewRandomNumber);
+  };
   return (
-    <ProjectWrap>
-      <Inner>
-        <DescWrap>
-          <TitleWrap>
-            <span>OVERVIEW</span>
-            #1 Videoplatform
-          </TitleWrap>
-          <ItemWrap>
-            <ItemList>
-              <Item>
-                <ItemTitle>Price</ItemTitle>
-                <ItemDesc>w 5,000</ItemDesc>
-              </Item>
-              <Item>
-                <ItemTitle>Quantity</ItemTitle>
-                <ItemDesc>000ea</ItemDesc>
-              </Item>
-              <Item>
-                <ItemTitle>Owned By</ItemTitle>
-                <ItemDesc>핀플러스글로벌</ItemDesc>
-              </Item>
-              <Item>
-                <ItemTitle>Description</ItemTitle>
-                <ItemDesc>실물자산 기반 최초의 수익형 부동산 NFT</ItemDesc>
-              </Item>
-              <Item>
-                <ItemTitle>SNS</ItemTitle>
-                <ItemDesc>
-                  <LogoList>
-                    <Logo />
-                    <Logo />
-                    <Logo />
-                  </LogoList>
-                </ItemDesc>
-              </Item>
-            </ItemList>
-            <Btn bgColor={theme.colors.primary_V} text="BUY NOW" size="p15l" />
-          </ItemWrap>
-        </DescWrap>
-        <ImageSection>
-          <HidTitleWrap>
-            <span>OVERVIEW</span>
-            #1 Videoplatform
-          </HidTitleWrap>
-          <ImgWrap></ImgWrap>
-        </ImageSection>
-      </Inner>
-    </ProjectWrap>
+    <>
+      <ProjectWrap>
+        {filteredData
+          .filter((_, index) => index === randomNumber)
+          .map((db) => (
+            <Inner key={db.id}>
+              <DescWrap>
+                <TitleWrap>
+                  <span>OVERVIEW</span>
+                  {db.maintitle}
+                </TitleWrap>
+                <ItemWrap>
+                  <ItemList>
+                    <Item>
+                      <ItemTitle>프로그래밍 언어</ItemTitle>
+                      <ItemDesc>{db.language}</ItemDesc>
+                    </Item>
+                    <Item>
+                      <ItemTitle>설명</ItemTitle>
+                      <ItemDesc>{db.mainsub}</ItemDesc>
+                    </Item>
+                    <Item>
+                      <ItemTitle>작업기간</ItemTitle>
+                      <ItemDesc>{db.date}</ItemDesc>
+                    </Item>
+                    <Item>
+                      <ItemTitle>프로젝트 종류</ItemTitle>
+                      <ItemDesc>{db.projecttype}</ItemDesc>
+                    </Item>
+                    <Item>
+                      <ItemTitle>Skill</ItemTitle>
+                      <ItemDesc>
+                        <LogoList>
+                          <Logo skill={db.library.one} />
+                          <Logo skill={db.library.two} />
+                          <Logo skill={db.library.three} />
+                        </LogoList>
+                      </ItemDesc>
+                    </Item>
+                  </ItemList>
+                  <Btn
+                    bgColor={theme.colors.primary_V}
+                    text="WATCH NOW"
+                    size="p15l"
+                    linkto={"/collection"}
+                  ></Btn>
+                </ItemWrap>
+              </DescWrap>
+              <ImageSection>
+                <HidTitleWrap>
+                  <span>OVERVIEW</span>
+                  {db.maintitle}
+                </HidTitleWrap>
+                <ImgWrap img={db.img}></ImgWrap>
+              </ImageSection>
+            </Inner>
+          ))}
+      </ProjectWrap>
+      <ProjectWrap>
+        {filteredData
+          .filter((_, index) => index === newRandomNumber)
+          .map((db) => (
+            <Inner key={db.id}>
+              <DescWrap>
+                <TitleWrap>
+                  <span>OVERVIEW</span>
+                  {db.maintitle}
+                </TitleWrap>
+                <ItemWrap>
+                  <ItemList>
+                    <Item>
+                      <ItemTitle>프로그래밍 언어</ItemTitle>
+                      <ItemDesc>{db.language}</ItemDesc>
+                    </Item>
+                    <Item>
+                      <ItemTitle>설명</ItemTitle>
+                      <ItemDesc>{db.mainsub}</ItemDesc>
+                    </Item>
+                    <Item>
+                      <ItemTitle>작업기간</ItemTitle>
+                      <ItemDesc>{db.date}</ItemDesc>
+                    </Item>
+                    <Item>
+                      <ItemTitle>프로젝트 종류</ItemTitle>
+                      <ItemDesc>{db.projecttype}</ItemDesc>
+                    </Item>
+                    <Item>
+                      <ItemTitle>Skill</ItemTitle>
+                      <ItemDesc>
+                        <LogoList>
+                          <Logo skill={db.library.one} />
+                          <Logo skill={db.library.two} />
+                          <Logo skill={db.library.three} />
+                        </LogoList>
+                      </ItemDesc>
+                    </Item>
+                  </ItemList>
+                  <Btn
+                    bgColor={theme.colors.primary_V}
+                    text="WATCH NOW"
+                    size="p15l"
+                  />
+                </ItemWrap>
+              </DescWrap>
+              <ImageSection>
+                <HidTitleWrap>
+                  <span>OVERVIEW</span>
+                  {db.maintitle}
+                </HidTitleWrap>
+                <ImgWrap img={db.img}></ImgWrap>
+              </ImageSection>
+            </Inner>
+          ))}
+      </ProjectWrap>
+    </>
   );
 };
 

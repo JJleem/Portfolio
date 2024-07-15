@@ -38,7 +38,6 @@ function App() {
         <RecoilRoot>
           <WhichGnb />
           <Gaside />
-
           <Routes>
             <Route path="/" element={<MainHome />} />
             <Route path="/collection" element={<Collection />} />

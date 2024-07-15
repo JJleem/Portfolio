@@ -16,28 +16,40 @@ import {
   MainSub,
   MainSubWrap,
   MainTitle,
+  NewProject,
+  NewProjectWrap,
   ProjectTitle,
   SubTitle,
 } from "./StyleMainHome";
-import ExploreGnb from "../../Component/gnb/ExploreGnb";
+
 import Footer from "../../Component/footer/Footer";
 import Btn from "../../Component/btn/Btn";
 import theme from "../../assets/theme/theme";
-import Box from "../../Component/box/Box";
-import videoplatform from "../../assets/img/item/videoplatform.png";
-import typescript from "../../assets/img/skill/Typescript.png";
+
 import MainProject from "../../Component/mainproject/MainProject";
-import Gaside from "../../Component/aside/Gaside";
+
 import { useNavigate } from "react-router-dom";
+
+import db from "../../data/db.json";
+import { numberState } from "../../atom/atom";
+import { newNumberState } from "../../atom/atom";
 import { useRecoilState } from "recoil";
-import { locationState } from "../../atom/atom";
-import { useLocation } from "react-router-dom";
-import Gnb from "../../Component/gnb/Gnb";
 const MainHome = () => {
-  const location = useLocation();
   const navigate = useNavigate();
   const goConnect = () => {
     navigate("/collection");
+  };
+
+  const [randomNumber, setRandomNumber] = useRecoilState<number>(numberState);
+  const [newRandomNumber, setNewRandomNumber] =
+    useRecoilState<number>(newNumberState);
+
+  const generateNewNumbers = () => {
+    const newRandomNumber: number = Math.floor(Math.random() * 14);
+    const newNewRandomNumber: number = Math.floor(Math.random() * 14);
+
+    setRandomNumber(newRandomNumber);
+    setNewRandomNumber(newNewRandomNumber);
   };
 
   return (
@@ -111,11 +123,13 @@ const MainHome = () => {
         <MainProjectWrap>
           <FirstProjectWrap>
             <ProjectTitle>
-              <span>NFT </span>Project
+              <span>PROJECTS </span>
+              <NewProjectWrap>
+                <NewProject onClick={generateNewNumbers}></NewProject>
+              </NewProjectWrap>
             </ProjectTitle>
             <MainProject></MainProject>
           </FirstProjectWrap>
-          <MainProject></MainProject>
         </MainProjectWrap>
         <MainSubWrap>
           <MainSub>

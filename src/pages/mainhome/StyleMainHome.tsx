@@ -6,6 +6,7 @@ import ts from "../../assets/img/skill/Typescript.png";
 import js from "../../assets/img/skill/JavaScript.png";
 import githubWhite from "../../assets/img/skill/githubWhite.png";
 import github from "../../assets/img/skill/Github.png";
+import replace from "../../assets/img/icon/Refresh_2@2x.png";
 type Props = {
   type?: string;
   transition?: string;
@@ -273,9 +274,30 @@ export const FirstProjectWrap = styled.div`
 `;
 export const ProjectTitle = styled.div`
   font-size: ${({ theme }) => theme.fontSize.p45};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+
   span {
     font-weight: 700;
   }
+`;
+export const NewProjectWrap = styled.div`
+  width: 100%;
+
+  display: flex;
+  justify-content: end;
+`;
+export const NewProject = styled.div`
+  width: 48px;
+  height: 48px;
+  background: url(${replace});
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
 `;
 export const MainSub = styled.div`
   text-align: center;
