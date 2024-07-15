@@ -5,17 +5,15 @@ import theme from "./assets/theme/theme";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "./assets/theme/global-style";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { RecoilRoot, useRecoilState } from "recoil";
+import { RecoilRoot } from "recoil";
 import MainHome from "./pages/mainhome/MainHome";
 import { useEffect } from "react";
 import Collection from "./pages/collection/Collection";
-import ExploreGnb from "./Component/gnb/ExploreGnb";
+
 import Gaside from "./Component/aside/Gaside";
-import Footer from "./Component/footer/Footer";
-import { useLocation } from "react-router-dom";
-import Gnb from "./Component/gnb/Gnb";
-import { locationState } from "./atom/atom";
+
 import WhichGnb from "./Component/gnb/WhichGnb";
+import Detail from "./pages/detail/Detail";
 function App() {
   useEffect(() => {
     const handleKeydown = (event: KeyboardEvent) => {
@@ -41,6 +39,7 @@ function App() {
           <Routes>
             <Route path="/" element={<MainHome />} />
             <Route path="/collection" element={<Collection />} />
+            <Route path="/collection/:id" element={<Detail />} />
           </Routes>
         </RecoilRoot>
       </BrowserRouter>

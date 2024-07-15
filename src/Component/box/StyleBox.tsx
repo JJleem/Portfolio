@@ -1,5 +1,4 @@
 import styled, { css } from "styled-components";
-import vidieoplatform from "../../assets/img/item/videoplatform.png";
 import github from "../../assets/img/skill/Github.png";
 import { Link } from "react-router-dom";
 import theme from "../../assets/theme/theme";
@@ -183,4 +182,11 @@ export const InfoLink = styled(Link)`
   justify-content: center;
   align-items: center;
   gap: 10px;
+`;
+export const Info = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
 `;

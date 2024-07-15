@@ -225,7 +225,7 @@
       "img": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/item/theventi.png",
       "title": "THE VENTI",
       "maintitle": "#12 THE VENTI",
-      "skill": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/JavaScript.png",
+      "skill": "js",
       "language": "JAVASCRIPT",
       "transition": "10",
       "sub": "The Venti 클론코딩 협업 프로젝트 사이트 입니다.",
@@ -245,7 +245,7 @@
       "img": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/item/lotto.png",
       "title": "LOTTO GENERATOR",
       "maintitle": "#13 LOTTO GENERATOR",
-      "skill": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/JavaScript.png",
+      "skill": "js",
       "language": "JAVASCRIPT",
       "transition": "5",
       "sub": "로또 황금번호 제조기 사이트 입니다.",
@@ -253,7 +253,7 @@
       "projecttype": "개인 프로젝트",
       "date": "24.03~24.03",
       "library": {
-        "one": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/JavaScript.png",
+        "one": "js",
         "two": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Html.png",
         "three": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Css.png"
       },
@@ -265,7 +265,7 @@
       "img": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/item/slecto.png",
       "title": "SELECTO 커피 매장찾기",
       "maintitle": "#14 SELECTO 커피 매장찾기",
-      "skill": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/JavaScript.png",
+      "skill": "js",
       "language": "JAVASCRIPT",
       "transition": "5",
       "sub": "SELECTO 커피 매장찾기 페이지 클론코딩 사이트입니다.",
@@ -273,7 +273,7 @@
       "projecttype": "개인 프로젝트",
       "date": "24.03~24.03",
       "library": {
-        "one": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/JavaScript.png",
+        "one": "js",
         "two": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Html.png",
         "three": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Css.png"
       },

@@ -28,6 +28,7 @@ const ExploreGnb: React.FC = () => {
           size="p14"
           text="Connect"
           onClick={goConnect}
+          linkto={"/collection"}
         />
         <Links to="/"></Links>
         <Links to="/" onClick={handleClick} isClick={clickedToggle}></Links>

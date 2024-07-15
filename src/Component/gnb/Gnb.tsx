@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useRef, useEffect } from "react";
 import {
   StyledGnb,
@@ -13,7 +14,20 @@ import {
 import { toggleState } from "../../atom/atom";
 import { useRecoilState } from "recoil";
 import { Link } from "react-router-dom";
+import { searchTermState } from "../../atom/atom";
+import { useNavigate } from "react-router-dom";
+
 const Gnb: React.FC = () => {
+  const navigate = useNavigate();
+  const [searchTerm, setSearchTerm] = useRecoilState(searchTermState);
+  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchTerm(e.target.value);
+  };
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    navigate("/collection");
+  };
+
   const [clickedToggle, setClickedToggle] = useRecoilState(toggleState);
   const handleClick = () => {
     setClickedToggle(!clickedToggle);
@@ -43,12 +57,15 @@ const Gnb: React.FC = () => {
       <Inner>
         <InputWrap>
           <GnbSearch />
-          <GnbInput
-            className="text"
-            type="text"
-            placeholder='Search Projects ( press " / " )'
-            ref={inputRef}
-          />
+          <form onSubmit={handleSubmit}>
+            <GnbInput
+              className="text"
+              type="text"
+              placeholder='Search Projects ( press " / " )'
+              ref={inputRef}
+              onChange={handleSearch}
+            />
+          </form>
           <Gnbctrl>/</Gnbctrl>
         </InputWrap>
         <MenuWrap>

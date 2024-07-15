@@ -4,7 +4,7 @@ import theme from "../../assets/theme/theme";
 import filter from "../../assets/img/icon/filter_list.png";
 import column from "../../assets/img/icon/column.png";
 import row from "../../assets/img/icon/row.png";
-import ts from "../../assets/img/skill/Typescript.png";
+
 import check from "../../assets/img/icon/check.png";
 type Props = {
   isClick?: boolean;
@@ -306,21 +306,21 @@ export const SkillTitle = styled.div<Props>`
   padding: 15px 15px;
   border-radius: 8px;
 
-  span {
-    background-image: url(${ts});
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 48px;
-    height: 48px;
-  }
-
   @media ${({ theme }) => theme.mediaSize.sm} {
     font-size: ${({ theme }) => theme.fontSize.p25};
-    span {
-      width: 30px;
-      height: 30px;
-    }
+  }
+`;
+
+export const LogoSpan = styled.span<logoProps>`
+  background-image: url(${({ logo }) => logo});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 48px;
+  height: 48px;
+  @media ${({ theme }) => theme.mediaSize.sm} {
+    width: 30px;
+    height: 30px;
   }
 `;
 export const ItemContainer = styled.div`

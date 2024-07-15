@@ -1,21 +1,5 @@
 import styled from "styled-components";
 
-import recoil from "../../assets/img/skill/recoil.png";
-import router from "../../assets/img/skill/Router.png";
-import stylecomponent from "../../assets/img/skill/Styledcomponents.png";
-import leaflet from "../../assets/img/skill/Leaflet.png";
-import query from "../../assets/img/skill/query.png";
-import scss from "../../assets/img/skill/Scss.png";
-import hook from "../../assets/img/skill/hookform.png";
-import yup from "../../assets/img/skill/yup.jpg";
-import dnd from "../../assets/img/skill/dnd.png";
-import bootstrap from "../../assets/img/skill/bootstrap.png";
-import redux from "../../assets/img/skill/Redux.png";
-import tmdb from "../../assets/img/skill/tmdb.png";
-import html from "../../assets/img/skill/Html.png";
-import css from "../../assets/img/skill/Css.png";
-import git from "../../assets/img/skill/Github.png";
-import js from "../../assets/img/skill/JavaScript.png";
 type LogoProps = {
   skill?: string;
   img?: string;

@@ -1,5 +1,7 @@
 import { atom } from "recoil";
 
+
+
 export const toggleState = atom({
   key: "toggle",
   default: false,
@@ -30,4 +32,8 @@ export const numberState = atom({
 export const newNumberState = atom({
   key: "newnumber",
   default: initialNewRandomNumber,
+});
+export const searchTermState = atom({
+  key: "searchTerm",
+  default: "",
 });

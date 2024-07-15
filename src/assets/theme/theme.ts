@@ -1,4 +1,4 @@
-import { css } from "styled-components";
+"styled-components";
 
 /** 자주 사용하는 색상들 */
 // const colors = {
