@@ -7,14 +7,14 @@ export type Props = {
   size?: Size;
   bgColor: string;
   text: string;
-  onClick?: () => void;
+  onClick?: () => void | undefined;
   linkto?: string | any;
 };
 
 const Btn = ({ size, bgColor, text, onClick, linkto }: Props) => {
   return (
-    <Link to={linkto}>
-      <StyledBtn size={size} bgColor={bgColor} onClick={onClick}>
+    <Link to={linkto} onClick={onClick}>
+      <StyledBtn size={size} bgColor={bgColor}>
         {text}
       </StyledBtn>
     </Link>
