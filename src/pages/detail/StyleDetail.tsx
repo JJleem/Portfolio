@@ -14,12 +14,12 @@ type Props = {
 };
 export const StyleDetail = styled.div`
   width: 100vw;
-  height: 100vh;
+  position: relative;
   padding-bottom: 97px;
 `;
 export const DetailWrapper = styled.div`
   width: 100%;
-  height: 100%;
+
   display: flex;
   flex-direction: column;
   gap: 18px;
@@ -35,7 +35,7 @@ export const BottomSection = styled.div`
 
   padding: 0 35px;
   display: flex;
-  gap: 20px;
+  gap: 30px;
   @media ${({ theme }) => theme.mediaSize.md} {
     flex-direction: column;
     gap: 8px;
@@ -87,7 +87,7 @@ export const ImgSection = styled.div<Props>`
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   border-radius: 0px 0px 8px 8px;
   transition: all ${({ transition }) => transition}s;
   &:hover {
@@ -138,7 +138,7 @@ export const HideTitle = styled.div`
 export const DescWrap = styled.div`
   width: 55%;
   height: 100%;
-  border: 1px solid #f0f;
+
   display: flex;
   flex-direction: column;
   gap: 27px;
@@ -211,11 +211,20 @@ export const DescriptionSection = styled.div<Props>`
   `}
 `;
 export const DescriptionInner = styled.div<Props>`
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding-right: 20px;
+  ${({ isClick }) =>
+    isClick &&
+    `
+   display:none;
+  `}
+`;
+export const DescriptionGridInner = styled.div<Props>`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 
+  gap: 20px;
+  @media ${({ theme }) => theme.mediaSize.md} {
+    grid-template-columns: repeat(1, 1fr);
+  }
   ${({ isClick }) =>
     isClick &&
     `
@@ -226,8 +235,9 @@ export const SkillContainer = styled.div<Props>`
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  /* text-align: right; */
+  align-items: start;
+
   ${({ isClick }) =>
     isClick &&
     `
@@ -237,9 +247,13 @@ export const SkillContainer = styled.div<Props>`
 export const Skill = styled.div<Props>`
   border: 1px solid ${({ theme }) => theme.colors.secondary_V};
   background: rgba(167, 150, 255, 0.2);
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 export const SkillLogo = styled.div<Props>`
   background: url(${({ logo }) => logo});
@@ -250,5 +264,25 @@ export const SkillLogo = styled.div<Props>`
   height: 100%;
 `;
 export const SkillText = styled.div`
+  width: 100%;
+  height: 100%;
+  /* padding: 10px 10px; */
   border: 1px solid #f00;
+`;
+export const SkillWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  span {
+    font-size: ${({ theme }) => theme.fontSize.p11};
+    color: ${({ theme }) => theme.colors.White};
+    border: 1px solid ${({ theme }) => theme.colors.secondary_V};
+    background: rgba(167, 150, 255, 0.2);
+    width: 100%;
+    padding: 1px;
+    text-align: center;
+    letter-spacing: -0.5px;
+  }
 `;

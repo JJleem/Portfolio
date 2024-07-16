@@ -2,6 +2,7 @@ import React from "react";
 import Footer from "../../Component/footer/Footer";
 import description from "../../assets/img/icon/description.png";
 import skill from "../../assets/img/icon/skill.png";
+import detail from "../../assets/img/icon/detail.png";
 import {
   StyleDetail,
   DetailWrapper,
@@ -24,6 +25,8 @@ import {
   Skill,
   SkillLogo,
   SkillText,
+  SkillWrapper,
+  DescriptionGridInner,
 } from "./StyleDetail";
 import { useState, useEffect } from "react";
 import Db from "../../data/db.json";
@@ -33,12 +36,16 @@ const Detail = () => {
   const [isDescClick, setIsDescClick] = useState(false);
 
   const [isDescClickTwo, setIsDescClickTwo] = useState(false);
+  const [isDescClickThree, setIsDescClickThree] = useState(false);
 
   const handleDescClick = () => {
     setIsDescClick(!isDescClick);
   };
   const handleDescClickTwo = () => {
     setIsDescClickTwo(!isDescClickTwo);
+  };
+  const handleDescClickThree = () => {
+    setIsDescClickThree(!isDescClickThree);
   };
   const projects = Db.items;
   const { id } = useParams() as { id?: string };
@@ -145,26 +152,92 @@ const Detail = () => {
                 ></ArrowDown>
               </Description>
               <DescriptionSection isClick={isDescClickTwo}>
-                <DescriptionInner isClick={isDescClickTwo}>
+                <DescriptionGridInner isClick={isDescClickTwo}>
                   <SkillContainer isClick={isDescClickTwo}>
-                    <Skill>
-                      <SkillLogo logo={ChooseData?.library.one}></SkillLogo>
-                    </Skill>
-                    <SkillText>dd</SkillText>
+                    <SkillWrapper>
+                      <Skill>
+                        <SkillLogo logo={ChooseData?.library.one}></SkillLogo>
+                      </Skill>
+                      <span>{ChooseData?.library.onetitle}</span>
+                    </SkillWrapper>
+
+                    <SkillText>
+                      Recoil을 적극활용하여 전역상태를 관리하였습니다.
+                    </SkillText>
                   </SkillContainer>
                   <SkillContainer>
-                    <Skill>
-                      <SkillLogo logo={ChooseData?.library.two}></SkillLogo>
-                    </Skill>
+                    <SkillWrapper>
+                      <Skill>
+                        <SkillLogo logo={ChooseData?.library.two}></SkillLogo>
+                      </Skill>
+                      <span>{ChooseData?.library.twotitle}</span>
+                    </SkillWrapper>
                     <SkillText>dd</SkillText>
                   </SkillContainer>
 
                   <SkillContainer>
-                    <Skill>
-                      <SkillLogo logo={ChooseData?.library.three}></SkillLogo>
-                    </Skill>
+                    <SkillWrapper>
+                      <Skill>
+                        <SkillLogo logo={ChooseData?.library.three}></SkillLogo>
+                      </Skill>
+                      <span>{ChooseData?.library.threetitle}</span>
+                    </SkillWrapper>
                     <SkillText>dd</SkillText>
                   </SkillContainer>
+                  {ChooseData?.library.four && (
+                    <SkillContainer>
+                      <SkillWrapper>
+                        <Skill>
+                          <SkillLogo
+                            logo={ChooseData?.library.four}
+                          ></SkillLogo>
+                        </Skill>
+                        <span>{ChooseData?.library.fourtitle}</span>
+                      </SkillWrapper>
+                      <SkillText>dd</SkillText>
+                    </SkillContainer>
+                  )}
+                  {ChooseData?.library.five && (
+                    <SkillContainer>
+                      <SkillWrapper>
+                        <Skill>
+                          <SkillLogo
+                            logo={ChooseData?.library.five}
+                          ></SkillLogo>
+                        </Skill>
+                        <span>{ChooseData?.library.fivetitle}</span>
+                      </SkillWrapper>
+                      <SkillText>dd</SkillText>
+                    </SkillContainer>
+                  )}
+                  {ChooseData?.library.six && (
+                    <SkillContainer>
+                      <SkillWrapper>
+                        <Skill>
+                          <SkillLogo logo={ChooseData?.library.six}></SkillLogo>
+                        </Skill>
+                        <span>{ChooseData?.library.sixtitle}</span>
+                      </SkillWrapper>
+                      <SkillText>dd</SkillText>
+                    </SkillContainer>
+                  )}
+                </DescriptionGridInner>
+              </DescriptionSection>
+              <Description logo={detail}>
+                <span></span>
+                <div>Details</div>
+                <ArrowDown
+                  isClick={isDescClickThree}
+                  onClick={handleDescClickThree}
+                ></ArrowDown>
+              </Description>
+              <DescriptionSection isClick={isDescClickThree}>
+                <DescriptionInner isClick={isDescClickThree}>
+                  이 사이트는 '디지털 정부서비스 UI/UX 가이드라인'을 참고하여
+                  클론코딩하였습니다. <br />
+                  정부에서 제시한 UI/UX에 대한 세부 사항을 학습하기위해
+                  작업하였으며, 이 사이트에서는 UI/UX 가이드라인을 바탕으로 실제
+                  디지털 정부서비스의 UI/UX를 구현하고 있습니다.
                 </DescriptionInner>
               </DescriptionSection>
             </DescSection>

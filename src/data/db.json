@@ -13,9 +13,18 @@
       "projecttype": "개인 프로젝트",
       "date": "24.07~24.07",
       "library": {
-        "one": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/recoil.png",
+        "one": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/recoilll.png",
+        "onetitle": "Recoil",
         "two": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Router.png",
-        "three": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Scss.png"
+        "twotitle": "Router-dom",
+        "three": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Scss.png",
+        "threetitle": "Scss",
+        "four": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/helmet.png",
+        "fourtitle": "Helmet",
+        "five": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/swiper.png",
+        "fivetitle": "Swiper",
+        "six": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Firebase.png",
+        "sixtitle": "Firebase"
       },
       "github": "https://github.com/JJleem/KRDS",
       "site": "https://krds-clonecoading-jjleem.web.app/"
@@ -34,8 +43,17 @@
       "date": "24.06~24.06",
       "library": {
         "one": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/query.png",
+        "onetitle": "Query",
         "two": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Styledcomponents.png",
-        "three": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Router.png"
+        "twotitle": "StyledComponent",
+        "three": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Router.png",
+        "threetitle": "Router-dom",
+        "four": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/recoilll.png",
+        "fourtitle": "Recoil",
+        "five": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/framer.png",
+        "fivetitle": "Framer-motion",
+        "six": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Youtube_logo.png",
+        "sixtitle": "React-youtube"
       },
       "github": "https://github.com/JJleem/videoPlatform",
       "site": "https://videoplatform-55aea.web.app"
@@ -55,7 +73,16 @@
       "library": {
         "one": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/query.png",
         "two": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Leaflet.png",
-        "three": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Styledcomponents.png"
+        "three": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Styledcomponents.png",
+        "onetitle": "Query",
+        "twotitle": "Leaflet",
+        "threetitle": "StyledComponent",
+        "four": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/axios.png",
+        "fourtitle": "Axios",
+        "five": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/framer.png",
+        "fivetitle": "Framer-motion",
+        "six": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Firebase.png",
+        "sixtitle": "Firebase"
       },
       "github": "https://github.com/JJleem/global",
       "site": "https://globalmap-jjleem.web.app/"
@@ -75,7 +102,12 @@
       "library": {
         "one": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/hookform.png",
         "two": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/yup.jpg",
-        "three": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Styledcomponents.png"
+        "three": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Styledcomponents.png",
+        "onetitle": "Hookform",
+        "twotitle": "YUP",
+        "threetitle": "StyledComponent",
+        "four": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Firebase.png",
+        "fourtitle": "Firebase"
       },
       "github": "https://github.com/JJleem/login",
       "site": "https://naverlogin-jjleem.web.app/"
@@ -94,8 +126,15 @@
       "date": "24.05~24.05",
       "library": {
         "one": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/dnd.png",
-        "two": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/recoil.png",
-        "three": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Styledcomponents.png"
+        "two": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/recoilll.png",
+        "three": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Styledcomponents.png",
+        "onetitle": "DnD",
+        "twotitle": "Recoil",
+        "threetitle": "StyledComponent",
+        "four": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/hookform.png",
+        "fourtitle": "HookForm",
+        "five": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Firebase.png",
+        "fivetitle": "Firebase"
       },
       "github": "https://github.com/JJleem/kanbanboard",
       "site": "https://kanbanboard-jjleem.web.app/"
@@ -115,7 +154,14 @@
       "library": {
         "one": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/query.png",
         "two": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Router.png",
-        "three": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Styledcomponents.png"
+        "three": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Styledcomponents.png",
+        "onetitle": "Query",
+        "twotitle": "Router",
+        "threetitle": "StyledComponent",
+        "four": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/apex.png",
+        "fourtitle": "Apexchart",
+        "five": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Firebase.png",
+        "fivetitle": "Firebase"
       },
       "github": "#",
       "site": "https://bitcoin-jjleem.web.app/"
@@ -133,9 +179,14 @@
       "projecttype": "개인 프로젝트",
       "date": "24.07~24.07",
       "library": {
-        "one": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/recoil.png",
+        "one": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/recoilll.png",
         "two": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Router.png",
-        "three": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Styledcomponents.png"
+        "three": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Styledcomponents.png",
+        "onetitle": "Recoil",
+        "twotitle": "Router",
+        "threetitle": "StyledComponent",
+        "four": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Firebase.png",
+        "fourtitle": "Firebase"
       },
       "github": "https://github.com/JJleem/Portfolio",
       "site": "#"
@@ -155,7 +206,12 @@
       "library": {
         "one": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/bootstrap.png",
         "two": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Router.png",
-        "three": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Styledcomponents.png"
+        "three": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Styledcomponents.png",
+        "onetitle": "Bootstrap",
+        "twotitle": "Router",
+        "threetitle": "StyledComponent",
+        "four": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Firebase.png",
+        "fourtitle": "Firebase"
       },
       "github": "https://github.com/JJleem/geckodiary",
       "site": "https://geckodiary-jjleem.web.app/"
@@ -175,7 +231,12 @@
       "library": {
         "one": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Router.png",
         "two": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Styledcomponents.png",
-        "three": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/bootstrap.png"
+        "three": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/bootstrap.png",
+        "onetitle": "Router",
+        "twotitle": "StyledComponent",
+        "threetitle": "Bootstrap",
+        "four": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Firebase.png",
+        "fourtitle": "Firebase"
       },
       "github": "https://github.com/JJleem/mbti",
       "site": "https://mbti-jjleem.web.app/"
@@ -195,7 +256,14 @@
       "library": {
         "one": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Redux.png",
         "two": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Router.png",
-        "three": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/TMDB.png"
+        "three": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/TMDB.png",
+        "onetitle": "Redux",
+        "twotitle": "Router",
+        "threetitle": "TMDB",
+        "four": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Styledcomponents.png",
+        "fourtitle": "StyledComponent",
+        "five": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Firebase.png",
+        "fivetitle": "Firebase"
       },
       "github": "https://github.com/JJleem/animate-netflix",
       "site": "https://netflix-jjleem-e4b56.web.app/"
@@ -214,8 +282,15 @@
       "date": "24.05~24.06",
       "library": {
         "one": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/React.png",
-        "two": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Styledcomponents.png",
-        "three": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/bootstrap.png"
+        "two": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/React.png",
+        "three": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Styledcomponents.png",
+        "onetitle": "Full-Page",
+        "twotitle": "Transition-Group",
+        "threetitle": "StyledComponent",
+        "four": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/emailjs.png",
+        "fourtitle": "EmailJS",
+        "five": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Firebase.png",
+        "fivetitle": "Firebase"
       },
       "github": "https://github.com/JJleem/JJPortfolio",
       "site": "https://jjportfolio-4bcc2.web.app/"
@@ -235,7 +310,12 @@
       "library": {
         "one": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Html.png",
         "two": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Scss.png",
-        "three": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Github.png"
+        "three": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Github.png",
+        "onetitle": "HTML",
+        "twotitle": "SCSS",
+        "threetitle": "GitHub",
+        "four": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Firebase.png",
+        "fourtitle": "Firebase"
       },
       "github": "https://github.com/jbinyim/team-project-theventi",
       "site": "https://theventi-d1217.web.app/common/common.html"
@@ -255,7 +335,12 @@
       "library": {
         "one": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/JavaScript.png",
         "two": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Html.png",
-        "three": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Css.png"
+        "three": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Css.png",
+        "onetitle": "JAVASCRIPT",
+        "twotitle": "HTML",
+        "threetitle": "CSS",
+        "four": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Firebase.png",
+        "fourtitle": "Firebase"
       },
       "github": "https://github.com/JJleem/lotto",
       "site": "https://lotto-generator-jjleem.web.app/"
@@ -275,7 +360,12 @@
       "library": {
         "one": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/JavaScript.png",
         "two": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Html.png",
-        "three": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Css.png"
+        "three": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Css.png",
+        "onetitle": "JAVASCRIPT",
+        "twotitle": "HTML",
+        "threetitle": "CSS",
+        "four": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Firebase.png",
+        "fourtitle": "Firebase"
       },
       "github": "https://github.com/JJleem/EZEN-FRONT-UIUX/tree/master/portfolio%20%EC%98%88%EC%A0%9C/portfolio%20%EC%98%88%EC%A0%9C/%EC%85%80%EB%A0%89%ED%86%A0%20%EB%A7%A4%EC%9E%A5%EC%B0%BE%EA%B8%B0",
       "site": "https://selecto-map-jjleem.web.app/"
