@@ -19,14 +19,17 @@ export const StyleDetail = styled.div`
 `;
 export const DetailWrapper = styled.div`
   width: 100%;
-
+  padding-bottom: 100px;
   display: flex;
   flex-direction: column;
   gap: 18px;
+  @media ${({ theme }) => theme.mediaSize.sm} {
+    padding-bottom: 50px;
+  }
 `;
 export const TopSection = styled.div`
   width: 100%;
-  height: 128px;
+  height: 78px;
   border-bottom: 1px solid ${({ theme }) => theme.colors.nav_BG};
 `;
 export const BottomSection = styled.div`
@@ -87,13 +90,16 @@ export const ImgSection = styled.div<Props>`
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - 160px);
   border-radius: 0px 0px 8px 8px;
-  transition: all ${({ transition }) => transition}s;
+  transition: background-position ${({ transition }) => transition}s;
   &:hover {
     background-position: bottom;
   }
   position: relative;
+  @media ${({ theme }) => theme.mediaSize.md} {
+    height: 50vh;
+  }
 `;
 export const ModalCursor = styled.div<Props>`
   position: fixed;
@@ -124,7 +130,7 @@ export const ModalCursor = styled.div<Props>`
 `;
 export const HideTitle = styled.div`
   display: none;
-  @media ${({ theme }) => theme.mediaSize.sm} {
+  @media ${({ theme }) => theme.mediaSize.md} {
     display: block;
     color: ${({ theme }) => theme.colors.White};
     font-size: ${({ theme }) => theme.fontSize.p30};
@@ -137,7 +143,7 @@ export const HideTitle = styled.div`
 `;
 export const DescWrap = styled.div`
   width: 55%;
-  height: 100%;
+  height: 100vh;
 
   display: flex;
   flex-direction: column;
@@ -154,6 +160,9 @@ export const Title = styled.div`
     font-size: ${({ theme }) => theme.fontSize.p15};
     color: ${({ theme }) => theme.colors.secondary_V};
     margin-bottom: 10px;
+  }
+  @media ${({ theme }) => theme.mediaSize.md} {
+    display: none;
   }
 `;
 export const DescSection = styled.div`
@@ -215,11 +224,20 @@ export const DescriptionSection = styled.div<Props>`
   `}
 `;
 export const DescriptionInner = styled.div<Props>`
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
   ${({ isClick }) =>
     isClick &&
     `
    display:none;
-  `}
+  `};
+  @media ${({ theme }) => theme.mediaSize.md} {
+    font-size: ${({ theme }) => theme.fontSize.p17};
+  }
+  @media ${({ theme }) => theme.mediaSize.sm} {
+    font-size: ${({ theme }) => theme.fontSize.p15};
+  }
 `;
 export const DescriptionGridInner = styled.div<Props>`
   display: grid;
@@ -285,6 +303,9 @@ export const SkillUl = styled.ul`
 export const SkillLi = styled.li`
   list-style: inside;
   font-size: ${({ theme }) => theme.fontSize.p12};
+  @media ${({ theme }) => theme.mediaSize.md} {
+    font-size: ${({ theme }) => theme.fontSize.p11};
+  }
 `;
 export const SkillWrapper = styled.div`
   display: flex;
@@ -302,5 +323,26 @@ export const SkillWrapper = styled.div`
 
     text-align: center;
     letter-spacing: -0.5px;
+  }
+`;
+export const DetailsItems = styled.div<Props>`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: ${({ theme }) => theme.fontSize.p16};
+  span {
+    font-size: ${({ theme }) => theme.fontSize.p14};
+    color: ${({ theme }) => theme.colors.secondary_V};
+
+    display: flex;
+    i {
+      width: 24px;
+      height: 24px;
+      background: url(${({ logo }) => logo});
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      cursor: pointer;
+    }
   }
 `;

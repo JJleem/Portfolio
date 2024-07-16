@@ -3,6 +3,8 @@ import Footer from "../../Component/footer/Footer";
 import description from "../../assets/img/icon/description.png";
 import skill from "../../assets/img/icon/skill.png";
 import detail from "../../assets/img/icon/detail.png";
+import github from "../../assets/img/skill/githubWhite.png";
+import opne from "../../assets/img/icon/open.png";
 import {
   StyleDetail,
   DetailWrapper,
@@ -29,10 +31,11 @@ import {
   DescriptionGridInner,
   SkillUl,
   SkillLi,
+  DetailsItems,
 } from "./StyleDetail";
 import { useState, useEffect } from "react";
 import Db from "../../data/db.json";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const Detail = () => {
   const [isDescClick, setIsDescClick] = useState(false);
@@ -140,9 +143,13 @@ const Detail = () => {
                 <DescriptionInner isClick={isDescClick}>
                   {ChooseData?.detail?.desc}
                   <br />
+                  <br />
                   {ChooseData?.detail?.desc2}
                   <br />
+                  <br />
                   {ChooseData?.detail?.desc3 && ChooseData?.detail?.desc3}
+
+                  {ChooseData?.detail?.desc4 && ChooseData?.detail?.desc4}
                 </DescriptionInner>
               </DescriptionSection>
               <Description logo={skill}>
@@ -281,11 +288,31 @@ const Detail = () => {
               </Description>
               <DescriptionSection isClick={isDescClickThree}>
                 <DescriptionInner isClick={isDescClickThree}>
-                  이 사이트는 '디지털 정부서비스 UI/UX 가이드라인'을 참고하여
-                  클론코딩하였습니다. <br />
-                  정부에서 제시한 UI/UX에 대한 세부 사항을 학습하기위해
-                  작업하였으며, 이 사이트에서는 UI/UX 가이드라인을 바탕으로 실제
-                  디지털 정부서비스의 UI/UX를 구현하고 있습니다.
+                  <DetailsItems>
+                    프로그래밍 언어<span>{ChooseData?.language}</span>
+                  </DetailsItems>
+                  <DetailsItems>
+                    작업 기간<span>{ChooseData?.date}</span>
+                  </DetailsItems>
+                  <DetailsItems>
+                    프로젝트 종류<span>{ChooseData?.projecttype}</span>
+                  </DetailsItems>
+                  <DetailsItems logo={opne}>
+                    사이트 보러가기
+                    <Link to={ChooseData?.site || ""} target="_blank">
+                      <span>
+                        <i></i>
+                      </span>
+                    </Link>
+                  </DetailsItems>
+                  <DetailsItems logo={github}>
+                    GitHub 보러가기
+                    <Link to={ChooseData?.github || ""} target="_blank">
+                      <span>
+                        <i></i>
+                      </span>
+                    </Link>
+                  </DetailsItems>
                 </DescriptionInner>
               </DescriptionSection>
             </DescSection>
