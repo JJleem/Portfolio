@@ -96,7 +96,7 @@ export const ImgSection = styled.div<Props>`
   position: relative;
 `;
 export const ModalCursor = styled.div<Props>`
-  position: absolute;
+  position: fixed;
 
   display: ${({ isHover }) => (isHover ? "block" : "none")};
   padding: 8px 12px;
@@ -109,8 +109,8 @@ export const ModalCursor = styled.div<Props>`
     content: "";
     position: absolute;
     bottom: -5px;
-    left: 98%;
-    transform: translateX(-50%) rotate(-45deg);
+    left: 2px;
+    transform: translateX(-50%) rotate(45deg);
     width: 0;
     height: 0;
     border-left: 10px solid transparent;
@@ -170,6 +170,7 @@ export const Description = styled.div<Props>`
   position: relative;
   display: flex;
   align-items: center;
+
   gap: 10px;
   color: ${({ theme }) => theme.colors.White};
   font-size: ${({ theme }) => theme.fontSize.p17};
@@ -181,6 +182,9 @@ export const Description = styled.div<Props>`
     background-position: center;
     background-repeat: no-repeat;
     background-size: center;
+  }
+  div {
+    height: 24px;
   }
 `;
 export const ArrowDown = styled.i<Props>`
@@ -200,13 +204,13 @@ export const DescriptionSection = styled.div<Props>`
   padding: 30px 25px;
   color: ${({ theme }) => theme.colors.White};
   border-bottom: 1px solid ${({ theme }) => theme.colors.nav_BG};
-
-  transition: all 0.4s;
-
+  transition: max-height 1s, padding 0s;
+  max-height: 999px;
+  overflow: hidden;
   ${({ isClick }) =>
     isClick &&
     `
-    height: 0;
+    max-height: 0;
     padding: 0;
   `}
 `;
@@ -235,9 +239,8 @@ export const SkillContainer = styled.div<Props>`
   width: 100%;
   height: 100%;
   display: flex;
-  /* text-align: right; */
-  align-items: start;
 
+  gap: 12px;
   ${({ isClick }) =>
     isClick &&
     `
@@ -248,7 +251,8 @@ export const Skill = styled.div<Props>`
   border: 1px solid ${({ theme }) => theme.colors.secondary_V};
   background: rgba(167, 150, 255, 0.2);
   width: 100px;
-  height: 100px;
+  min-height: 110px;
+  max-height: 999px;
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -266,8 +270,21 @@ export const SkillLogo = styled.div<Props>`
 export const SkillText = styled.div`
   width: 100%;
   height: 100%;
-  /* padding: 10px 10px; */
-  border: 1px solid #f00;
+  padding: 8px 15px;
+  background: rgba(167, 150, 255, 0.2);
+  border: 1px solid ${({ theme }) => theme.colors.secondary_V};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+export const SkillUl = styled.ul`
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+`;
+export const SkillLi = styled.li`
+  list-style: inside;
+  font-size: ${({ theme }) => theme.fontSize.p12};
 `;
 export const SkillWrapper = styled.div`
   display: flex;
@@ -275,13 +292,14 @@ export const SkillWrapper = styled.div`
   align-items: center;
   flex-direction: column;
 
+  height: 100%;
   span {
     font-size: ${({ theme }) => theme.fontSize.p11};
     color: ${({ theme }) => theme.colors.White};
     border: 1px solid ${({ theme }) => theme.colors.secondary_V};
     background: rgba(167, 150, 255, 0.2);
     width: 100%;
-    padding: 1px;
+
     text-align: center;
     letter-spacing: -0.5px;
   }

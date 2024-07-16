@@ -26,6 +26,20 @@
         "six": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Firebase.png",
         "sixtitle": "Firebase"
       },
+      "detail": {
+        "desc": "이 사이트는 '디지털 정부서비스 UI/UX 가이드라인'을 참고하여 클론코딩하였습니다.",
+        "desc2": "정부에서 제시한 UI/UX에 대한 세부 사항을 학습하기위해 작업하였으며, 이 사이트에서는 UI/UX 가이드라인을 바탕으로 실제 디지털 정부서비스의 UI/UX를 구현하고 있습니다.",
+        "onedesc": "Recoil을 사용하여  애플리케이션의 상태를 효율적으로 관리하였습니다.  상태 구독을 통해 상태 변화에 따른 UI 업데이트를 자동으로 처리하였습니다.",
+        "onedesc2": " Atoms로 관리하며 상태를 저장하고 변수를  전역에서 사용하였습니다. ",
+        "twodesc": "라우팅 설정: 프로젝트에서 사용할 다양한 페이지 컴포넌트를 정의하고, Route 컴포넌트를 사용하여 URL과 컴포넌트를 매핑했습니다.",
+        "twodesc2": " 동적 라우팅: 필요에 따라 동적 라우팅을 구현했습니다. useParams Hook을 사용하여 URL 파라미터에 접근할 수 있었습니다. ",
+        "threedesc": "변수 및 믹스인 사용: SCSS의 변수와 믹스인 기능을 활용하여 코드의 재사용성을 높였습니다. 예를 들어, 색상이나 폰트 관련 변수를 정의하고, 자주 사용되는 스타일 규칙을 믹스인으로 만들었습니다.",
+        "threedesc2": " 컴포넌트 스타일링: 각 React 컴포넌트에 대응되는 SCSS 파일을 만들어 스타일을 적용했습니다. ",
+        "fourdesc": "React-helmet을 사용하여 페이지별로 다른 메타 태그, 스타일 시트, 스크립트 등을 관리할 수 있었습니다.",
+        "fourdesc2": "동적으로 변경되는 문서 헤더 정보를 관리할 수 있었습니다. ",
+        "fivedesc": "Swiper는 React 애플리케이션에서 사용할 수 있는 강력한 슬라이더 라이브러리입니다.  다양한 기능과 옵션 이 있는 Swiper를 사용하여  사용자 경험을 향상시킬 수 있었습니다.",
+        "sixdesc": " Firebase를 사용하여 해당 프로젝트 사이트를 배포하였으며, Firebase CLI를 사용하여 쉽게 애플리케이션을 배포할 수 있습니다."
+      },
       "github": "https://github.com/JJleem/KRDS",
       "site": "https://krds-clonecoading-jjleem.web.app/"
     },
@@ -54,6 +68,20 @@
         "fivetitle": "Framer-motion",
         "six": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Youtube_logo.png",
         "sixtitle": "React-youtube"
+      },
+      "detail": {
+        "desc": "TMDB API를 활용하여 작업한 비디오 플랫폼 프로젝트 입니다.",
+        "desc2": "현재 실시간 TOP Ranking 과 영상 검색기능 및 장르, 리뷰 또한 그에따른 예고편과 관련 영화 API를 호출하여 구현하였습니다.",
+        "onedesc": "React Query의 useQuery 훅을 사용하여 데이터 fetching 과정을 간단하게 처리할 수 있었습니다. 이를 통해 기존의 복잡한 상태 관리 코드를 줄였습니다.",
+        "twodesc": "Styled-component를 사용하여 컴포넌트 단위로 스타일을 관리할 수 있어 더 유지보수하기 쉬운 코드를 작성할 수 있었습니다.",
+        "twodesc2": " 또한 createGlobalStyle을 사용하여 전역 스타일을 적용하였습니다.",
+        "threedesc": "동적 라우팅: 필요에 따라 동적 라우팅을 구현했습니다. useParams Hook을 사용하여 URL 파라미터에 접근할 수 있었습니다. ",
+        "threedesc2": "URL파라미터 값으로 각 movie들의 id값에 접근해 수월하게 작업할수있었습니다.  ",
+        "fourdesc": "Recoil을 사용하여  애플리케이션의 상태를 효율적으로 관리하였습니다.  상태 구독을 통해 상태 변화에 따른 UI 업데이트를 자동으로 처리하였습니다.",
+        "fivedesc": "Framer-motion을 활용하여 다양한 애니메이션 효과를 적용하였으며, 애니메이션의 동작을 쉽게 커스터마이징할 수 있었습니다.",
+        "fivedesc2": " 또한 LayoutId 기능을 적극 활용하여 애니메이션을 적용하였습니다.",
+        "sixdesc": "react-youtube는 React 애플리케이션에서 YouTube 동영상을 손쉽게 재생할 수 있도록 해주는 라이브러리입니다. ",
+        "sixdesc2": " 이 라이브러리를 사용하여 YouTube 동영상을  컴포넌트로 쉽게 통합할 수 있었습니다."
       },
       "github": "https://github.com/JJleem/videoPlatform",
       "site": "https://videoplatform-55aea.web.app"
@@ -84,6 +112,18 @@
         "six": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Firebase.png",
         "sixtitle": "Firebase"
       },
+      "detail": {
+        "desc": "이 사이트는 Geojson을 활용하여 전세계 지도와 각자 나라의 정보를 알수있습니다.",
+        "desc2": "각 나라의 국기, 정보 ,이미지 또한 API로 호출하여 적용하였고 GeoJson을 활용하여 세계 지도를 구축하였습니다.",
+        "onedesc": "React Query의 useQuery 훅을 사용하여 데이터 fetching 과정을 간단하게 처리할 수 있었습니다. 이를 통해 기존의 복잡한 상태 관리 코드를 줄였습니다.",
+        "twodesc": "React-leaflet은 React 애플리케이션에서 Leaflet 지도 라이브러리를 사용할 수 있도록 해주는 라이브러리입니다.",
+        "twodesc2": "GeoJSON 컴포넌트를 사용하여 GeoJSON 데이터를 지도에 추가했습니다. GeoJSON 컴포넌트를통하여 지도에 다양한 형태의 지리 데이터를 렌더링할 수 있었습니다.",
+        "threedesc": "Styled-component를 사용하여 컴포넌트 단위로 스타일을 관리할 수 있어 더 유지보수하기 쉬운 코드를 작성할 수 있었습니다.",
+        "fourdesc": "Axios를 사용하여 웹 애플리케이션에서 서버와의 통신을 쉽고 효율적으로 처리할 수 있었습니다. ",
+        "fivedesc": "Framer-motion을 활용하여 다양한 애니메이션 효과를 적용하였으며, 애니메이션의 동작을 쉽게 커스터마이징할 수 있었습니다.",
+        "fivedesc2": " 또한 LayoutId 기능을 적극 활용하여 애니메이션을 적용하였습니다.",
+        "sixdesc": " Firebase를 사용하여 해당 프로젝트 사이트를 배포하였으며, Firebase CLI를 사용하여 쉽게 애플리케이션을 배포할 수 있습니다."
+      },
       "github": "https://github.com/JJleem/global",
       "site": "https://globalmap-jjleem.web.app/"
     },
@@ -108,6 +148,16 @@
         "threetitle": "StyledComponent",
         "four": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Firebase.png",
         "fourtitle": "Firebase"
+      },
+      "detail": {
+        "desc": "NAVER 모바일버전 회원가입창을 클론코딩하여 제작한 웹사이트 입니다.",
+        "desc2": "유효성검사와 간편한 Input 관리를위해 React-hook-form 사용하였고, 그에따라 많은 학습이 된 예제입니다.",
+        "onedesc": "react-hook-form을 통해 폼 상태(예: 입력 값, 유효성 검사 오류 등)를 효과적으로 관리할 수 있었습니다.",
+        "onedesc2": "유효성 검사: react-hook-form를통해  폼 필드의 유효성 검사를 쉽게 설정할 수 있었습니다. 또한 유효성 검사 오류 메시지를 쉽게 표시할 수 있었습니다.",
+        "twodesc": "Yup은 JavaScript 및 TypeScript용 스키마 유효성 검사 라이브러리입니다. Yup은 react-hook-form과 함께 자주 사용하고있습니다.",
+        "twodesc2": "선언적 스키마 정의: Yup은 선언적 스키마 정의를 제공하여 유효성 검사 규칙을 쉽게 정의할 수 있습니다.",
+        "threedesc": "Styled-component를 사용하여 컴포넌트 단위로 스타일을 관리할 수 있어 더 유지보수하기 쉬운 코드를 작성할 수 있었습니다.",
+        "fourdesc": " Firebase를 사용하여 해당 프로젝트 사이트를 배포하였으며, Firebase CLI를 사용하여 쉽게 애플리케이션을 배포할 수 있습니다."
       },
       "github": "https://github.com/JJleem/login",
       "site": "https://naverlogin-jjleem.web.app/"
@@ -136,6 +186,19 @@
         "five": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Firebase.png",
         "fivetitle": "Firebase"
       },
+      "detail": {
+        "desc": "Drag & Drop 기능을 가진 TODOLIST 입니다.",
+        "desc2": "새로운 할일을 생성하고 Drag & Drop 을 통해 상태를 변경하고 삭제할수있는 기능을 구현하였습니다.",
+        "onedesc": " Beautiful DnD 라이브러리를 사용하여 React 애플리케이션에서 직관적이고 접근성 높은 드래그 앤 드롭 기능을 쉽게 구현할 수 있었습니다.",
+
+        "twodesc": "Recoil을 사용하여  애플리케이션의 상태를 효율적으로 관리하였습니다.  상태 구독을 통해 상태 변화에 따른 UI 업데이트를 자동으로 처리하였습니다.",
+
+        "threedesc": "Styled-component를 사용하여 컴포넌트 단위로 스타일을 관리할 수 있어 더 유지보수하기 쉬운 코드를 작성할 수 있었습니다.",
+
+        "fourdesc": "react-hook-form을 통해 폼 상태(예: 입력 값, 유효성 검사 오류 등)를 효과적으로 관리할 수 있었습니다.",
+
+        "fivedesc": " Firebase를 사용하여 해당 프로젝트 사이트를 배포하였으며, Firebase CLI를 사용하여 쉽게 애플리케이션을 배포할 수 있습니다."
+      },
       "github": "https://github.com/JJleem/kanbanboard",
       "site": "https://kanbanboard-jjleem.web.app/"
     },
@@ -163,6 +226,18 @@
         "five": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Firebase.png",
         "fivetitle": "Firebase"
       },
+      "detail": {
+        "desc": "Bitcoin 의 정보와 그에따른 차트 순위를 구현한 웹사이트 입니다. ",
+        "desc2": "파프리카 코인 사이트에서 API를 호출하길 원하였으나 유료인관계로 my-json-server를 통해 json을 구축하여 구현하였습니다.",
+        "onedesc": "React Query의 useQuery 훅을 사용하여 데이터 fetching 과정을 간단하게 처리할 수 있었습니다. 이를 통해 기존의 복잡한 상태 관리 코드를 줄였습니다.",
+
+        "twodesc": "라우팅 설정: 프로젝트에서 사용할 다양한 페이지 컴포넌트를 정의하고, Route 컴포넌트를 사용하여 URL과 컴포넌트를 매핑했습니다.",
+        "threedesc": "Styled-component를 사용하여 컴포넌트 단위로 스타일을 관리할 수 있어 더 유지보수하기 쉬운 코드를 작성할 수 있었습니다.",
+
+        "fourdesc": "ApexCharts는 React 애플리케이션에서 다양한 차트를 구현할 수 있는 강력한 라이브러리입니다.",
+        "fourdesc2": "ApexCharts를 활용해 빠른 렌더링이 가능하였고, 차트의 디자인, 동작, 데이터 등을 상세하게 커스터마이징하였습니다.",
+        "fivedesc": " Firebase를 사용하여 해당 프로젝트 사이트를 배포하였으며, Firebase CLI를 사용하여 쉽게 애플리케이션을 배포할 수 있습니다."
+      },
       "github": "#",
       "site": "https://bitcoin-jjleem.web.app/"
     },
@@ -187,6 +262,23 @@
         "threetitle": "StyledComponent",
         "four": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Firebase.png",
         "fourtitle": "Firebase"
+      },
+      "detail": {
+        "desc": "현재 보고계신 포트폴리오 사이트 입니다.",
+        "desc2": "최대한 실제 서비스되고있는 사이트처럼 구현하려고 노력하였으며 사소한부분까지 놓치지않으려 작업하였습니다. ",
+        "desc3": "열심히 구상하여 작업하였으니 이쁘게봐주시면 감사하겠습니다.",
+        "onedesc": "Recoil을 사용하여  애플리케이션의 상태를 효율적으로 관리하였습니다.  상태 구독을 통해 상태 변화에 따른 UI 업데이트를 자동으로 처리하였습니다.",
+        "onedesc2": " Atoms로 관리하며 상태를 저장하고 변수를  전역에서 사용하였습니다. ",
+        "twodesc": "Recoil을 사용하여  애플리케이션의 상태를 효율적으로 관리하였습니다.  상태 구독을 통해 상태 변화에 따른 UI 업데이트를 자동으로 처리하였습니다.",
+        "twodesc2": " Atoms로 관리하며 상태를 저장하고 변수를  전역에서 사용하였습니다. ",
+        "threedesc": "Recoil을 사용하여  애플리케이션의 상태를 효율적으로 관리하였습니다.  상태 구독을 통해 상태 변화에 따른 UI 업데이트를 자동으로 처리하였습니다.",
+        "threedesc2": " Atoms로 관리하며 상태를 저장하고 변수를  전역에서 사용하였습니다. ",
+        "fourdesc": "Recoil을 사용하여  애플리케이션의 상태를 효율적으로 관리하였습니다.  상태 구독을 통해 상태 변화에 따른 UI 업데이트를 자동으로 처리하였습니다.",
+        "fourdesc2": " Atoms로 관리하며 상태를 저장하고 변수를  전역에서 사용하였습니다. ",
+        "fivedesc": "Recoil을 사용하여  애플리케이션의 상태를 효율적으로 관리하였습니다.  상태 구독을 통해 상태 변화에 따른 UI 업데이트를 자동으로 처리하였습니다.",
+        "fivedesc2": " Atoms로 관리하며 상태를 저장하고 변수를  전역에서 사용하였습니다. ",
+        "sixdesc": "Recoil을 사용하여  애플리케이션의 상태를 효율적으로 관리하였습니다.  상태 구독을 통해 상태 변화에 따른 UI 업데이트를 자동으로 처리하였습니다.",
+        "sixdesc2": " Atoms로 관리하며 상태를 저장하고 변수를  전역에서 사용하였습니다. "
       },
       "github": "https://github.com/JJleem/Portfolio",
       "site": "#"
@@ -213,6 +305,22 @@
         "four": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Firebase.png",
         "fourtitle": "Firebase"
       },
+      "detail": {
+        "desc": "이 사이트는 '디지털 정부서비스 UI/UX 가이드라인'을 참고하여 클론코딩하였습니다.",
+        "desc2": "정부에서 제시한 UI/UX에 대한 세부 사항을 학습하기위해 작업하였으며, 이 사이트에서는 UI/UX 가이드라인을 바탕으로 실제 디지털 정부서비스의 UI/UX를 구현하고 있습니다.",
+        "onedesc": "Recoil을 사용하여  애플리케이션의 상태를 효율적으로 관리하였습니다.  상태 구독을 통해 상태 변화에 따른 UI 업데이트를 자동으로 처리하였습니다.",
+        "onedesc2": " Atoms로 관리하며 상태를 저장하고 변수를  전역에서 사용하였습니다. ",
+        "twodesc": "Recoil을 사용하여  애플리케이션의 상태를 효율적으로 관리하였습니다.  상태 구독을 통해 상태 변화에 따른 UI 업데이트를 자동으로 처리하였습니다.",
+        "twodesc2": " Atoms로 관리하며 상태를 저장하고 변수를  전역에서 사용하였습니다. ",
+        "threedesc": "Recoil을 사용하여  애플리케이션의 상태를 효율적으로 관리하였습니다.  상태 구독을 통해 상태 변화에 따른 UI 업데이트를 자동으로 처리하였습니다.",
+        "threedesc2": " Atoms로 관리하며 상태를 저장하고 변수를  전역에서 사용하였습니다. ",
+        "fourdesc": "Recoil을 사용하여  애플리케이션의 상태를 효율적으로 관리하였습니다.  상태 구독을 통해 상태 변화에 따른 UI 업데이트를 자동으로 처리하였습니다.",
+        "fourdesc2": " Atoms로 관리하며 상태를 저장하고 변수를  전역에서 사용하였습니다. ",
+        "fivedesc": "Recoil을 사용하여  애플리케이션의 상태를 효율적으로 관리하였습니다.  상태 구독을 통해 상태 변화에 따른 UI 업데이트를 자동으로 처리하였습니다.",
+        "fivedesc2": " Atoms로 관리하며 상태를 저장하고 변수를  전역에서 사용하였습니다. ",
+        "sixdesc": "Recoil을 사용하여  애플리케이션의 상태를 효율적으로 관리하였습니다.  상태 구독을 통해 상태 변화에 따른 UI 업데이트를 자동으로 처리하였습니다.",
+        "sixdesc2": " Atoms로 관리하며 상태를 저장하고 변수를  전역에서 사용하였습니다. "
+      },
       "github": "https://github.com/JJleem/geckodiary",
       "site": "https://geckodiary-jjleem.web.app/"
     },
@@ -237,6 +345,22 @@
         "threetitle": "Bootstrap",
         "four": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Firebase.png",
         "fourtitle": "Firebase"
+      },
+      "detail": {
+        "desc": "이 사이트는 '디지털 정부서비스 UI/UX 가이드라인'을 참고하여 클론코딩하였습니다.",
+        "desc2": "정부에서 제시한 UI/UX에 대한 세부 사항을 학습하기위해 작업하였으며, 이 사이트에서는 UI/UX 가이드라인을 바탕으로 실제 디지털 정부서비스의 UI/UX를 구현하고 있습니다.",
+        "onedesc": "Recoil을 사용하여  애플리케이션의 상태를 효율적으로 관리하였습니다.  상태 구독을 통해 상태 변화에 따른 UI 업데이트를 자동으로 처리하였습니다.",
+        "onedesc2": " Atoms로 관리하며 상태를 저장하고 변수를  전역에서 사용하였습니다. ",
+        "twodesc": "Recoil을 사용하여  애플리케이션의 상태를 효율적으로 관리하였습니다.  상태 구독을 통해 상태 변화에 따른 UI 업데이트를 자동으로 처리하였습니다.",
+        "twodesc2": " Atoms로 관리하며 상태를 저장하고 변수를  전역에서 사용하였습니다. ",
+        "threedesc": "Recoil을 사용하여  애플리케이션의 상태를 효율적으로 관리하였습니다.  상태 구독을 통해 상태 변화에 따른 UI 업데이트를 자동으로 처리하였습니다.",
+        "threedesc2": " Atoms로 관리하며 상태를 저장하고 변수를  전역에서 사용하였습니다. ",
+        "fourdesc": "Recoil을 사용하여  애플리케이션의 상태를 효율적으로 관리하였습니다.  상태 구독을 통해 상태 변화에 따른 UI 업데이트를 자동으로 처리하였습니다.",
+        "fourdesc2": " Atoms로 관리하며 상태를 저장하고 변수를  전역에서 사용하였습니다. ",
+        "fivedesc": "Recoil을 사용하여  애플리케이션의 상태를 효율적으로 관리하였습니다.  상태 구독을 통해 상태 변화에 따른 UI 업데이트를 자동으로 처리하였습니다.",
+        "fivedesc2": " Atoms로 관리하며 상태를 저장하고 변수를  전역에서 사용하였습니다. ",
+        "sixdesc": "Recoil을 사용하여  애플리케이션의 상태를 효율적으로 관리하였습니다.  상태 구독을 통해 상태 변화에 따른 UI 업데이트를 자동으로 처리하였습니다.",
+        "sixdesc2": " Atoms로 관리하며 상태를 저장하고 변수를  전역에서 사용하였습니다. "
       },
       "github": "https://github.com/JJleem/mbti",
       "site": "https://mbti-jjleem.web.app/"
@@ -265,6 +389,22 @@
         "five": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Firebase.png",
         "fivetitle": "Firebase"
       },
+      "detail": {
+        "desc": "이 사이트는 '디지털 정부서비스 UI/UX 가이드라인'을 참고하여 클론코딩하였습니다.",
+        "desc2": "정부에서 제시한 UI/UX에 대한 세부 사항을 학습하기위해 작업하였으며, 이 사이트에서는 UI/UX 가이드라인을 바탕으로 실제 디지털 정부서비스의 UI/UX를 구현하고 있습니다.",
+        "onedesc": "Recoil을 사용하여  애플리케이션의 상태를 효율적으로 관리하였습니다.  상태 구독을 통해 상태 변화에 따른 UI 업데이트를 자동으로 처리하였습니다.",
+        "onedesc2": " Atoms로 관리하며 상태를 저장하고 변수를  전역에서 사용하였습니다. ",
+        "twodesc": "Recoil을 사용하여  애플리케이션의 상태를 효율적으로 관리하였습니다.  상태 구독을 통해 상태 변화에 따른 UI 업데이트를 자동으로 처리하였습니다.",
+        "twodesc2": " Atoms로 관리하며 상태를 저장하고 변수를  전역에서 사용하였습니다. ",
+        "threedesc": "Recoil을 사용하여  애플리케이션의 상태를 효율적으로 관리하였습니다.  상태 구독을 통해 상태 변화에 따른 UI 업데이트를 자동으로 처리하였습니다.",
+        "threedesc2": " Atoms로 관리하며 상태를 저장하고 변수를  전역에서 사용하였습니다. ",
+        "fourdesc": "Recoil을 사용하여  애플리케이션의 상태를 효율적으로 관리하였습니다.  상태 구독을 통해 상태 변화에 따른 UI 업데이트를 자동으로 처리하였습니다.",
+        "fourdesc2": " Atoms로 관리하며 상태를 저장하고 변수를  전역에서 사용하였습니다. ",
+        "fivedesc": "Recoil을 사용하여  애플리케이션의 상태를 효율적으로 관리하였습니다.  상태 구독을 통해 상태 변화에 따른 UI 업데이트를 자동으로 처리하였습니다.",
+        "fivedesc2": " Atoms로 관리하며 상태를 저장하고 변수를  전역에서 사용하였습니다. ",
+        "sixdesc": "Recoil을 사용하여  애플리케이션의 상태를 효율적으로 관리하였습니다.  상태 구독을 통해 상태 변화에 따른 UI 업데이트를 자동으로 처리하였습니다.",
+        "sixdesc2": " Atoms로 관리하며 상태를 저장하고 변수를  전역에서 사용하였습니다. "
+      },
       "github": "https://github.com/JJleem/animate-netflix",
       "site": "https://netflix-jjleem-e4b56.web.app/"
     },
@@ -292,6 +432,22 @@
         "five": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Firebase.png",
         "fivetitle": "Firebase"
       },
+      "detail": {
+        "desc": "이 사이트는 '디지털 정부서비스 UI/UX 가이드라인'을 참고하여 클론코딩하였습니다.",
+        "desc2": "정부에서 제시한 UI/UX에 대한 세부 사항을 학습하기위해 작업하였으며, 이 사이트에서는 UI/UX 가이드라인을 바탕으로 실제 디지털 정부서비스의 UI/UX를 구현하고 있습니다.",
+        "onedesc": "Recoil을 사용하여  애플리케이션의 상태를 효율적으로 관리하였습니다.  상태 구독을 통해 상태 변화에 따른 UI 업데이트를 자동으로 처리하였습니다.",
+        "onedesc2": " Atoms로 관리하며 상태를 저장하고 변수를  전역에서 사용하였습니다. ",
+        "twodesc": "Recoil을 사용하여  애플리케이션의 상태를 효율적으로 관리하였습니다.  상태 구독을 통해 상태 변화에 따른 UI 업데이트를 자동으로 처리하였습니다.",
+        "twodesc2": " Atoms로 관리하며 상태를 저장하고 변수를  전역에서 사용하였습니다. ",
+        "threedesc": "Recoil을 사용하여  애플리케이션의 상태를 효율적으로 관리하였습니다.  상태 구독을 통해 상태 변화에 따른 UI 업데이트를 자동으로 처리하였습니다.",
+        "threedesc2": " Atoms로 관리하며 상태를 저장하고 변수를  전역에서 사용하였습니다. ",
+        "fourdesc": "Recoil을 사용하여  애플리케이션의 상태를 효율적으로 관리하였습니다.  상태 구독을 통해 상태 변화에 따른 UI 업데이트를 자동으로 처리하였습니다.",
+        "fourdesc2": " Atoms로 관리하며 상태를 저장하고 변수를  전역에서 사용하였습니다. ",
+        "fivedesc": "Recoil을 사용하여  애플리케이션의 상태를 효율적으로 관리하였습니다.  상태 구독을 통해 상태 변화에 따른 UI 업데이트를 자동으로 처리하였습니다.",
+        "fivedesc2": " Atoms로 관리하며 상태를 저장하고 변수를  전역에서 사용하였습니다. ",
+        "sixdesc": "Recoil을 사용하여  애플리케이션의 상태를 효율적으로 관리하였습니다.  상태 구독을 통해 상태 변화에 따른 UI 업데이트를 자동으로 처리하였습니다.",
+        "sixdesc2": " Atoms로 관리하며 상태를 저장하고 변수를  전역에서 사용하였습니다. "
+      },
       "github": "https://github.com/JJleem/JJPortfolio",
       "site": "https://jjportfolio-4bcc2.web.app/"
     },
@@ -316,6 +472,22 @@
         "threetitle": "GitHub",
         "four": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Firebase.png",
         "fourtitle": "Firebase"
+      },
+      "detail": {
+        "desc": "이 사이트는 '디지털 정부서비스 UI/UX 가이드라인'을 참고하여 클론코딩하였습니다.",
+        "desc2": "정부에서 제시한 UI/UX에 대한 세부 사항을 학습하기위해 작업하였으며, 이 사이트에서는 UI/UX 가이드라인을 바탕으로 실제 디지털 정부서비스의 UI/UX를 구현하고 있습니다.",
+        "onedesc": "Recoil을 사용하여  애플리케이션의 상태를 효율적으로 관리하였습니다.  상태 구독을 통해 상태 변화에 따른 UI 업데이트를 자동으로 처리하였습니다.",
+        "onedesc2": " Atoms로 관리하며 상태를 저장하고 변수를  전역에서 사용하였습니다. ",
+        "twodesc": "Recoil을 사용하여  애플리케이션의 상태를 효율적으로 관리하였습니다.  상태 구독을 통해 상태 변화에 따른 UI 업데이트를 자동으로 처리하였습니다.",
+        "twodesc2": " Atoms로 관리하며 상태를 저장하고 변수를  전역에서 사용하였습니다. ",
+        "threedesc": "Recoil을 사용하여  애플리케이션의 상태를 효율적으로 관리하였습니다.  상태 구독을 통해 상태 변화에 따른 UI 업데이트를 자동으로 처리하였습니다.",
+        "threedesc2": " Atoms로 관리하며 상태를 저장하고 변수를  전역에서 사용하였습니다. ",
+        "fourdesc": "Recoil을 사용하여  애플리케이션의 상태를 효율적으로 관리하였습니다.  상태 구독을 통해 상태 변화에 따른 UI 업데이트를 자동으로 처리하였습니다.",
+        "fourdesc2": " Atoms로 관리하며 상태를 저장하고 변수를  전역에서 사용하였습니다. ",
+        "fivedesc": "Recoil을 사용하여  애플리케이션의 상태를 효율적으로 관리하였습니다.  상태 구독을 통해 상태 변화에 따른 UI 업데이트를 자동으로 처리하였습니다.",
+        "fivedesc2": " Atoms로 관리하며 상태를 저장하고 변수를  전역에서 사용하였습니다. ",
+        "sixdesc": "Recoil을 사용하여  애플리케이션의 상태를 효율적으로 관리하였습니다.  상태 구독을 통해 상태 변화에 따른 UI 업데이트를 자동으로 처리하였습니다.",
+        "sixdesc2": " Atoms로 관리하며 상태를 저장하고 변수를  전역에서 사용하였습니다. "
       },
       "github": "https://github.com/jbinyim/team-project-theventi",
       "site": "https://theventi-d1217.web.app/common/common.html"
@@ -342,6 +514,22 @@
         "four": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Firebase.png",
         "fourtitle": "Firebase"
       },
+      "detail": {
+        "desc": "이 사이트는 '디지털 정부서비스 UI/UX 가이드라인'을 참고하여 클론코딩하였습니다.",
+        "desc2": "정부에서 제시한 UI/UX에 대한 세부 사항을 학습하기위해 작업하였으며, 이 사이트에서는 UI/UX 가이드라인을 바탕으로 실제 디지털 정부서비스의 UI/UX를 구현하고 있습니다.",
+        "onedesc": "Recoil을 사용하여  애플리케이션의 상태를 효율적으로 관리하였습니다.  상태 구독을 통해 상태 변화에 따른 UI 업데이트를 자동으로 처리하였습니다.",
+        "onedesc2": " Atoms로 관리하며 상태를 저장하고 변수를  전역에서 사용하였습니다. ",
+        "twodesc": "Recoil을 사용하여  애플리케이션의 상태를 효율적으로 관리하였습니다.  상태 구독을 통해 상태 변화에 따른 UI 업데이트를 자동으로 처리하였습니다.",
+        "twodesc2": " Atoms로 관리하며 상태를 저장하고 변수를  전역에서 사용하였습니다. ",
+        "threedesc": "Recoil을 사용하여  애플리케이션의 상태를 효율적으로 관리하였습니다.  상태 구독을 통해 상태 변화에 따른 UI 업데이트를 자동으로 처리하였습니다.",
+        "threedesc2": " Atoms로 관리하며 상태를 저장하고 변수를  전역에서 사용하였습니다. ",
+        "fourdesc": "Recoil을 사용하여  애플리케이션의 상태를 효율적으로 관리하였습니다.  상태 구독을 통해 상태 변화에 따른 UI 업데이트를 자동으로 처리하였습니다.",
+        "fourdesc2": " Atoms로 관리하며 상태를 저장하고 변수를  전역에서 사용하였습니다. ",
+        "fivedesc": "Recoil을 사용하여  애플리케이션의 상태를 효율적으로 관리하였습니다.  상태 구독을 통해 상태 변화에 따른 UI 업데이트를 자동으로 처리하였습니다.",
+        "fivedesc2": " Atoms로 관리하며 상태를 저장하고 변수를  전역에서 사용하였습니다. ",
+        "sixdesc": "Recoil을 사용하여  애플리케이션의 상태를 효율적으로 관리하였습니다.  상태 구독을 통해 상태 변화에 따른 UI 업데이트를 자동으로 처리하였습니다.",
+        "sixdesc2": " Atoms로 관리하며 상태를 저장하고 변수를  전역에서 사용하였습니다. "
+      },
       "github": "https://github.com/JJleem/lotto",
       "site": "https://lotto-generator-jjleem.web.app/"
     },
@@ -366,6 +554,22 @@
         "threetitle": "CSS",
         "four": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Firebase.png",
         "fourtitle": "Firebase"
+      },
+      "detail": {
+        "desc": "이 사이트는 '디지털 정부서비스 UI/UX 가이드라인'을 참고하여 클론코딩하였습니다.",
+        "desc2": "정부에서 제시한 UI/UX에 대한 세부 사항을 학습하기위해 작업하였으며, 이 사이트에서는 UI/UX 가이드라인을 바탕으로 실제 디지털 정부서비스의 UI/UX를 구현하고 있습니다.",
+        "onedesc": "Recoil을 사용하여  애플리케이션의 상태를 효율적으로 관리하였습니다.  상태 구독을 통해 상태 변화에 따른 UI 업데이트를 자동으로 처리하였습니다.",
+        "onedesc2": " Atoms로 관리하며 상태를 저장하고 변수를  전역에서 사용하였습니다. ",
+        "twodesc": "Recoil을 사용하여  애플리케이션의 상태를 효율적으로 관리하였습니다.  상태 구독을 통해 상태 변화에 따른 UI 업데이트를 자동으로 처리하였습니다.",
+        "twodesc2": " Atoms로 관리하며 상태를 저장하고 변수를  전역에서 사용하였습니다. ",
+        "threedesc": "Recoil을 사용하여  애플리케이션의 상태를 효율적으로 관리하였습니다.  상태 구독을 통해 상태 변화에 따른 UI 업데이트를 자동으로 처리하였습니다.",
+        "threedesc2": " Atoms로 관리하며 상태를 저장하고 변수를  전역에서 사용하였습니다. ",
+        "fourdesc": "Recoil을 사용하여  애플리케이션의 상태를 효율적으로 관리하였습니다.  상태 구독을 통해 상태 변화에 따른 UI 업데이트를 자동으로 처리하였습니다.",
+        "fourdesc2": " Atoms로 관리하며 상태를 저장하고 변수를  전역에서 사용하였습니다. ",
+        "fivedesc": "Recoil을 사용하여  애플리케이션의 상태를 효율적으로 관리하였습니다.  상태 구독을 통해 상태 변화에 따른 UI 업데이트를 자동으로 처리하였습니다.",
+        "fivedesc2": " Atoms로 관리하며 상태를 저장하고 변수를  전역에서 사용하였습니다. ",
+        "sixdesc": "Recoil을 사용하여  애플리케이션의 상태를 효율적으로 관리하였습니다.  상태 구독을 통해 상태 변화에 따른 UI 업데이트를 자동으로 처리하였습니다.",
+        "sixdesc2": " Atoms로 관리하며 상태를 저장하고 변수를  전역에서 사용하였습니다. "
       },
       "github": "https://github.com/JJleem/EZEN-FRONT-UIUX/tree/master/portfolio%20%EC%98%88%EC%A0%9C/portfolio%20%EC%98%88%EC%A0%9C/%EC%85%80%EB%A0%89%ED%86%A0%20%EB%A7%A4%EC%9E%A5%EC%B0%BE%EA%B8%B0",
       "site": "https://selecto-map-jjleem.web.app/"

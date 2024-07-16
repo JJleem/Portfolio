@@ -9,6 +9,10 @@ const WhichGnb = () => {
   const location = useLocation();
   const [locationGnb, setLocationGnb] = useRecoilState(locationState);
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
+  useEffect(() => {
     if (location.pathname === "/") {
       setLocationGnb(!locationGnb);
     } else if (location.pathname === "/collection") setLocationGnb(locationGnb);

@@ -3,6 +3,10 @@ interface LibraryConfig {
   two: string;
   three: string;
 }
+interface DetailConfig {
+  dsec: string;
+  desc2: string;
+}
 
 declare module "./db.json" {
   export interface Db {
@@ -19,6 +23,7 @@ declare module "./db.json" {
       projecttype: string;
       date: string;
       library: LibraryConfig;
+      detail: DetailConfig;
       github: string;
       site: string;
     }[];

@@ -27,6 +27,8 @@ import {
   SkillText,
   SkillWrapper,
   DescriptionGridInner,
+  SkillUl,
+  SkillLi,
 } from "./StyleDetail";
 import { useState, useEffect } from "react";
 import Db from "../../data/db.json";
@@ -72,18 +74,19 @@ const Detail = () => {
   const handleMouseLeave = () => {
     setIsHovered(false);
   };
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    setMousePosition({ x: e.clientX, y: e.clientY });
+  const handleWindowMouseMove = (e: MouseEvent) => {
+    const windowHeight = window.innerHeight;
+    const adjustedY = Math.min(e.clientY, windowHeight - 50); // y 좌표를 화면 높이에 맞게 조정
+    setMousePosition({ x: e.clientX, y: adjustedY });
   };
+
   useEffect(() => {
-    const handleWindowMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-    };
     window.addEventListener("mousemove", handleWindowMouseMove);
     return () => {
       window.removeEventListener("mousemove", handleWindowMouseMove);
     };
   }, []);
+
   return (
     <StyleDetail>
       <DetailWrapper>
@@ -105,14 +108,13 @@ const Detail = () => {
                 onClick={() => goSite(ChooseData?.site)}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
-                onMouseMove={handleMouseMove}
               >
                 <ModalCursor
                   isHover={isHovered}
                   style={{
                     pointerEvents: "none",
-                    left: mousePosition.x - 20,
-                    top: mousePosition.y - 140,
+                    left: mousePosition.x + 20,
+                    top: mousePosition.y - 40,
                   }}
                 >
                   클릭하여 사이트로 이동해보세요
@@ -136,11 +138,11 @@ const Detail = () => {
               </Description>
               <DescriptionSection isClick={isDescClick}>
                 <DescriptionInner isClick={isDescClick}>
-                  이 사이트는 '디지털 정부서비스 UI/UX 가이드라인'을 참고하여
-                  클론코딩하였습니다. <br />
-                  정부에서 제시한 UI/UX에 대한 세부 사항을 학습하기위해
-                  작업하였으며, 이 사이트에서는 UI/UX 가이드라인을 바탕으로 실제
-                  디지털 정부서비스의 UI/UX를 구현하고 있습니다.
+                  {ChooseData?.detail?.desc}
+                  <br />
+                  {ChooseData?.detail?.desc2}
+                  <br />
+                  {ChooseData?.detail?.desc3 && ChooseData?.detail?.desc3}
                 </DescriptionInner>
               </DescriptionSection>
               <Description logo={skill}>
@@ -162,7 +164,12 @@ const Detail = () => {
                     </SkillWrapper>
 
                     <SkillText>
-                      Recoil을 적극활용하여 전역상태를 관리하였습니다.
+                      <SkillUl>
+                        <SkillLi>{ChooseData?.detail?.onedesc}</SkillLi>
+                        {ChooseData?.detail?.onedesc2 && (
+                          <SkillLi>{ChooseData?.detail?.onedesc2}</SkillLi>
+                        )}
+                      </SkillUl>
                     </SkillText>
                   </SkillContainer>
                   <SkillContainer>
@@ -172,7 +179,14 @@ const Detail = () => {
                       </Skill>
                       <span>{ChooseData?.library.twotitle}</span>
                     </SkillWrapper>
-                    <SkillText>dd</SkillText>
+                    <SkillText>
+                      <SkillUl>
+                        <SkillLi>{ChooseData?.detail?.twodesc}</SkillLi>
+                        {ChooseData?.detail?.twodesc2 && (
+                          <SkillLi>{ChooseData?.detail?.twodesc2}</SkillLi>
+                        )}
+                      </SkillUl>
+                    </SkillText>
                   </SkillContainer>
 
                   <SkillContainer>
@@ -182,7 +196,14 @@ const Detail = () => {
                       </Skill>
                       <span>{ChooseData?.library.threetitle}</span>
                     </SkillWrapper>
-                    <SkillText>dd</SkillText>
+                    <SkillText>
+                      <SkillUl>
+                        <SkillLi>{ChooseData?.detail?.threedesc}</SkillLi>
+                        {ChooseData?.detail?.threedesc2 && (
+                          <SkillLi>{ChooseData?.detail?.threedesc2}</SkillLi>
+                        )}
+                      </SkillUl>
+                    </SkillText>
                   </SkillContainer>
                   {ChooseData?.library.four && (
                     <SkillContainer>
@@ -194,7 +215,16 @@ const Detail = () => {
                         </Skill>
                         <span>{ChooseData?.library.fourtitle}</span>
                       </SkillWrapper>
-                      <SkillText>dd</SkillText>
+                      <SkillText>
+                        <SkillUl>
+                          {ChooseData?.detail?.fourdesc && (
+                            <SkillLi>{ChooseData?.detail?.fourdesc}</SkillLi>
+                          )}
+                          {ChooseData?.detail?.fourdesc2 && (
+                            <SkillLi>{ChooseData?.detail?.fourdesc2}</SkillLi>
+                          )}
+                        </SkillUl>
+                      </SkillText>
                     </SkillContainer>
                   )}
                   {ChooseData?.library.five && (
@@ -207,7 +237,16 @@ const Detail = () => {
                         </Skill>
                         <span>{ChooseData?.library.fivetitle}</span>
                       </SkillWrapper>
-                      <SkillText>dd</SkillText>
+                      <SkillText>
+                        <SkillUl>
+                          {ChooseData?.detail?.fivedesc && (
+                            <SkillLi>{ChooseData?.detail?.fivedesc}</SkillLi>
+                          )}
+                          {ChooseData?.detail?.fivedesc2 && (
+                            <SkillLi>{ChooseData?.detail?.fivedesc2}</SkillLi>
+                          )}
+                        </SkillUl>
+                      </SkillText>
                     </SkillContainer>
                   )}
                   {ChooseData?.library.six && (
@@ -218,7 +257,16 @@ const Detail = () => {
                         </Skill>
                         <span>{ChooseData?.library.sixtitle}</span>
                       </SkillWrapper>
-                      <SkillText>dd</SkillText>
+                      <SkillText>
+                        <SkillUl>
+                          {ChooseData?.detail?.sixdesc && (
+                            <SkillLi>{ChooseData?.detail?.sixdesc}</SkillLi>
+                          )}
+                          {ChooseData?.detail?.sixdesc2 && (
+                            <SkillLi>{ChooseData?.detail?.sixdesc2}</SkillLi>
+                          )}
+                        </SkillUl>
+                      </SkillText>
                     </SkillContainer>
                   )}
                 </DescriptionGridInner>
