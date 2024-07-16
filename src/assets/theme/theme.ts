@@ -97,6 +97,7 @@ const colors = {
   footer_line: "#D9D9D9",
   mainLine: "#403C5C",
   datatitle: "#706d82",
+  detail_BG: "#46405F",
 };
 
 const theme = {

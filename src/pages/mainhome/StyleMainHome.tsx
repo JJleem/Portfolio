@@ -5,7 +5,7 @@ import react from "../../assets/img/skill/React.png";
 import ts from "../../assets/img/skill/Typescript.png";
 import js from "../../assets/img/skill/JavaScript.png";
 import githubWhite from "../../assets/img/skill/githubWhite.png";
-import github from "../../assets/img/skill/Github.png";
+
 import replace from "../../assets/img/icon/Refresh_2@2x.png";
 type Props = {
   type?: string;
