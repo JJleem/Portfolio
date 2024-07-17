@@ -1,12 +1,11 @@
 import React, { useEffect, useRef } from "react";
 import * as THREE from "three";
-import styled from "styled-components";
 
 const CloudAnimation: any = () => {
   const canvasRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     const width = 1920;
-    const height = 795;
+    const height = 670;
     const cloudParticles: THREE.Mesh[] = [];
     const scene = new THREE.Scene();
     const renderer = new THREE.WebGLRenderer();

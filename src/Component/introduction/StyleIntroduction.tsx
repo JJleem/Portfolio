@@ -27,11 +27,12 @@ export const IntroductionInner = styled.div`
   width: 100%;
   height: 100%;
 
-  padding: 80px 0 40px 0px;
+  padding: 40px 0 40px 0px;
   display: flex;
   gap: 20px;
   justify-content: space-around;
   align-items: center;
+
   @media ${({ theme }) => theme.mediaSize.lg} {
     flex-direction: column;
     gap: 30px;
@@ -41,7 +42,7 @@ export const IntroductionInner = styled.div`
     padding: 30px 0 40px 0px;
   }
   @media ${({ theme }) => theme.mediaSize.xs} {
-    padding: 0px 0 40px 0px;
+    padding: 0px 0 0px 0px;
   }
 `;
 export const PdfSection = styled.div`

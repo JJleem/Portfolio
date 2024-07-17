@@ -32,10 +32,11 @@ import {
   SkillUl,
   SkillLi,
   DetailsItems,
+  Goback,
 } from "./StyleDetail";
 import { useState, useEffect } from "react";
 import Db from "../../data/db.json";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import TopBtn from "../../Component/topbtn/TopBtn";
 
 const Detail = () => {
@@ -90,11 +91,18 @@ const Detail = () => {
       window.removeEventListener("mousemove", handleWindowMouseMove);
     };
   }, []);
-
+  const navigate = useNavigate();
+  const goback = () => {
+    navigate(-1);
+  };
   return (
     <StyleDetail>
       <DetailWrapper>
-        <TopSection></TopSection>
+        <TopSection>
+          <Goback onClick={goback}>
+            <div></div>
+          </Goback>
+        </TopSection>
         <BottomSection>
           <HideTitle>
             <span>MOLT's Project</span>

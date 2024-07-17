@@ -52,18 +52,21 @@ const StyleTopBtn = styled.button<Props>`
   height: 60px;
   background: ${({ theme }) => theme.colors.primary_V};
   transition: all 0.5s;
-  opacity: ${({ scroll }) => (scroll > 1400 ? 1 : 0)};
+  opacity: ${({ scroll }) => (scroll > 1200 ? 0.7 : 0)};
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 3px;
   font-weight: 700;
+  z-index: 99999999999;
   &:hover {
-    background: ${({ theme }) => theme.colors.secondary_V};
-    color: #000;
-    div {
-      display: none;
-    }
+    opacity: 1;
+  }
+  @media ${({ theme }) => theme.mediaSize.sm} {
+    width: 50px;
+    height: 50px;
+    right: 10px;
+    bottom: 145px;
   }
 `;

@@ -55,6 +55,7 @@ export const HomeGrid = styled.div`
   align-items: center;
   gap: 48px;
   flex-direction: column;
+  position: relative;
 `;
 export const MainLogo = styled.div`
   width: 200px;

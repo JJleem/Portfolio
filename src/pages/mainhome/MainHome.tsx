@@ -34,6 +34,7 @@ import db from "../../data/db.json";
 import { numberState } from "../../atom/atom";
 import { newNumberState } from "../../atom/atom";
 import { useRecoilState } from "recoil";
+import TopBtn from "../../Component/topbtn/TopBtn";
 const MainHome = () => {
   const navigate = useNavigate();
   const goConnect = () => {
@@ -53,104 +54,108 @@ const MainHome = () => {
   };
 
   return (
-    <HomeWrapper>
-      <BgWrapper />
-      <HomeGrid>
-        <MainInfo>
-          <MainLogo />
-          <MainTitle>
-            <span>MOLT</span>SPACE
-          </MainTitle>
-          <SubTitle>Frontend LeemJaeJun Portfolio</SubTitle>
-          <MainDesc>
-            2024년 7월, MOLTSPACE 차원의 문이 열리기 시작했습니다! <br />
-            신입 프론트엔드 개발자 포트폴리오 입니다.
-          </MainDesc>
-        </MainInfo>
-        <ItemWrapper>
-          <MainItem>
-            <MainItemLogo>
-              <Logo type="ts" />
-            </MainItemLogo>
-            <MainItemDesc>
-              BOASPACE는 <br />
-              보스아고라 메인넷 기반의 NFT 마켓플레이스입니다.
-            </MainItemDesc>
-          </MainItem>
-          <MainItem>
-            <MainItemLogo>
-              <Logo type="react" />
-            </MainItemLogo>
-            <MainItemDesc>
-              BOASPACE는 <br />
-              보스아고라 메인넷 기반의 NFT 마켓플레이스입니다.
-            </MainItemDesc>
-          </MainItem>
-          <MainItem>
-            <MainItemLogo>
-              <Logo type="js" />
-            </MainItemLogo>
-            <MainItemDesc>
-              BOASPACE는 <br />
-              보스아고라 메인넷 기반의 NFT 마켓플레이스입니다.
-            </MainItemDesc>
-          </MainItem>
-          <MainItem>
-            <MainItemLogo>
-              <Logo type="github" />
-            </MainItemLogo>
-            <MainItemDesc>
-              BOASPACE는 <br />
-              보스아고라 메인넷 기반의 NFT 마켓플레이스입니다.
-            </MainItemDesc>
-          </MainItem>
-          <MainItem>
-            <MainItemLogo>
-              <Logo />
-            </MainItemLogo>
-            <MainItemDesc>
-              BOASPACE는 <br />
-              보스아고라 메인넷 기반의 NFT 마켓플레이스입니다.
-            </MainItemDesc>
-          </MainItem>
-        </ItemWrapper>
-        <Btn
-          bgColor={theme.colors.primary_V}
-          text="CONNECT WALLET"
-          size="p15c"
-          onClick={goConnect}
-        />
-        <MainProjectWrap>
-          <FirstProjectWrap>
-            <ProjectTitle>
-              <span>PROJECTS </span>
-              <NewProjectWrap>
-                <NewProject onClick={generateNewNumbers}></NewProject>
-              </NewProjectWrap>
-            </ProjectTitle>
-            <MainProject></MainProject>
-          </FirstProjectWrap>
-        </MainProjectWrap>
-        <MainSubWrap>
-          <MainSub>
-            곧, BOASPACE의 차원의 문이 활짝 열릴 예정입니다! <br />
-            차원의 문이 활짝 열리면 <br />
-            <span>NFT 민팅, 판매, 전송, 거래</span>가 가능해집니다.
-          </MainSub>
-          <MainSub>
-            BOASPACE의 우주는 계속 진화합니다. <br /> 차별화된 다양한 편의기능이{" "}
-            <br /> 수시로 업데이트 될 예정입니다.
-          </MainSub>
+    <>
+      <HomeWrapper>
+        <BgWrapper />
+        <HomeGrid>
+          <MainInfo>
+            <MainLogo />
+            <MainTitle>
+              <span>MOLT</span>SPACE
+            </MainTitle>
+            <SubTitle>Frontend LeemJaeJun Portfolio</SubTitle>
+            <MainDesc>
+              2024년 7월, MOLTSPACE 차원의 문이 열리기 시작했습니다! <br />
+              신입 프론트엔드 개발자 포트폴리오 입니다.
+            </MainDesc>
+          </MainInfo>
+          <ItemWrapper>
+            <MainItem>
+              <MainItemLogo>
+                <Logo type="ts" />
+              </MainItemLogo>
+              <MainItemDesc>
+                BOASPACE는 <br />
+                보스아고라 메인넷 기반의 NFT 마켓플레이스입니다.
+              </MainItemDesc>
+            </MainItem>
+            <MainItem>
+              <MainItemLogo>
+                <Logo type="react" />
+              </MainItemLogo>
+              <MainItemDesc>
+                BOASPACE는 <br />
+                보스아고라 메인넷 기반의 NFT 마켓플레이스입니다.
+              </MainItemDesc>
+            </MainItem>
+            <MainItem>
+              <MainItemLogo>
+                <Logo type="js" />
+              </MainItemLogo>
+              <MainItemDesc>
+                BOASPACE는 <br />
+                보스아고라 메인넷 기반의 NFT 마켓플레이스입니다.
+              </MainItemDesc>
+            </MainItem>
+            <MainItem>
+              <MainItemLogo>
+                <Logo type="github" />
+              </MainItemLogo>
+              <MainItemDesc>
+                BOASPACE는 <br />
+                보스아고라 메인넷 기반의 NFT 마켓플레이스입니다.
+              </MainItemDesc>
+            </MainItem>
+            <MainItem>
+              <MainItemLogo>
+                <Logo />
+              </MainItemLogo>
+              <MainItemDesc>
+                BOASPACE는 <br />
+                보스아고라 메인넷 기반의 NFT 마켓플레이스입니다.
+              </MainItemDesc>
+            </MainItem>
+          </ItemWrapper>
           <Btn
             bgColor={theme.colors.primary_V}
             text="CONNECT WALLET"
             size="p15c"
             onClick={goConnect}
           />
-        </MainSubWrap>
-      </HomeGrid>
-      <Footer />
-    </HomeWrapper>
+          <MainProjectWrap>
+            <FirstProjectWrap>
+              <ProjectTitle>
+                <span>PROJECTS </span>
+                <NewProjectWrap>
+                  <NewProject onClick={generateNewNumbers}></NewProject>
+                </NewProjectWrap>
+              </ProjectTitle>
+              <MainProject></MainProject>
+            </FirstProjectWrap>
+          </MainProjectWrap>
+          <MainSubWrap>
+            <MainSub>
+              곧, BOASPACE의 차원의 문이 활짝 열릴 예정입니다! <br />
+              차원의 문이 활짝 열리면 <br />
+              <span>NFT 민팅, 판매, 전송, 거래</span>가 가능해집니다.
+            </MainSub>
+            <MainSub>
+              BOASPACE의 우주는 계속 진화합니다. <br /> 차별화된 다양한
+              편의기능이 <br /> 수시로 업데이트 될 예정입니다.
+            </MainSub>
+            <Btn
+              bgColor={theme.colors.primary_V}
+              text="CONNECT WALLET"
+              size="p15c"
+              onClick={goConnect}
+            />
+          </MainSubWrap>
+        </HomeGrid>
+
+        <Footer />
+      </HomeWrapper>
+      <TopBtn />
+    </>
   );
 };
 

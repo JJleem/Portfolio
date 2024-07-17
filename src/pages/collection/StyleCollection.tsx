@@ -36,13 +36,13 @@ export const Section = styled.div`
 `;
 export const TopCover = styled.div`
   width: 100%;
-  height: 430px;
+  height: 330px;
   background: ${({ theme }) => theme.colors.login_BOXline};
   @media ${({ theme }) => theme.mediaSize.sm} {
-    height: 284px;
+    height: 225px;
   }
   @media ${({ theme }) => theme.mediaSize.xs} {
-    height: 244px;
+    height: 225px;
   }
 `;
 export const BottomCover = styled.div`
@@ -121,12 +121,14 @@ export const DataList = styled.div`
 export const Data = styled.div`
   padding-right: 25px;
   border-right: 1px solid ${({ theme }) => theme.colors.popup_B01};
+  text-align: center;
   span {
     font-size: ${({ theme }) => theme.fontSize.p15};
     color: ${({ theme }) => theme.colors.datatitle};
   }
   p {
     font-size: ${({ theme }) => theme.fontSize.p22};
+    text-align: center;
   }
 `;
 export const TabList = styled.div`
@@ -334,8 +336,10 @@ export const ItemContainer = styled.div`
   gap: 10px;
   flex-direction: column;
   animation: ${Opacity} 1.5s ease-in-out;
+  padding-bottom: 50px;
+
   @media ${({ theme }) => theme.mediaSize.xs} {
-    margin-bottom: 150px;
+    padding-bottom: 50px;
   }
 `;
 export const ItemSection = styled.div`

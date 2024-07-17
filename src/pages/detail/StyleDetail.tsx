@@ -13,27 +13,57 @@ type Props = {
   logo?: string;
 };
 
-
-
 export const StyleDetail = styled.div`
   width: 100vw;
+
   position: relative;
   padding-bottom: 97px;
 `;
 export const DetailWrapper = styled.div`
   width: 100%;
   padding-bottom: 100px;
+  height: fit-content;
+
   display: flex;
   flex-direction: column;
   gap: 18px;
+  padding: 0px 0px 300px 0px;
   @media ${({ theme }) => theme.mediaSize.sm} {
     padding-bottom: 150px;
   }
 `;
 export const TopSection = styled.div`
   width: 100%;
-  height: 78px;
+  height: 128px;
   border-bottom: 1px solid ${({ theme }) => theme.colors.nav_BG};
+  display: flex;
+  align-items: end;
+  padding: 0 35px;
+  padding-bottom: 10px;
+`;
+export const Goback = styled.div`
+  width: 35px;
+  height: 35px;
+  background: ${({ theme }) => theme.colors.primary_V};
+  transition: all 0.5s;
+  &:hover {
+    background: ${({ theme }) => theme.colors.secondary_V};
+  }
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  div {
+    width: 30px;
+    height: 30px;
+    background-image: url(${arrowdown});
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: center;
+    transform: rotate(90deg);
+    cursor: pointer;
+  }
 `;
 export const BottomSection = styled.div`
   width: 100%;
@@ -217,7 +247,7 @@ export const DescriptionSection = styled.div<Props>`
   color: ${({ theme }) => theme.colors.White};
   border-bottom: 1px solid ${({ theme }) => theme.colors.nav_BG};
   transition: max-height 1s, padding 0s;
-  max-height: 999px;
+  max-height: 9999px;
   overflow: hidden;
   ${({ isClick }) =>
     isClick &&

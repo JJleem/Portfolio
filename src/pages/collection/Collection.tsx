@@ -93,14 +93,14 @@ const Collection = () => {
                 <span>Javascript.</span>
                 <p>3</p>
               </Data>
-              <Data>
+              {/* <Data>
                 <span>Floor</span>
                 <p>0.1943</p>
               </Data>
               <Data>
                 <span>Royalty</span>
                 <p>10%</p>
-              </Data>
+              </Data> */}
             </DataList>
           </BottomSection>
           <TabList>
@@ -109,25 +109,25 @@ const Collection = () => {
             </Tab>
 
             <Tab
-              onClick={() => handleTabClick("introduction")}
-              isClick={tabs.introduction}
-            >
-              Introduction
-            </Tab>
-
-            <Tab
               onClick={() => handleTabClick("activity")}
               isClick={tabs.activity}
             >
               Activity
+            </Tab>
+            <Tab
+              onClick={() => handleTabClick("introduction")}
+              isClick={tabs.introduction}
+            >
+              Introduction
             </Tab>
           </TabList>
           {tabs.items && <ItemTabs />}
           {tabs.introduction && <Introduction />}
           {tabs.activity && <Activity />}
         </BottomCover>
+        <TopBtn />
       </Section>
-      <TopBtn />
+
       <Footer />
     </Container>
   );
