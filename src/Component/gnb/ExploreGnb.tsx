@@ -1,5 +1,11 @@
 import React from "react";
-import { StyledGnb, LogoContainer, MenuWrap, Links } from "./StyledExploreGnb";
+import {
+  StyledGnb,
+  LogoContainer,
+  MenuWrap,
+  Links,
+  ToggleBtn,
+} from "./StyledExploreGnb";
 import { useRecoilState } from "recoil";
 import Btn from "../btn/Btn";
 import theme from "../../assets/theme/theme";
@@ -31,7 +37,7 @@ const ExploreGnb: React.FC = () => {
           linkto={"/collection"}
         />
         <Links to="/"></Links>
-        <Links to="/" onClick={handleClick} isClick={clickedToggle}></Links>
+        <ToggleBtn onClick={handleClick} isClick={clickedToggle}></ToggleBtn>
       </MenuWrap>
     </StyledGnb>
   );

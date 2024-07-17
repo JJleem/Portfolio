@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import emptyheart from "../../assets/img/icon/emptyheart.png";
 import fillheart from "../../assets/img/icon/filledheart.png";
 import ts from "../../assets/img/skill/Typescript.png";
@@ -12,6 +12,9 @@ type Props = {
   isHover?: boolean;
   logo?: string;
 };
+
+
+
 export const StyleDetail = styled.div`
   width: 100vw;
   position: relative;
@@ -24,7 +27,7 @@ export const DetailWrapper = styled.div`
   flex-direction: column;
   gap: 18px;
   @media ${({ theme }) => theme.mediaSize.sm} {
-    padding-bottom: 50px;
+    padding-bottom: 150px;
   }
 `;
 export const TopSection = styled.div`

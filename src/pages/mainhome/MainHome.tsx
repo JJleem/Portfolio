@@ -64,7 +64,7 @@ const MainHome = () => {
           <SubTitle>Frontend LeemJaeJun Portfolio</SubTitle>
           <MainDesc>
             2024년 7월, MOLTSPACE 차원의 문이 열리기 시작했습니다! <br />
-            내가 보유한 NFT 및 자산 확인이 가능한 상태입니다.
+            신입 프론트엔드 개발자 포트폴리오 입니다.
           </MainDesc>
         </MainInfo>
         <ItemWrapper>

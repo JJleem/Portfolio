@@ -203,49 +203,6 @@ const ItemTabs = () => {
               </ItemWrap>
             </ItemList>
           )}
-
-          {/* <ItemList>
-        <SkillTitle>
-          <span></span>React
-        </SkillTitle>
-        <ItemWrap>
-          <Box
-            itemImg={videoplatform}
-            skill={ts}
-            title="비디오 플랫폼"
-            transition="10"
-            sub="TMDB API를 활용하여 작업한 비디오플랫폼 프로젝트입니다"
-          />
-          <Box
-            itemImg={krds}
-            skill={ts}
-            title="KRDS"
-            transition="10"
-            sub="정부 UI/UX 가이드라인 사이트 KRDS 클론코딩 사이트 입니다."
-          />
-        </ItemWrap>
-      </ItemList>
-      <ItemList>
-        <SkillTitle>
-          <span></span>Javascript
-        </SkillTitle>
-        <ItemWrap>
-          <Box
-            itemImg={videoplatform}
-            skill={ts}
-            title="비디오 플랫폼"
-            transition="10"
-            sub="TMDB API를 활용하여 작업한 비디오플랫폼 프로젝트입니다"
-          />
-          <Box
-            itemImg={krds}
-            skill={ts}
-            title="KRDS"
-            transition="10"
-            sub="정부 UI/UX 가이드라인 사이트 KRDS 클론코딩 사이트 입니다."
-          />
-        </ItemWrap>
-      </ItemList> */}
         </ItemSection>
       </ItemContainer>
     </>

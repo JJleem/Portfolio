@@ -17,22 +17,25 @@ import {
   Tab,
   TabList,
   More,
+  FoldText,
 } from "./StyleCollection";
 import { useState } from "react";
 
 import CloudAnimation from "../../assets/three/CloudAnimation";
 
 import ItemTabs from "../../Component/itemTabs/ItemTabs";
+import Introduction from "../../Component/introduction/Introduction";
+import Activity from "../../Component/activity/Activity";
 
 const Collection = () => {
-  const [more, setMore] = useState(false);
+  const [more, setMore] = useState(true);
   const handleMore = () => {
     setMore(!more);
   };
 
   const [tabs, setTabs] = useState({
     items: true,
-    analytics: false,
+    introduction: false,
     activity: false,
   });
 
@@ -41,7 +44,7 @@ const Collection = () => {
       ...prevTabs,
       [tab]: true,
       items: tab === "items",
-      analytics: tab === "analytics",
+      introduction: tab === "introduction",
       activity: tab === "activity",
     }));
   };
@@ -58,24 +61,36 @@ const Collection = () => {
             <TitleName>LEEM JAEJUN</TitleName>
             <SubName>MOLT</SubName>
             <Desc>
-              Jenkins the Valet’s Writer’s Room is a collection of 6942 NFTs
-              that unlock a members-only Web3 authenticated...
+              안녕하세요. 성실하게 나아가는 신입 프론트엔드 개발자 임재준
+              입니다.
             </Desc>
             <Fold>
               See More <More onClick={handleMore} isClick={more}></More>
             </Fold>
+            <FoldText isClick={more}>
+              <div>
+                사용자의 니즈를 이해하고 이를 바탕으로 직관적이고 깔끔한 UI를
+                구현하는 것이 저의 목표입니다.
+              </div>
+
+              <div>
+                또한 최신 프론트엔드 기술들을 적극적으로 학습하고 이를
+                프로젝트에 적용하여 효율적이고 유지보수가 용이한 코드를 작성하는
+                것에 관심이 많습니다.
+              </div>
+            </FoldText>
             <DataList>
               <Data>
-                <span>Items</span>
-                <p>5.56K</p>
+                <span>Typescript.</span>
+                <p>7</p>
               </Data>
               <Data>
-                <span>Owners</span>
-                <p>3.54K</p>
+                <span>React.</span>
+                <p>4</p>
               </Data>
               <Data>
-                <span>VOL.</span>
-                <p>632.05</p>
+                <span>Javascript.</span>
+                <p>3</p>
               </Data>
               <Data>
                 <span>Floor</span>
@@ -93,10 +108,10 @@ const Collection = () => {
             </Tab>
 
             <Tab
-              onClick={() => handleTabClick("analytics")}
-              isClick={tabs.analytics}
+              onClick={() => handleTabClick("introduction")}
+              isClick={tabs.introduction}
             >
-              Self-Introduction
+              Introduction
             </Tab>
 
             <Tab
@@ -107,6 +122,8 @@ const Collection = () => {
             </Tab>
           </TabList>
           {tabs.items && <ItemTabs />}
+          {tabs.introduction && <Introduction />}
+          {tabs.activity && <Activity />}
         </BottomCover>
       </Section>
       <Footer />

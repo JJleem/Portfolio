@@ -21,7 +21,7 @@ export const ProjectWrap = styled.div`
     padding: 30px;
   }
   @media ${({ theme }) => theme.mediaSize.sm} {
-    width: 544px;
+    width: 474px;
     height: 1007px;
   }
   @media ${({ theme }) => theme.mediaSize.xs} {

@@ -190,29 +190,32 @@ export const Links = styled(Link)<GasideProps>`
   }
   &:nth-of-type(4) {
     display: none;
-    @media ${({ theme }) => theme.mediaSize.xs} {
-      transition: all 0.5s;
-      display: block;
-      width: 28px;
-      height: 28px;
-      background-image: ${({ isClick }) =>
-        isClick ? `url(${close})` : `url(${toggle})`};
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: center;
-      position: relative;
-      &::before {
-        content: "";
-        width: 38px;
-        height: 38px;
-        background: ${({ theme }) => theme.colors.primary_V};
-        position: absolute;
-        z-index: -1;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        border-radius: 6px;
-      }
+  }
+`;
+export const ToggleBtn = styled.div<GasideProps>`
+  display: none;
+  @media ${({ theme }) => theme.mediaSize.xs} {
+    transition: all 0.5s;
+    display: block;
+    width: 28px;
+    height: 28px;
+    background-image: ${({ isClick }) =>
+      isClick ? `url(${close})` : `url(${toggle})`};
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: center;
+    position: relative;
+    &::before {
+      content: "";
+      width: 38px;
+      height: 38px;
+      background: ${({ theme }) => theme.colors.primary_V};
+      position: absolute;
+      z-index: -1;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 6px;
     }
   }
 `;

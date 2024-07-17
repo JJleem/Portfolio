@@ -19,6 +19,8 @@ export const Top = styled.div`
   height: 50%;
   border-bottom: 1px solid ${({ theme }) => theme.colors.footer_line};
   opacity: 0.15;
+  @media ${({ theme }) => theme.mediaSize.xs} {
+  }
 `;
 export const Bottom = styled.div`
   width: 100%;

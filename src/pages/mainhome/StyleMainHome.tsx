@@ -283,6 +283,15 @@ export const ProjectTitle = styled.div`
   span {
     font-weight: 700;
   }
+
+  @media ${({ theme }) => theme.mediaSize.md} {
+    font-size: ${({ theme }) => theme.fontSize.p30};
+    padding: 0 15px;
+  }
+  @media ${({ theme }) => theme.mediaSize.sm} {
+    font-size: ${({ theme }) => theme.fontSize.p25};
+    padding: 0 15px;
+  }
 `;
 export const NewProjectWrap = styled.div`
   width: 100%;

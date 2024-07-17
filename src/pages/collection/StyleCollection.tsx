@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 import more from "../../assets/img/icon/expand_more.png";
 import theme from "../../assets/theme/theme";
 import filter from "../../assets/img/icon/filter_list.png";
@@ -13,7 +13,14 @@ type Props = {
 type logoProps = {
   logo?: string;
 };
-
+const Opacity = keyframes`
+0% {
+  opacity:0;
+}
+100% {
+  opacity:1;
+}
+`;
 export const Container = styled.div`
   width: 100vw;
   height: 100%;
@@ -88,7 +95,6 @@ export const Fold = styled.div<Props>`
   align-items: center;
   font-size: ${({ theme }) => theme.fontSize.p17};
   color: ${({ theme }) => theme.colors.secondary_V};
-  margin-bottom: 20px;
 `;
 export const More = styled.div<Props>`
   display: block;
@@ -144,7 +150,7 @@ export const Tab = styled.div<Props>`
 export const InputWrap = styled.div`
   display: flex;
   width: 100%;
-
+  animation: ${Opacity} 1.5s ease-in-out;
   height: 53px;
   gap: 12px;
   margin-top: -20px;
@@ -327,6 +333,7 @@ export const ItemContainer = styled.div`
   display: flex;
   gap: 10px;
   flex-direction: column;
+  animation: ${Opacity} 1.5s ease-in-out;
 `;
 export const ItemSection = styled.div`
   display: flex;
@@ -390,4 +397,10 @@ export const FilterCheckBox = styled.div<Props>`
   background-position: center;
   background-repeat: no-repeat;
   background-size: center;
+`;
+export const FoldText = styled.div<Props>`
+  margin-bottom: 10px;
+  height: 100%;
+  height: ${({ isClick }) => (isClick ? "0" : "100%")};
+  text-indent: ${({ isClick }) => (isClick ? "-99999px" : "0")};
 `;
