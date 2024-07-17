@@ -5,20 +5,25 @@ export const StyleFooter = styled.div`
   height: 106px;
   position: absolute;
   bottom: 0;
-  z-index: 9999999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background: ${({ theme }) => theme.colors.transparent};
   @media ${({ theme }) => theme.mediaSize.sm} {
     height: 180px;
   }
   @media ${({ theme }) => theme.mediaSize.xs} {
-    height: 230px;
+    height: 130px;
   }
 `;
 export const Top = styled.div`
   width: 100%;
   height: 50%;
-  border-bottom: 1px solid ${({ theme }) => theme.colors.footer_line};
+  max-height: 1%;
+
   opacity: 0.15;
+  z-index: -1;
   @media ${({ theme }) => theme.mediaSize.xs} {
   }
 `;
@@ -29,7 +34,10 @@ export const Bottom = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 9999999;
+  border-top: 1px solid ${({ theme }) => theme.colors.footer_line};
   color: ${({ theme }) => theme.colors.White};
+  padding-top: 30px;
   @media ${({ theme }) => theme.mediaSize.sm} {
     flex-direction: column;
     justify-content: center;

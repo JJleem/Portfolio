@@ -36,6 +36,7 @@ import {
 import { useState, useEffect } from "react";
 import Db from "../../data/db.json";
 import { Link, useParams } from "react-router-dom";
+import TopBtn from "../../Component/topbtn/TopBtn";
 
 const Detail = () => {
   const [isDescClick, setIsDescClick] = useState(false);
@@ -319,6 +320,7 @@ const Detail = () => {
           </DescWrap>
         </BottomSection>
       </DetailWrapper>
+      <TopBtn />
       <Footer />
     </StyleDetail>
   );

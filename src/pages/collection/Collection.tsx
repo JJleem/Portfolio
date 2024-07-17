@@ -26,6 +26,7 @@ import CloudAnimation from "../../assets/three/CloudAnimation";
 import ItemTabs from "../../Component/itemTabs/ItemTabs";
 import Introduction from "../../Component/introduction/Introduction";
 import Activity from "../../Component/activity/Activity";
+import TopBtn from "../../Component/topbtn/TopBtn";
 
 const Collection = () => {
   const [more, setMore] = useState(true);
@@ -126,6 +127,7 @@ const Collection = () => {
           {tabs.activity && <Activity />}
         </BottomCover>
       </Section>
+      <TopBtn />
       <Footer />
     </Container>
   );

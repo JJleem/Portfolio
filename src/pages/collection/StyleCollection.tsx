@@ -107,7 +107,7 @@ export const More = styled.div<Props>`
   transform: rotate(180);
   cursor: pointer;
   transition: all 0.5s;
-  transform: ${({ isClick }) => (isClick ? "rotate(180deg)" : "rotate(0deg)")};
+  transform: ${({ isClick }) => (isClick ? "rotate(0deg)" : "rotate(180deg)")};
 `;
 export const DataList = styled.div`
   display: flex;
@@ -334,6 +334,9 @@ export const ItemContainer = styled.div`
   gap: 10px;
   flex-direction: column;
   animation: ${Opacity} 1.5s ease-in-out;
+  @media ${({ theme }) => theme.mediaSize.xs} {
+    margin-bottom: 150px;
+  }
 `;
 export const ItemSection = styled.div`
   display: flex;
