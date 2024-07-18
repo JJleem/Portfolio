@@ -93,6 +93,7 @@ const colors = {
   mocup_text: "#929292",
   transparent: "transparent",
   popup_B01: "#4F4B67",
+  inputFill: "#2c273f",
   nav_BG: "#3d3755",
   line: "#BCBCCC",
   footer_line: "#D9D9D9",

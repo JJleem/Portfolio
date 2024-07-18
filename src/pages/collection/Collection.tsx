@@ -25,7 +25,7 @@ import {
 import { useState } from "react";
 
 import CloudAnimation from "../../assets/three/CloudAnimation";
-
+import { useMediaQuery } from "react-responsive";
 import ItemTabs from "../../Component/itemTabs/ItemTabs";
 import Introduction from "../../Component/introduction/Introduction";
 import Activity from "../../Component/activity/Activity";
@@ -59,7 +59,22 @@ const Collection = () => {
     contact: false,
   });
 
+  const isSmall = useMediaQuery({ maxWidth: 744 });
+
+  const tabPositions: { [key: string]: number } = {
+    items: isSmall ? 530 : 610,
+    introduction: isSmall ? 410 : 610,
+    activity: isSmall ? 530 : 610,
+    skillstack: 2000,
+    contact: isSmall ? 530 : 630,
+  };
+
+  const [isScrolling, setIsScrolling] = useState(false);
+
   const handleTabClick = (tab: string) => {
+    if (isScrolling) return; // 스크롤 중이면 클릭 무시
+
+    setIsScrolling(true); // 스크롤 중임을 표시
     setTabs((prevTabs) => ({
       ...prevTabs,
       [tab]: true,
@@ -69,8 +84,27 @@ const Collection = () => {
       skillstack: tab === "skillstack",
       contact: tab === "contact",
     }));
+
+    const scrollToTab = () => {
+      window.requestAnimationFrame(() => {
+        window.scrollTo({
+          top: tabPositions[tab],
+          behavior: "smooth",
+        });
+      });
+
+      const scrollEndListener = () => {
+        window.removeEventListener("scroll", scrollEndListener);
+        setIsScrolling(false); // 스크롤 완료 후 상태 업데이트
+      };
+      window.addEventListener("scroll", scrollEndListener);
+    };
+
+    scrollToTab();
   };
+
   const tabListRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     if (tabListRef.current) {
       const tabList = tabListRef.current;
@@ -84,10 +118,12 @@ const Collection = () => {
         if (activeTabLeftInList <= 0) {
           tabList.scrollLeft = 0;
         } else if (activeTabRightInList >= tabListWidth) {
-          tabList.scrollLeft = activeTabRect.width;
+          tabList.scrollLeft = activeTabRect.width + 100;
         } else {
           tabList.scrollLeft =
-            activeTabLeftInList - (tabListWidth - activeTabRect.width) / 2;
+            activeTabLeftInList -
+            (tabListWidth - activeTabRect.width) / 2 +
+            100;
         }
       }
     }

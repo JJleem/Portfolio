@@ -26,7 +26,7 @@ const Activity = () => {
     <ItemContainer>
       <ActivityItemSection>
         <ActivityItemWraper>
-          <ActivityType className="firstType">교육 연수</ActivityType>
+          <ActivityType className="firstType">교육 이수</ActivityType>
           <ActivityWrapper>
             <ActivityInner>
               <ActivityTitle>교육 과정</ActivityTitle>
@@ -101,12 +101,12 @@ const Activity = () => {
               </ActivitySection>
               <ActivitySection>
                 <ActivityText logo={person}>
-                  <span></span>전기가설(주임)
+                  <span></span>전기가설
                 </ActivityText>
               </ActivitySection>
               <ActivitySection>
                 <ActivityText logo={person}>
-                  <span></span>데이터관리 매니저
+                  <span></span>데이터관리
                 </ActivityText>
               </ActivitySection>
             </ActivityInner>
