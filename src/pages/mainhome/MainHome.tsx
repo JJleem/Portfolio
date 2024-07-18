@@ -21,27 +21,39 @@ import {
   ProjectTitle,
   SubTitle,
 } from "./StyleMainHome";
-
 import Footer from "../../Component/footer/Footer";
 import Btn from "../../Component/btn/Btn";
 import theme from "../../assets/theme/theme";
-
 import MainProject from "../../Component/mainproject/MainProject";
-
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
-import db from "../../data/db.json";
 import { numberState } from "../../atom/atom";
 import { newNumberState } from "../../atom/atom";
 import { useRecoilState } from "recoil";
 import TopBtn from "../../Component/topbtn/TopBtn";
 const MainHome = () => {
+  //
+  const [scrollY, setScrollY] = useState(0);
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+  console.log(scrollY);
+  //
   const navigate = useNavigate();
   const goConnect = () => {
     navigate("/collection");
   };
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [randomNumber, setRandomNumber] = useRecoilState<number>(numberState);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [newRandomNumber, setNewRandomNumber] =
     useRecoilState<number>(newNumberState);
 
@@ -116,15 +128,15 @@ const MainHome = () => {
               </MainItemDesc>
             </MainItem>
           </ItemWrapper>
-          <Btn
+          {/* <Btn
             bgColor={theme.colors.primary_V}
             text="CONNECT WALLET"
             size="p15c"
             onClick={goConnect}
-          />
+          /> */}
           <MainProjectWrap>
             <FirstProjectWrap>
-              <ProjectTitle>
+              <ProjectTitle scrolly={scrollY}>
                 <span>PROJECTS </span>
                 <NewProjectWrap>
                   <NewProject onClick={generateNewNumbers}></NewProject>
@@ -133,7 +145,7 @@ const MainHome = () => {
               <MainProject></MainProject>
             </FirstProjectWrap>
           </MainProjectWrap>
-          <MainSubWrap>
+          <MainSubWrap scrolly={scrollY}>
             <MainSub>
               곧, BOASPACE의 차원의 문이 활짝 열릴 예정입니다! <br />
               차원의 문이 활짝 열리면 <br />

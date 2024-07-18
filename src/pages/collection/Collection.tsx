@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
 import Footer from "../../Component/footer/Footer";
 import {
@@ -18,6 +18,9 @@ import {
   TabList,
   More,
   FoldText,
+  Modaldetail,
+  ModalContent,
+  TabListContainer,
 } from "./StyleCollection";
 import { useState } from "react";
 
@@ -27,8 +30,22 @@ import ItemTabs from "../../Component/itemTabs/ItemTabs";
 import Introduction from "../../Component/introduction/Introduction";
 import Activity from "../../Component/activity/Activity";
 import TopBtn from "../../Component/topbtn/TopBtn";
+import SkillStack from "../../Component/skillstack/SkillStack";
+import Contact from "../../Component/contact/Contact";
 
 const Collection = () => {
+  const [isModal, setIsModal] = useState(true);
+  const handleIsModal = () => {
+    const newIsModal = !isModal;
+    setIsModal(newIsModal);
+    sessionStorage.setItem("isModal", JSON.stringify(newIsModal));
+  };
+  useEffect(() => {
+    const storedIsModal = sessionStorage.getItem("isModal");
+    if (storedIsModal !== null) {
+      setIsModal(JSON.parse(storedIsModal));
+    }
+  }, []);
   const [more, setMore] = useState(true);
   const handleMore = () => {
     setMore(!more);
@@ -38,6 +55,8 @@ const Collection = () => {
     items: true,
     introduction: false,
     activity: false,
+    skillstack: false,
+    contact: false,
   });
 
   const handleTabClick = (tab: string) => {
@@ -47,8 +66,32 @@ const Collection = () => {
       items: tab === "items",
       introduction: tab === "introduction",
       activity: tab === "activity",
+      skillstack: tab === "skillstack",
+      contact: tab === "contact",
     }));
   };
+  const tabListRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (tabListRef.current) {
+      const tabList = tabListRef.current;
+      const activeTab = tabList.querySelector(".active") as HTMLElement;
+      if (activeTab) {
+        const tabListRect = tabList.getBoundingClientRect();
+        const activeTabRect = activeTab.getBoundingClientRect();
+        const activeTabLeftInList = activeTabRect.left - tabListRect.left;
+        const activeTabRightInList = activeTabRect.right - tabListRect.left;
+        const tabListWidth = tabList.offsetWidth;
+        if (activeTabLeftInList <= 0) {
+          tabList.scrollLeft = 0;
+        } else if (activeTabRightInList >= tabListWidth) {
+          tabList.scrollLeft = activeTabRect.width;
+        } else {
+          tabList.scrollLeft =
+            activeTabLeftInList - (tabListWidth - activeTabRect.width) / 2;
+        }
+      }
+    }
+  }, [tabs]);
 
   return (
     <Container>
@@ -58,7 +101,7 @@ const Collection = () => {
         </TopCover>
         <BottomCover>
           <Profile />
-          <BottomSection>
+          <BottomSection isModal={isModal}>
             <TitleName>LEEM JAEJUN</TitleName>
             <SubName>MOLT</SubName>
             <Desc>
@@ -93,37 +136,60 @@ const Collection = () => {
                 <span>Javascript.</span>
                 <p>3</p>
               </Data>
-              {/* <Data>
-                <span>Floor</span>
-                <p>0.1943</p>
-              </Data>
-              <Data>
-                <span>Royalty</span>
-                <p>10%</p>
-              </Data> */}
             </DataList>
           </BottomSection>
-          <TabList>
-            <Tab onClick={() => handleTabClick("items")} isClick={tabs.items}>
-              Items
-            </Tab>
+          <TabListContainer>
+            <TabList ref={tabListRef}>
+              <Tab
+                className={tabs.items ? "active" : ""}
+                onClick={() => handleTabClick("items")}
+                isClick={tabs.items}
+              >
+                Projects
+              </Tab>
 
-            <Tab
-              onClick={() => handleTabClick("activity")}
-              isClick={tabs.activity}
-            >
-              Activity
-            </Tab>
-            <Tab
-              onClick={() => handleTabClick("introduction")}
-              isClick={tabs.introduction}
-            >
-              Introduction
-            </Tab>
-          </TabList>
+              <Tab
+                className={tabs.activity ? "active" : ""}
+                onClick={() => handleTabClick("activity")}
+                isClick={tabs.activity}
+              >
+                Activity
+              </Tab>
+              <Tab
+                className={tabs.skillstack ? "active" : ""}
+                onClick={() => handleTabClick("skillstack")}
+                isClick={tabs.skillstack}
+              >
+                SkillStack
+              </Tab>
+              <Tab
+                className={tabs.introduction ? "active" : ""}
+                onClick={() => handleTabClick("introduction")}
+                isClick={tabs.introduction}
+              >
+                Introduction
+              </Tab>
+
+              <Tab
+                className={tabs.contact ? "active" : ""}
+                onClick={() => handleTabClick("contact")}
+                isClick={tabs.contact}
+              >
+                Contact
+              </Tab>
+            </TabList>
+            <Modaldetail isModal={isModal} onClick={handleIsModal}>
+              <ModalContent>
+                <span>각 탭들을 클릭해 확인해보세요.</span>
+                <i></i>
+              </ModalContent>
+            </Modaldetail>
+          </TabListContainer>
           {tabs.items && <ItemTabs />}
           {tabs.introduction && <Introduction />}
           {tabs.activity && <Activity />}
+          {tabs.skillstack && <SkillStack />}
+          {tabs.contact && <Contact />}
         </BottomCover>
         <TopBtn />
       </Section>

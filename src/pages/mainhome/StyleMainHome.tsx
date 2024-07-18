@@ -7,10 +7,12 @@ import js from "../../assets/img/skill/JavaScript.png";
 import githubWhite from "../../assets/img/skill/githubWhite.png";
 
 import replace from "../../assets/img/icon/Refresh_2@2x.png";
+import { Opacity } from "../collection/StyleCollection";
 type Props = {
   type?: string;
   transition?: string;
   skill?: string;
+  scrolly?: number | undefined;
 };
 const ImgZ = keyframes`
 0% {
@@ -64,12 +66,15 @@ export const MainLogo = styled.div`
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  animation: ${Opacity} 1.5s ease-in-out;
 `;
 export const MainTitle = styled.div`
   font-size: 80px;
-
+  animation: ${Opacity} 1.5s ease-in-out;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
   font-weight: 100;
-
+  opacity: 0;
   span {
     font-weight: 700;
   }
@@ -84,6 +89,10 @@ export const MainTitle = styled.div`
   }
 `;
 export const SubTitle = styled.div`
+  animation: ${Opacity} 1.5s ease-in-out;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
   font-size: ${({ theme }) => theme.fontSize.p11};
   letter-spacing: 10px;
   font-weight: 500;
@@ -98,6 +107,10 @@ export const SubTitle = styled.div`
   }
 `;
 export const MainDesc = styled.div`
+  animation: ${Opacity} 1.5s ease-in-out;
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards;
+  opacity: 0;
   font-size: ${({ theme }) => theme.fontSize.p25};
   text-align: center;
   font-weight: 500;
@@ -118,6 +131,10 @@ export const MainInfo = styled.div`
   flex-direction: column;
 `;
 export const ItemWrapper = styled.div`
+  animation: ${Opacity} 1.5s ease-in-out;
+  animation-delay: 0.4s;
+  animation-fill-mode: forwards;
+  opacity: 0;
   display: flex;
   gap: 7px;
   transition: all 0.5s;
@@ -273,17 +290,24 @@ export const FirstProjectWrap = styled.div`
   flex-direction: column;
   gap: 22px;
 `;
-export const ProjectTitle = styled.div`
+export const ProjectTitle = styled.div<Props>`
   font-size: ${({ theme }) => theme.fontSize.p45};
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
   width: 100%;
-
+  opacity: 0;
   span {
     font-weight: 700;
   }
+  ${({ scrolly = 0 }) =>
+    scrolly >= 100
+      ? css`
+          animation: ${Opacity} 1.5s ease-in-out;
+          animation-fill-mode: forwards;
+        `
+      : ""}
 
   @media ${({ theme }) => theme.mediaSize.md} {
     font-size: ${({ theme }) => theme.fontSize.p30};
@@ -333,7 +357,7 @@ export const MainSub = styled.div`
     }
   }
 `;
-export const MainSubWrap = styled.div`
+export const MainSubWrap = styled.div<Props>`
   width: 100%;
   display: flex;
   justify-content: center;
@@ -341,6 +365,14 @@ export const MainSubWrap = styled.div`
   flex-direction: column;
   gap: 24px;
   margin-top: 32px;
+  opacity: 0;
+  ${({ scrolly = 0 }) =>
+    scrolly >= 1350
+      ? css`
+          animation: ${Opacity} 1.5s ease-in-out;
+          animation-fill-mode: forwards;
+        `
+      : ""}
   div {
     &:nth-of-type(2) {
       margin-bottom: 50px;

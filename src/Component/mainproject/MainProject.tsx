@@ -18,13 +18,30 @@ import {
 } from "./StyleMainProject";
 import Btn from "../btn/Btn";
 import theme from "../../assets/theme/theme";
-
+import { useState, useEffect } from "react";
 import Db from "../../data/db.json";
 import { useNavigate } from "react-router-dom";
 import { numberState } from "../../atom/atom";
 import { newNumberState } from "../../atom/atom";
 import { useRecoilState } from "recoil";
 const MainProject = () => {
+  const [scrollY, setScrollY] = useState(0);
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  //
+
+  const goConnect = () => {
+    navigate("/collection");
+  };
+
   const filteredData = Db.items.map((item) => item);
 
   const [randomNumber, setRandomNumber] = useRecoilState<number>(numberState);
@@ -36,7 +53,7 @@ const MainProject = () => {
   };
   return (
     <>
-      <ProjectWrap>
+      <ProjectWrap scrolly={scrollY}>
         {filteredData
           .filter((_, index) => index === randomNumber)
           .map((db) => (
@@ -93,7 +110,7 @@ const MainProject = () => {
             </Inner>
           ))}
       </ProjectWrap>
-      <ProjectWrap>
+      <ProjectWrap scrolly={scrollY}>
         {filteredData
           .filter((_, index) => index === newRandomNumber)
           .map((db) => (

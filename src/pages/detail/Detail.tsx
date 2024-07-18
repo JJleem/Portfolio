@@ -93,7 +93,7 @@ const Detail = () => {
   }, []);
   const navigate = useNavigate();
   const goback = () => {
-    navigate(-1);
+    navigate("/collection");
   };
   return (
     <StyleDetail>

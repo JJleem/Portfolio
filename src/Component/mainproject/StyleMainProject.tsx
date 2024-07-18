@@ -1,15 +1,25 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+import { Opacity } from "../../pages/collection/StyleCollection";
 
 type LogoProps = {
   skill?: string;
   img?: string;
+  scrolly?: number;
 };
-export const ProjectWrap = styled.div`
+export const ProjectWrap = styled.div<LogoProps>`
   width: 1220px;
   height: 570px;
   border-radius: 20px;
   padding: 50px 50px 50px 50px;
   background: ${({ theme }) => theme.colors.BG_MainBox};
+  opacity: 0;
+  ${({ scrolly = 0 }) =>
+    scrolly >= 100
+      ? css`
+          animation: ${Opacity} 1.5s ease-in-out;
+          animation-fill-mode: forwards;
+        `
+      : ""}
   @media ${({ theme }) => theme.mediaSize.xl} {
     width: 1060px;
   }

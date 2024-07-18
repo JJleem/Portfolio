@@ -14,7 +14,7 @@ import {
   PdfSection,
   PdfText,
 } from "./StyleIntroduction";
-import { Link } from "react-router-dom";
+
 import pdf from "../../assets/img/icon/pdf.png";
 import hwp from "../../assets/img/icon/hwp.png";
 const Introduction = () => {
@@ -36,7 +36,7 @@ const Introduction = () => {
                 <PdfDownload>
                   다운로드 <PdfDownloadLogo></PdfDownloadLogo>
                 </PdfDownload>
-              </PdfLink> 
+              </PdfLink>
             </PdfSection>
           </LinkSection>
           <LinkSection>

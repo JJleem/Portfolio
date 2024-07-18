@@ -1,7 +1,7 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import emptyheart from "../../assets/img/icon/emptyheart.png";
 import fillheart from "../../assets/img/icon/filledheart.png";
-import ts from "../../assets/img/skill/Typescript.png";
+
 import arrowdown from "../../assets/img/icon/arrowdown.png";
 type Props = {
   isClick?: boolean;
@@ -136,7 +136,6 @@ export const ImgSection = styled.div<Props>`
 `;
 export const ModalCursor = styled.div<Props>`
   position: fixed;
-
   display: ${({ isHover }) => (isHover ? "block" : "none")};
   padding: 8px 12px;
   border-radius: 8px;
