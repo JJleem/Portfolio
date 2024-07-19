@@ -65,7 +65,7 @@ const Collection = () => {
     items: isSmall ? 530 : 610,
     introduction: isSmall ? 410 : 610,
     activity: isSmall ? 530 : 610,
-    skillstack: 2000,
+    skillstack: 642,
     contact: isSmall ? 530 : 630,
   };
 

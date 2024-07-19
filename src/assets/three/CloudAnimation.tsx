@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import * as THREE from "three";
-
+import purple from "../img/bg/purplecloud.png";
+import smoke from "../img/bg/smoke-1.png";
 const CloudAnimation: any = () => {
   const canvasRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -31,25 +32,28 @@ const CloudAnimation: any = () => {
     camera.rotation.y = -0.12;
     camera.rotation.z = 0.27;
 
-    const ambient = new THREE.AmbientLight(0x555555);
+    const ambient = new THREE.AmbientLight(0x555555, 1.2);
     scene.add(ambient);
 
-    const directional = new THREE.DirectionalLight(0xffeedd);
+    const directional = new THREE.DirectionalLight(0xffeedd, 1.5);
     directional.position.set(0, 0, 1);
     scene.add(directional);
 
-    const point = new THREE.PointLight(0x062d89, 30, 500, 1.7);
+    const point = new THREE.PointLight(0x062d89, 50, 500, 1.7);
     point.position.set(200, 300, 100);
     scene.add(point);
 
-    const loader = new THREE.TextureLoader();
-    loader.load(
+    const loadertwo = new THREE.TextureLoader();
+    loadertwo.load(
       "https://i.postimg.cc/TYvjnH2F/smoke-1.png",
       (texture) => {
         const cloudGeometry = new THREE.PlaneGeometry(2000, 800);
         const cloudMaterial = new THREE.MeshLambertMaterial({
           map: texture,
           transparent: true,
+          color: new THREE.Color(0x6f36ff),
+          emissive: new THREE.Color(0x6f36ff),
+          emissiveIntensity: 0.5,
         });
 
         for (let i = 0; i < 15; i++) {
@@ -62,7 +66,7 @@ const CloudAnimation: any = () => {
           cloud.rotation.x = 1.16;
           cloud.rotation.y = -0.12;
           cloud.rotation.z = Math.random() * 360;
-          cloud.material.opacity = 0.6;
+          cloud.material.opacity = 0.5;
           cloudParticles.push(cloud);
           scene.add(cloud);
         }
@@ -73,8 +77,49 @@ const CloudAnimation: any = () => {
       }
     );
 
+    const loader = new THREE.TextureLoader();
+    loader.load(
+      `${purple}`,
+      (texture) => {
+        const cloudGeometry = new THREE.PlaneGeometry(1500, 800);
+        const cloudMaterial = new THREE.MeshLambertMaterial({
+          map: texture,
+          transparent: true,
+          color: new THREE.Color(0x6f36ff),
+          emissive: new THREE.Color(0x6f36ff),
+          emissiveIntensity: 0.5,
+        });
+
+        for (let i = 0; i < 15; i++) {
+          const cloud = new THREE.Mesh(cloudGeometry, cloudMaterial);
+          cloud.position.set(
+            Math.random() * 1200 - 600,
+            1000,
+            Math.random() * 800 - 40
+          );
+          cloud.rotation.x = 1.16;
+          cloud.rotation.y = -0.12;
+          cloud.rotation.z = Math.random() * 360;
+          cloud.material.opacity = 1;
+          cloudParticles.push(cloud);
+          scene.add(cloud);
+        }
+      },
+      (progress) => {
+        // 로딩 상태 표시
+        console.log(
+          `Loaded image: ${(progress.loaded / progress.total) * 100}%`
+        );
+      },
+      (error) => {
+        // 오류 처리 개선
+        console.error("Error loading texture:", error);
+        // 대체 이미지 사용 등의 처리 추가
+      }
+    );
+
     const rainGeometry = new THREE.BufferGeometry();
-    const rainCount = 7000;
+    const rainCount = 3000;
     const rainPositions = new Float32Array(rainCount * 3);
 
     for (let i = 0; i < rainCount; i++) {

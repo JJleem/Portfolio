@@ -44,12 +44,12 @@ export const LogoContainer = styled.div`
   &::before {
     content: "";
     width: 50px;
-    height: 30px;
+    height: 50px;
     margin-right: 11px;
     background-image: url(${Logo});
     background-repeat: no-repeat;
     background-position: center;
-    background-size: center;
+    background-size: contain;
   }
 `;
 export const Inner = styled.div`

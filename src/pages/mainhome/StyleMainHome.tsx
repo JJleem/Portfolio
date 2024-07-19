@@ -1,6 +1,7 @@
 import styled, { css, keyframes } from "styled-components";
 import bg from "../../assets/img/bg/testbg.png";
-import mainlogo from "../../assets/img/bg/mainlogo.png";
+// import mainlogo from "../../assets/img/bg/mainlogo.png";
+import mainlogo from "../../assets/img/logo/logo.png";
 import react from "../../assets/img/skill/React.png";
 import ts from "../../assets/img/skill/Typescript.png";
 import js from "../../assets/img/skill/JavaScript.png";
@@ -51,7 +52,7 @@ export const HomeGrid = styled.div`
   height: 100%;
   padding: 0 35px;
   padding-bottom: 210px;
-  padding-top: 83px;
+  padding-top: 123px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -60,8 +61,8 @@ export const HomeGrid = styled.div`
   position: relative;
 `;
 export const MainLogo = styled.div`
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   background: url(${mainlogo});
   background-position: center;
   background-size: cover;
