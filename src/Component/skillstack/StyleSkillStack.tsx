@@ -37,12 +37,9 @@ export const SkillStackSection = styled(motion.div)<ClickedProps>`
   position: relative;
   transition: all 0.5s 1s;
   display: ${({ isClick }) => (isClick ? "none" : "flex")};
-
   transition: all 0.8s;
-
   width: 300px;
   height: 300px;
-
   background-image: url(${blackhole});
   background-repeat: no-repeat;
   background-position: center;
@@ -132,13 +129,14 @@ export const SkillInner = styled.div<logoProps>`
 `;
 export const SkillSectionlayout = styled(motion.div)<logoProps>`
   width: 100%;
-  height: 100vh;
+  height: 200vh;
   display: flex;
 
   transition-property: transform;
   transition-duration: 1s;
   transition-timing-function: ease-in-out;
   transition-delay: 1s;
+  flex-direction: column;
 `;
 export const SkillItemlayout = styled(motion.div)<logoProps>`
   background-image: url(${({ logo }) => logo});
@@ -150,4 +148,26 @@ export const SkillItemlayout = styled(motion.div)<logoProps>`
   z-index: 2;
   border-radius: 15px;
   border: 1.5px solid ${({ theme }) => theme.colors.secondary_V};
+  padding: 10px;
+  background-color: ${({ theme }) => theme.colors.secondary_V};
+`;
+
+export const ModalSkill = styled.div<ClickedProps>`
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  display: block;
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: ${({ theme }) => theme.colors.White};
+  background: ${({ theme }) => theme.colors.primary_V};
+  font-size: ${({ theme }) => theme.fontSize.p14};
+  white-space: nowrap;
+
+  @media ${({ theme }) => theme.mediaSize.md} {
+    font-size: ${({ theme }) => theme.fontSize.p14};
+    top: 80%;
+  }
 `;

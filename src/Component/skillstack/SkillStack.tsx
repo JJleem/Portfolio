@@ -4,6 +4,7 @@ import {
   ItemSection,
 } from "../../pages/collection/StyleCollection";
 import {
+  ModalSkill,
   SkillInner,
   SkillItem,
   SkillItemlayout,
@@ -35,6 +36,7 @@ const SkillStack = () => {
     <ItemContainer>
       <ItemSection>
         <SkillStackBox isClick={isClicked} onClick={handleisClicked}>
+          <ModalSkill>Skill을 Hover & Click 해 보세요.</ModalSkill>
           <SkillStackContainer isClick={isClicked}>
             <SkillStackSection
               animate={{
@@ -54,28 +56,31 @@ const SkillStack = () => {
               isClick={isClicked}
             >
               <SkillInner>
-                <SkillItem logo={html}></SkillItem>
+                <SkillItem logo={html} layoutId="html"></SkillItem>
               </SkillInner>
               <SkillInner>
-                <SkillItem logo={css}></SkillItem>
+                <SkillItem logo={css} layoutId="css"></SkillItem>
               </SkillInner>
               <SkillInner>
-                <SkillItem logo={redux}></SkillItem>
+                <SkillItem logo={redux} layoutId="redux"></SkillItem>
               </SkillInner>
               <SkillInner>
-                <SkillItem logo={recoil}></SkillItem>
+                <SkillItem logo={recoil} layoutId="recoil"></SkillItem>
               </SkillInner>
               <SkillInner>
-                <SkillItem logo={hook}></SkillItem>
+                <SkillItem logo={hook} layoutId="hook"></SkillItem>
               </SkillInner>
               <SkillInner>
-                <SkillItem logo={scss}></SkillItem>
+                <SkillItem logo={scss} layoutId="scss"></SkillItem>
               </SkillInner>
               <SkillInner>
-                <SkillItem logo={stylecomponent}></SkillItem>
+                <SkillItem
+                  logo={stylecomponent}
+                  layoutId="stylecomponent"
+                ></SkillItem>
               </SkillInner>
               <SkillInner>
-                <SkillItem logo={router}></SkillItem>
+                <SkillItem logo={router} layoutId="router"></SkillItem>
               </SkillInner>
               <SkillInner>
                 <SkillItem logo={query} layoutId="query"></SkillItem>
@@ -87,15 +92,7 @@ const SkillStack = () => {
                 <SkillItem logo={js} layoutId="js"></SkillItem>
               </SkillInner>
               <SkillInner>
-                <SkillItem
-                  logo={ts}
-                  layoutId="ts"
-                  transition={{
-                    type: "tween",
-                    duration: 1,
-                    delay: 0.5, // 0.5초 지연
-                  }}
-                ></SkillItem>
+                <SkillItem logo={ts} layoutId="ts"></SkillItem>
               </SkillInner>
             </SkillStackSection>
           </SkillStackContainer>
@@ -108,7 +105,7 @@ const SkillStack = () => {
               transition={{
                 type: "tween",
                 duration: 0.5,
-                delay: 0, // 0.5초 지연
+                delay: 0,
               }}
             ></SkillItemlayout>
             <SkillItemlayout
@@ -117,10 +114,90 @@ const SkillStack = () => {
               transition={{
                 type: "tween",
                 duration: 0.5,
-                delay: 0.2, // 0.5초 지연
+                delay: 0.2,
               }}
             ></SkillItemlayout>
-            <SkillItemlayout logo={react} layoutId="react"></SkillItemlayout>
+            <SkillItemlayout
+              logo={react}
+              layoutId="react"
+              transition={{
+                type: "tween",
+                duration: 0.5,
+                delay: 0.3,
+              }}
+            ></SkillItemlayout>
+            <SkillItemlayout
+              logo={query}
+              layoutId="query"
+              transition={{
+                type: "tween",
+                duration: 0.5,
+                delay: 0.4,
+              }}
+            ></SkillItemlayout>
+            <SkillItemlayout
+              logo={router}
+              layoutId="router"
+              transition={{
+                type: "tween",
+                duration: 0.5,
+                delay: 0.4,
+              }}
+            ></SkillItemlayout>
+            <SkillItemlayout
+              logo={stylecomponent}
+              layoutId="stylecomponent"
+              transition={{
+                type: "tween",
+                duration: 0.5,
+                delay: 0.5,
+              }}
+            ></SkillItemlayout>
+            <SkillItemlayout
+              logo={hook}
+              layoutId="hook"
+              transition={{
+                type: "tween",
+                duration: 0.5,
+                delay: 0.6,
+              }}
+            ></SkillItemlayout>
+            <SkillItemlayout
+              logo={recoil}
+              layoutId="recoil"
+              transition={{
+                type: "tween",
+                duration: 0.5,
+                delay: 0.6,
+              }}
+            ></SkillItemlayout>
+            <SkillItemlayout
+              logo={redux}
+              layoutId="redux"
+              transition={{
+                type: "tween",
+                duration: 0.5,
+                delay: 0.6,
+              }}
+            ></SkillItemlayout>
+            <SkillItemlayout
+              logo={css}
+              layoutId="css"
+              transition={{
+                type: "tween",
+                duration: 0.5,
+                delay: 0.7,
+              }}
+            ></SkillItemlayout>
+            <SkillItemlayout
+              logo={html}
+              layoutId="html"
+              transition={{
+                type: "tween",
+                duration: 0.5,
+                delay: 0.7,
+              }}
+            ></SkillItemlayout>
           </SkillSectionlayout>
         )}
       </ItemSection>
