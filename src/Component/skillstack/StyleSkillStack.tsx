@@ -147,9 +147,8 @@ export const SkillItemlayout = styled(motion.div)<logoProps>`
   height: 100px;
   z-index: 2;
   border-radius: 15px;
-  border: 1.5px solid ${({ theme }) => theme.colors.secondary_V};
+
   padding: 10px;
-  background-color: ${({ theme }) => theme.colors.secondary_V};
 `;
 
 export const ModalSkill = styled.div<ClickedProps>`
@@ -170,4 +169,16 @@ export const ModalSkill = styled.div<ClickedProps>`
     font-size: ${({ theme }) => theme.fontSize.p14};
     top: 80%;
   }
+`;
+export const Logo = styled(motion.div)`
+  border: 1px solid ${({ theme }) => theme.colors.secondary_V};
+  background: rgba(167, 150, 255, 0.2);
+  width: 150px;
+  min-height: 150px;
+  max-height: 999px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
