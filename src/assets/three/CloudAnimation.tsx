@@ -66,7 +66,7 @@ const CloudAnimation: any = () => {
           cloud.rotation.x = 1.16;
           cloud.rotation.y = -0.12;
           cloud.rotation.z = Math.random() * 360;
-          cloud.material.opacity = 0.5;
+          cloud.material.opacity = 0.3;
           cloudParticles.push(cloud);
           scene.add(cloud);
         }
