@@ -46,9 +46,9 @@ export const SkillStackBox = styled.div<ClickedProps>`
 `;
 export const SkillStackSection = styled(motion.div)<ClickedProps>`
   position: relative;
-  transition: all 0.5s 1s;
+  transition: all 3s 1s;
   display: ${({ isClick }) => (isClick ? "none" : "flex")};
-  transition: all 0.8s;
+  transition: all 3s;
   width: 300px;
   height: 300px;
   background-image: url(${blackhole});
@@ -58,12 +58,16 @@ export const SkillStackSection = styled(motion.div)<ClickedProps>`
   border-radius: 100%;
   background-color: rgba(0, 0, 0, 1);
   transition: background-color 0.5s ease-in-out;
+  transition-delay: 1s;
   transform: rotate(-32deg) skewX(20deg);
   cursor: pointer;
   @media ${({ theme }) => theme.mediaSize.xs} {
     width: 200px;
     height: 200px;
     transform: rotate(-32deg) skewX(20deg);
+  }
+  div {
+    transition: all 1s;
   }
   &:hover {
     box-shadow: -50px 100px 60px rgba(0, 0, 0, 0.3);

@@ -321,6 +321,7 @@ export const FirstProjectWrap = styled.div`
   opacity: 0;
 `;
 export const ProjectTitle = styled.div<Props>`
+  margin-top: 50px;
   font-size: ${({ theme }) => theme.fontSize.p45};
   display: flex;
   justify-content: center;

@@ -65,6 +65,11 @@ export const ImgWrap = styled.div<ItemProps>`
       }
     }
   }
+  @media ${({ theme }) => theme.mediaSize.xs} {
+    &:hover {
+      background-position: top;
+    }
+  }
 `;
 export const DescWrap = styled.div<ItemProps>`
   width: 100%;
@@ -84,6 +89,11 @@ export const DescWrap = styled.div<ItemProps>`
       border-radius: 0px 10px 10px 10px;
     `}
   &:hover {
+    .Info {
+      bottom: 0px;
+    }
+  }
+  @media ${({ theme }) => theme.mediaSize.xs} {
     .Info {
       bottom: 0px;
     }

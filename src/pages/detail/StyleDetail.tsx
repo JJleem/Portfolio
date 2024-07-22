@@ -133,6 +133,11 @@ export const ImgSection = styled.div<Props>`
   @media ${({ theme }) => theme.mediaSize.md} {
     height: 50vh;
   }
+  @media ${({ theme }) => theme.mediaSize.xs} {
+    &:hover {
+      background-position: top;
+    }
+  }
 `;
 export const ModalCursor = styled.div<Props>`
   position: fixed;
@@ -158,6 +163,9 @@ export const ModalCursor = styled.div<Props>`
   @media ${({ theme }) => theme.mediaSize.md} {
     font-size: ${({ theme }) => theme.fontSize.p9};
     padding: 4px 8px;
+  }
+  @media ${({ theme }) => theme.mediaSize.xs} {
+    display: none;
   }
 `;
 export const HideTitle = styled.div`

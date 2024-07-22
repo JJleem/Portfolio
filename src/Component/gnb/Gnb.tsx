@@ -125,7 +125,7 @@ const Gnb: React.FC = () => {
           <Links to="/">MainHome</Links>
           <Links to="/collection/7">Detail</Links>
           <Links to="/directory">Directory</Links>
-          <Links to="/"></Links>
+          <Links to="/directory"></Links>
           <Links to="/collection" onClick={IntrouctionClick}></Links>
           <Links to="/collection" onClick={SkillStackClick}></Links>
           <Links to="#" onClick={handleClick} isClick={clickedToggle}></Links>

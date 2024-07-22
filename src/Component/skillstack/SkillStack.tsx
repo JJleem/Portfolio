@@ -49,9 +49,12 @@ import { motion } from "framer-motion";
 
 const SkillStack = () => {
   const [isClicked, setIsClicked] = useState(false);
-  const handleisClicked = () => {
-    setIsClicked(!isClicked);
+  const handleIsClicked = () => {
+    setTimeout(() => {
+      setIsClicked(!isClicked);
+    }, 500);
   };
+
   return (
     <ItemContainer>
       <ItemSection>
@@ -59,7 +62,7 @@ const SkillStack = () => {
           <ModalSkill>Skill을 Hover & Click 해 보세요.</ModalSkill>
           <SkillStackContainer isClick={isClicked}>
             <SkillStackSection
-              onClick={handleisClicked}
+              onClick={handleIsClicked}
               animate={{
                 backgroundColor: [
                   "rgba(56, 0, 188, 0.5)",

@@ -6,7 +6,7 @@ import account from "../../assets/img/icon/account.png";
 import info from "../../assets/img/icon/info.png";
 import toggle from "../../assets/img/icon/toggle.png";
 import close from "../../assets/img/icon/close.png";
-
+import list from "../../assets/img/icon/list.png";
 type GasideProps = {
   isClick?: boolean;
 };
@@ -24,7 +24,7 @@ export const StyledGnb = styled.div`
   background-color: ${({ theme }) => theme.colors.transparent};
   z-index: 10;
   color: #fff;
-  background-color: rgba(21, 18, 37, 0.7);
+  background-color: rgba(21, 18, 37, 0.9);
   backdrop-filter: blur(10px);
   @media ${({ theme }) => theme.mediaSize.xl} {
     gap: 25px;
@@ -164,13 +164,7 @@ export const Links = styled(Link)<GasideProps>`
   &:nth-child(4) {
     display: none;
     @media ${({ theme }) => theme.mediaSize.xs} {
-      display: block;
-      width: 28px;
-      height: 28px;
-      background-image: url(${search});
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: center;
+      display: none;
     }
   }
   &:nth-child(5) {

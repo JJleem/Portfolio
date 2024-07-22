@@ -22,7 +22,7 @@ export const StyledGnb = styled.div`
   background-color: ${({ theme }) => theme.colors.transparent};
   z-index: 999;
   color: #fff;
-  background-color: rgba(21, 18, 37, 0.7);
+  background-color: rgba(21, 18, 37, 0.9);
   backdrop-filter: blur(10px);
   justify-content: space-between;
   @media ${({ theme }) => theme.mediaSize.xl} {

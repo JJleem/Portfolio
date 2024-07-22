@@ -114,7 +114,7 @@ const Collection = () => {
         const activeTabRightInList = activeTabRect.right - tabListRect.left;
         const tabListWidth = tabList.offsetWidth;
         if (activeTabLeftInList <= 0) {
-          tabList.scrollLeft = 0;
+          tabList.scrollLeft = -100;
         } else if (activeTabRightInList >= tabListWidth) {
           tabList.scrollLeft = activeTabRect.width + 100;
         } else {
