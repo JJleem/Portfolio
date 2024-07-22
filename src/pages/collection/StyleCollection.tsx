@@ -24,6 +24,7 @@ export const Opacity = keyframes`
 }
 `;
 export const Container = styled.div`
+  overflow-x: hidden;
   width: 100vw;
   height: 100%;
   position: relative;
