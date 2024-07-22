@@ -390,6 +390,9 @@ export const MainSub = styled.div`
       }
     }
   }
+  @media ${({ theme }) => theme.mediaSize.xs} {
+    font-size: ${({ theme }) => theme.fontSize.p14};
+  }
 `;
 export const MainSubWrap = styled.div<Props>`
   width: 100%;

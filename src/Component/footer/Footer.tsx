@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from "react";
 import {
   Bottom,
@@ -18,11 +19,11 @@ const Footer = () => {
   const [isScrolling, setIsScrolling] = useState(false);
   const [tabs, setTabs] = useRecoilState(tabsState);
   const tabPositions: { [key: string]: number } = {
-    items: isMobile ? 610 : isSmall ? 530 : 610,
+    items: isMobile ? 610 : isSmall ? 610 : 610,
     introduction: isMobile ? 390 : isSmall ? 410 : 610,
-    activity: isMobile ? 670 : isSmall ? 530 : 610,
-    skillstack: isMobile ? 610 : isSmall ? 530 : 642,
-    contact: isMobile ? 650 : isSmall ? 530 : 630,
+    activity: isMobile ? 670 : isSmall ? 670 : 610,
+    skillstack: isMobile ? 610 : isSmall ? 620 : 642,
+    contact: isMobile ? 650 : isSmall ? 600 : 630,
   };
   const handleTabClick = (tab: string) => {
     if (isScrolling) return;
@@ -67,16 +68,11 @@ const Footer = () => {
           <LogoContainer>MOLT</LogoContainer>
           <ItemWrap>
             <li>
-              <Link to="/">Terms</Link>
+              <Link to="/directory">Project Directory</Link>
             </li>
+
             <li>
-              <Link to="/">Privacy policy</Link>
-            </li>
-            <li>
-              <Link to="/">Built in</Link>
-            </li>
-            <li>
-              <Link to="/collection/7">Page</Link>
+              <Link to="/collection/7">Page Detail</Link>
             </li>
             <li>
               <Link to="/collection" onClick={ContactClick}>

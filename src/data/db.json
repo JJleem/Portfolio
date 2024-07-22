@@ -243,12 +243,12 @@
     },
     {
       "id": 7,
-      "img": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/item/Bitcoin.png",
+      "img": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/item/moltspace-min.png",
       "title": "MOLTSPACE",
       "maintitle": "#7 MOLTSPACE",
       "skill": "ts",
       "language": "TYPESCRIPT",
-      "transition": "10",
+      "transition": "30",
       "sub": "현재 보고계신 포트폴리오 사이트입니다.",
       "mainsub": "현재 보고계신 포트폴리오 사이트",
       "projecttype": "개인 프로젝트",
@@ -261,7 +261,11 @@
         "twotitle": "Router",
         "threetitle": "StyledComponent",
         "four": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Firebase.png",
-        "fourtitle": "Firebase"
+        "fourtitle": "Firebase",
+        "five": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/emailjs.png",
+        "fivetitle": "EmailJS",
+        "six": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/framer.png",
+        "sixtitle": "Framer-motion"
       },
       "detail": {
         "desc": "현재 보고계신 포트폴리오 사이트 입니다.",
@@ -274,7 +278,10 @@
         "twodesc2": " URL파라미터 값으로 각 프로젝트들의 id값을 활용해 페이지 라우팅 기능을 구현하였습니다. ",
         "threedesc": "Styled-component를 사용하여 컴포넌트 단위로 스타일을 관리할 수 있어 더 유지보수하기 쉬운 코드를 작성할 수 있었습니다.",
         "threedesc2": "또한 전역 스타일을 관리하고 색 폰트사이즈 등을 변수로 설정해 적용하였습니다.",
-        "fourdesc": " Firebase를 사용하여 해당 프로젝트 사이트를 배포하였으며, Firebase CLI를 사용하여 쉽게 애플리케이션을 배포할 수 있었습니다."
+        "fourdesc": " Firebase를 사용하여 해당 프로젝트 사이트를 배포하였으며, Firebase CLI를 사용하여 쉽게 애플리케이션을 배포할 수 있었습니다.",
+        "sixdesc": "Framer-motion을 활용하여 다양한 애니메이션 효과를 적용하였으며, 애니메이션의 동작을 쉽게 커스터마이징할 수 있었습니다.",
+        "sixdesc2": " 또한 LayoutId 기능을 적극 활용하여 애니메이션을 적용하였습니다.",
+        "fivedesc": "EmailJS를 활용하여 Contact Page에서  Google메일로 이메일을 직접보낼수있는 기능을 구현하였습니다."
       },
       "github": "https://github.com/JJleem/Portfolio",
       "site": "#"
@@ -412,6 +419,7 @@
         "threetitle": "StyledComponent",
         "four": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/emailjs.png",
         "fourtitle": "EmailJS",
+
         "five": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Firebase.png",
         "fivetitle": "Firebase"
       },

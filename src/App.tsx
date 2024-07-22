@@ -14,6 +14,7 @@ import Gaside from "./Component/aside/Gaside";
 
 import WhichGnb from "./Component/gnb/WhichGnb";
 import Detail from "./pages/detail/Detail";
+import Directory from "./pages/directory/Directory";
 function App() {
   useEffect(() => {
     const handleKeydown = (event: KeyboardEvent) => {
@@ -40,6 +41,7 @@ function App() {
             <Route path="/" element={<MainHome />} />
             <Route path="/collection" element={<Collection />} />
             <Route path="/collection/:id" element={<Detail />} />
+            <Route path="/directory" element={<Directory />} />
           </Routes>
         </RecoilRoot>
       </BrowserRouter>

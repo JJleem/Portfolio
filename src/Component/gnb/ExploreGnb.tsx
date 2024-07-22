@@ -27,8 +27,8 @@ const ExploreGnb: React.FC = () => {
         <Link to="/">MOLT</Link>
       </LogoContainer>
       <MenuWrap>
-        <Links to="/">Explore</Links>
-        <Links to="/">My</Links>
+        <Links to="/"></Links>
+        <Links to="/"></Links>
         <Btn
           bgColor={theme.colors.primary_V}
           size="p14"

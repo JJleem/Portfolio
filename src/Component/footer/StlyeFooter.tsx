@@ -24,8 +24,6 @@ export const Top = styled.div`
 
   opacity: 0.15;
   z-index: -1;
-  @media ${({ theme }) => theme.mediaSize.xs} {
-  }
 `;
 export const Bottom = styled.div`
   width: 100%;
@@ -34,7 +32,7 @@ export const Bottom = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 9999999;
+  z-index: 10;
   border-top: 1px solid ${({ theme }) => theme.colors.footer_line};
   color: ${({ theme }) => theme.colors.White};
   padding-top: 30px;

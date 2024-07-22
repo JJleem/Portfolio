@@ -194,7 +194,7 @@ export const Links = styled(Link)<GasideProps>`
 `;
 export const ToggleBtn = styled.div<GasideProps>`
   display: none;
-  @media ${({ theme }) => theme.mediaSize.xs} {
+  @media ${({ theme }) => theme.mediaSize.sm} {
     transition: all 0.5s;
     display: block;
     width: 28px;
@@ -205,6 +205,7 @@ export const ToggleBtn = styled.div<GasideProps>`
     background-position: center;
     background-size: center;
     position: relative;
+    cursor: pointer;
     &::before {
       content: "";
       width: 38px;

@@ -5,7 +5,7 @@ import filter from "../../assets/img/icon/filter_list.png";
 import close from "../../assets/img/icon/close.png";
 import column from "../../assets/img/icon/column.png";
 import row from "../../assets/img/icon/row.png";
-
+import JJ from "../../assets/img/bg/jjMain8.png";
 import check from "../../assets/img/icon/check.png";
 type Props = {
   isClick?: boolean;
@@ -60,9 +60,13 @@ export const Profile = styled.div`
   width: 180px;
   height: 180px;
   border-radius: 15px;
-  border: 6px solid #000;
+  border: 3px solid ${({ theme }) => theme.colors.BG_MainBox};
   position: absolute;
-  background: ${({ theme }) => theme.colors.line};
+  background-image: url(${JJ});
+  /* background-color: ${({ theme }) => theme.colors.line}; */
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
   top: -157px;
   @media ${({ theme }) => theme.mediaSize.sm} {
     width: 124px;
@@ -70,9 +74,9 @@ export const Profile = styled.div`
     top: -97px;
   }
   @media ${({ theme }) => theme.mediaSize.xs} {
-    width: 88px;
-    height: 88px;
-    top: -67px;
+    width: 140px;
+    height: 140px;
+    top: -107px;
   }
 `;
 export const BottomSection = styled.div<Props>`

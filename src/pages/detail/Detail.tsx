@@ -38,6 +38,7 @@ import { useState, useEffect } from "react";
 import Db from "../../data/db.json";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import TopBtn from "../../Component/topbtn/TopBtn";
+import { Helmet } from "react-helmet";
 
 const Detail = () => {
   const [isDescClick, setIsDescClick] = useState(false);
@@ -95,8 +96,16 @@ const Detail = () => {
   const goback = () => {
     navigate("/collection");
   };
+
+  let title;
+  if (ChooseData) {
+    title = `${ChooseData.maintitle} Detail | Frontend-developer Portfolio`;
+  } else {
+    title = "Project Collection | Frontend-developer Portfolio";
+  }
   return (
     <StyleDetail>
+      <Helmet title={title}></Helmet>
       <DetailWrapper>
         <TopSection>
           <Goback onClick={goback}>

@@ -28,7 +28,7 @@ import theme from "../../assets/theme/theme";
 import MainProject from "../../Component/mainproject/MainProject";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-
+import { Helmet } from "react-helmet";
 import { numberState } from "../../atom/atom";
 import { newNumberState } from "../../atom/atom";
 import { useRecoilState } from "recoil";
@@ -69,6 +69,7 @@ const MainHome = () => {
 
   return (
     <>
+      <Helmet title="MOLT SPACE | Frontend-developer Portfolio"></Helmet>
       <HomeWrapper>
         <BgWrapper />
         <HomeGrid>

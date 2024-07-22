@@ -13,6 +13,7 @@ const StyledBtn = styled.div<StyledProps>`
   border-radius: 6px;
   font-weight: 700;
   transition: all 0.5s linear;
+  color: ${({ theme }) => theme.colors.White};
   &:hover {
     background-color: ${({ theme }) => theme.colors.secondary_V};
   }

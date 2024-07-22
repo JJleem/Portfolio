@@ -2,6 +2,10 @@ import styled, { css } from "styled-components";
 import account from "../../assets/img/icon/account.png";
 import explore from "../../assets/img/icon/explore.png";
 import wallet from "../../assets/img/icon/wallet.png";
+import list from "../../assets/img/icon/list.png";
+import detail from "../../assets/img/icon/detail.png";
+import contact from "../../assets/img/icon/contact.png";
+import arrow from "../../assets/img/icon/arrow.png";
 type GasideProps = {
   isClick: boolean;
   isResponsive: boolean;
@@ -36,7 +40,7 @@ export const StyleGaside = styled.div<GasideProps>`
     position: fixed;
     top: 73px;
     right: -420px;
-    z-index: 7;
+    z-index: 11;
     transform: ${({ isClick }) =>
       isClick ? "translate(-420px, 0)" : "translate(0, 0)"};
   }
@@ -65,6 +69,10 @@ export const Item = styled.div`
   align-items: center;
   gap: 15px;
   cursor: pointer;
+  transition: all 0.3s;
+  &:hover {
+    background: ${({ theme }) => theme.colors.input_BOXbg};
+  }
 `;
 export const Name = styled.div``;
 export const Icon = styled.div<NameProps>`
@@ -87,6 +95,18 @@ export const Icon = styled.div<NameProps>`
         return css`
           background-image: url(${wallet});
         `;
+      case "directory":
+        return css`
+          background-image: url(${list});
+        `;
+      case "detail":
+        return css`
+          background-image: url(${detail});
+        `;
+      case "contact":
+        return css`
+          background-image: url(${contact});
+        `;
     }
   }};
 `;
@@ -101,4 +121,31 @@ export const BtnWrap = styled.div`
   display: flex;
   gap: 20px;
   align-items: center;
+`;
+export const BtnAside = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: ${({ theme }) => theme.colors.primary_V};
+  border-radius: 6px;
+  font-weight: 700;
+  transition: all 0.5s linear;
+  color: ${({ theme }) => theme.colors.White};
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.secondary_V};
+  }
+  width: 208px;
+  height: 48px;
+  font-size: ${({ theme }) => theme.fontSize.p15};
+  &::before {
+    content: "";
+    width: 24px;
+    height: 24px;
+    margin-right: 30px;
+    background-image: url(${arrow});
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: ${({ theme }) => theme.colors.White};
+  }
 `;

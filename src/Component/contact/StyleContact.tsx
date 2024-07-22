@@ -2,6 +2,7 @@ import styled from "styled-components";
 import check from "../../assets/img/icon/check_circle.png";
 import checkred from "../../assets/img/icon/checkred.png";
 import { Opacity } from "../../pages/collection/StyleCollection";
+import JJ from "../../assets/img/bg/JJ.png";
 type errorProps = {
   errors?: any | undefined;
 };
@@ -136,9 +137,12 @@ export const ProfileContact = styled.div`
   width: 180px;
   height: 180px;
   border-radius: 15px;
-  border: 6px solid #000;
-
-  background: ${({ theme }) => theme.colors.line};
+  border: 3px solid #000;
+  background-image: url(${JJ});
+  background-color: ${({ theme }) => theme.colors.nav_BG};
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
 
   @media ${({ theme }) => theme.mediaSize.sm} {
     width: 124px;

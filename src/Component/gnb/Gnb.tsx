@@ -24,11 +24,11 @@ const Gnb: React.FC = () => {
   const [isScrolling, setIsScrolling] = useState(false);
   const [tabs, setTabs] = useRecoilState(tabsState);
   const tabPositions: { [key: string]: number } = {
-    items: isMobile ? 610 : isSmall ? 530 : 610,
+    items: isMobile ? 610 : isSmall ? 610 : 610,
     introduction: isMobile ? 390 : isSmall ? 410 : 610,
-    activity: isMobile ? 670 : isSmall ? 530 : 610,
-    skillstack: isMobile ? 610 : isSmall ? 530 : 642,
-    contact: isMobile ? 650 : isSmall ? 530 : 630,
+    activity: isMobile ? 670 : isSmall ? 670 : 610,
+    skillstack: isMobile ? 610 : isSmall ? 620 : 642,
+    contact: isMobile ? 650 : isSmall ? 600 : 630,
   };
   const handleTabClick = (tab: string) => {
     if (isScrolling) return;
@@ -122,12 +122,12 @@ const Gnb: React.FC = () => {
           <Gnbctrl>/</Gnbctrl>
         </InputWrap>
         <MenuWrap>
-          <Links to="/">Explore</Links>
-          <Links to="/">Drops</Links>
-          <Links to="/">Resources</Links>
+          <Links to="/">MainHome</Links>
+          <Links to="/collection/7">Detail</Links>
+          <Links to="/directory">Directory</Links>
           <Links to="/"></Links>
-          <Links to="#" onClick={IntrouctionClick}></Links>
-          <Links to="#" onClick={SkillStackClick}></Links>
+          <Links to="/collection" onClick={IntrouctionClick}></Links>
+          <Links to="/collection" onClick={SkillStackClick}></Links>
           <Links to="#" onClick={handleClick} isClick={clickedToggle}></Links>
         </MenuWrap>
       </Inner>

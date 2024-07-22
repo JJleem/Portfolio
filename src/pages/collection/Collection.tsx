@@ -34,6 +34,7 @@ import SkillStack from "../../Component/skillstack/SkillStack";
 import Contact from "../../Component/contact/Contact";
 import { useRecoilState } from "recoil";
 import { tabsState } from "../../atom/atom";
+import { Helmet } from "react-helmet";
 
 const Collection = () => {
   const [isModal, setIsModal] = useState(true);
@@ -58,12 +59,12 @@ const Collection = () => {
   const isSmall = useMediaQuery({ maxWidth: 744 });
   const isMobile = useMediaQuery({ maxWidth: 428 });
 
- const tabPositions: { [key: string]: number } = {
-    items: isMobile ? 610 : isSmall ? 530 : 610,
+  const tabPositions: { [key: string]: number } = {
+    items: isMobile ? 610 : isSmall ? 610 : 610,
     introduction: isMobile ? 390 : isSmall ? 410 : 610,
-    activity: isMobile ? 670 : isSmall ? 530 : 610,
-    skillstack: isMobile ? 610 : isSmall ? 530 : 642,
-    contact: isMobile ? 650 : isSmall ? 530 : 630,
+    activity: isMobile ? 670 : isSmall ? 670 : 610,
+    skillstack: isMobile ? 610 : isSmall ? 620 : 642,
+    contact: isMobile ? 650 : isSmall ? 600 : 630,
   };
 
   const [isScrolling, setIsScrolling] = useState(false);
@@ -126,8 +127,23 @@ const Collection = () => {
     }
   }, [tabs]);
 
+  let title;
+  if (tabs.items) {
+    title = "Projects | Frontend-developer Portfolio";
+  } else if (tabs.introduction) {
+    title = "Introduction | Frontend-developer Portfolio";
+  } else if (tabs.activity) {
+    title = "Activity | Frontend-developer Portfolio";
+  } else if (tabs.skillstack) {
+    title = "Skill Stack | Frontend-developer Portfolio";
+  } else if (tabs.contact) {
+    title = "Contact | Frontend-developer Portfolio";
+  } else {
+    title = "Project Collection | Frontend-developer Portfolio";
+  }
   return (
     <Container>
+      <Helmet title={title}></Helmet>
       <Section>
         <TopCover>
           <CloudAnimation />
