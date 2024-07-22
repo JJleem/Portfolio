@@ -32,6 +32,8 @@ import Activity from "../../Component/activity/Activity";
 import TopBtn from "../../Component/topbtn/TopBtn";
 import SkillStack from "../../Component/skillstack/SkillStack";
 import Contact from "../../Component/contact/Contact";
+import { useRecoilState } from "recoil";
+import { tabsState } from "../../atom/atom";
 
 const Collection = () => {
   const [isModal, setIsModal] = useState(true);
@@ -51,30 +53,25 @@ const Collection = () => {
     setMore(!more);
   };
 
-  const [tabs, setTabs] = useState({
-    items: true,
-    introduction: false,
-    activity: false,
-    skillstack: false,
-    contact: false,
-  });
+  const [tabs, setTabs] = useRecoilState(tabsState);
 
   const isSmall = useMediaQuery({ maxWidth: 744 });
+  const isMobile = useMediaQuery({ maxWidth: 428 });
 
-  const tabPositions: { [key: string]: number } = {
-    items: isSmall ? 530 : 610,
-    introduction: isSmall ? 410 : 610,
-    activity: isSmall ? 530 : 610,
-    skillstack: isSmall ? 530 : 642,
-    contact: isSmall ? 530 : 630,
+ const tabPositions: { [key: string]: number } = {
+    items: isMobile ? 610 : isSmall ? 530 : 610,
+    introduction: isMobile ? 390 : isSmall ? 410 : 610,
+    activity: isMobile ? 670 : isSmall ? 530 : 610,
+    skillstack: isMobile ? 610 : isSmall ? 530 : 642,
+    contact: isMobile ? 650 : isSmall ? 530 : 630,
   };
 
   const [isScrolling, setIsScrolling] = useState(false);
 
   const handleTabClick = (tab: string) => {
-    if (isScrolling) return; // 스크롤 중이면 클릭 무시
+    if (isScrolling) return;
 
-    setIsScrolling(true); // 스크롤 중임을 표시
+    setIsScrolling(true);
     setTabs((prevTabs) => ({
       ...prevTabs,
       [tab]: true,

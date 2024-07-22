@@ -35,3 +35,14 @@ export const searchTermState = atom({
   key: "searchTerm",
   default: "",
 });
+
+export const tabsState = atom({
+  key: "tabsState",
+  default: {
+    items: true,
+    introduction: false,
+    activity: false,
+    skillstack: false,
+    contact: false,
+  },
+});

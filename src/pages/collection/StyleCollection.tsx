@@ -41,10 +41,10 @@ export const TopCover = styled.div`
   height: 330px;
   background: ${({ theme }) => theme.colors.login_BOXline};
   @media ${({ theme }) => theme.mediaSize.sm} {
-    height: 225px;
+    height: 310px;
   }
   @media ${({ theme }) => theme.mediaSize.xs} {
-    height: 225px;
+    height: 310px;
   }
 `;
 export const BottomCover = styled.div`
@@ -227,11 +227,11 @@ export const TabListContainer = styled.div`
     width: 100%;
 
     transition: all 0.5s;
-    scrollbar-width: none; 
-    -ms-overflow-style: none; 
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 
     &::-webkit-scrollbar {
-      display: none; 
+      display: none;
     }
   }
 `;
@@ -252,7 +252,7 @@ export const ModalContent = styled.div`
     cursor: pointer;
   }
   @media ${({ theme }) => theme.mediaSize.sm} {
-    transform: scaleX(-1); 
+    transform: scaleX(-1);
     position: relative;
     width: 100%;
     height: 100%;

@@ -72,7 +72,7 @@ export const MainLogo = styled.div`
 export const MainTitle = styled.div`
   font-size: 80px;
   animation: ${Opacity} 1.5s ease-in-out;
-  animation-delay: 0.2s;
+  animation-delay: 0.5s;
   animation-fill-mode: forwards;
   font-weight: 100;
   opacity: 0;
@@ -91,7 +91,7 @@ export const MainTitle = styled.div`
 `;
 export const SubTitle = styled.div`
   animation: ${Opacity} 1.5s ease-in-out;
-  animation-delay: 0.2s;
+  animation-delay: 0.6s;
   animation-fill-mode: forwards;
   opacity: 0;
   font-size: ${({ theme }) => theme.fontSize.p11};
@@ -109,21 +109,43 @@ export const SubTitle = styled.div`
 `;
 export const MainDesc = styled.div`
   animation: ${Opacity} 1.5s ease-in-out;
-  animation-delay: 0.3s;
+  animation-delay: 1s;
   animation-fill-mode: forwards;
   opacity: 0;
   font-size: ${({ theme }) => theme.fontSize.p25};
   text-align: center;
-  font-weight: 500;
+  font-weight: 300;
   line-height: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  span {
+    font-weight: 900;
+  }
+  .molt {
+    margin-left: 10px;
+  }
   @media ${({ theme }) => theme.mediaSize.md} {
-    font-size: ${({ theme }) => theme.fontSize.p22};
+    font-size: ${({ theme }) => theme.fontSize.p20};
   }
   @media ${({ theme }) => theme.mediaSize.xs} {
-    font-size: ${({ theme }) => theme.fontSize.p24};
+    font-size: ${({ theme }) => theme.fontSize.p16};
+    white-space: nowrap;
   }
 `;
-
+export const MainDescTitle = styled.div`
+  display: flex;
+  @media ${({ theme }) => theme.mediaSize.md} {
+    flex-direction: column;
+    font-size: ${({ theme }) => theme.fontSize.p20};
+  }
+  @media ${({ theme }) => theme.mediaSize.xs} {
+    flex-direction: column;
+    font-size: ${({ theme }) => theme.fontSize.p16};
+    white-space: nowrap;
+  }
+`;
 export const MainInfo = styled.div`
   width: 100%;
   display: flex;
@@ -133,7 +155,7 @@ export const MainInfo = styled.div`
 `;
 export const ItemWrapper = styled.div`
   animation: ${Opacity} 1.5s ease-in-out;
-  animation-delay: 0.4s;
+  animation-delay: 1.2s;
   animation-fill-mode: forwards;
   opacity: 0;
   display: flex;
@@ -164,7 +186,7 @@ export const MainItem = styled.div`
     height: 262px;
   }
   @media ${({ theme }) => theme.mediaSize.sm} {
-    width: 544px;
+    width: 444px;
     height: 140px;
     flex-direction: row;
     padding: 20px 10px;
@@ -256,6 +278,9 @@ export const MainItemDesc = styled.div`
   padding-top: 40px;
   font-size: ${({ theme }) => theme.fontSize.p16};
   font-weight: 200;
+  span {
+    font-weight: 700;
+  }
   @media ${({ theme }) => theme.mediaSize.xl} {
     padding-top: 30px;
   }
@@ -290,6 +315,10 @@ export const FirstProjectWrap = styled.div`
   align-items: center;
   flex-direction: column;
   gap: 22px;
+  animation: ${Opacity} 1.5s ease-in-out;
+  animation-delay: 1.2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
 `;
 export const ProjectTitle = styled.div<Props>`
   font-size: ${({ theme }) => theme.fontSize.p45};
@@ -306,6 +335,7 @@ export const ProjectTitle = styled.div<Props>`
     scrolly >= 100
       ? css`
           animation: ${Opacity} 1.5s ease-in-out;
+
           animation-fill-mode: forwards;
         `
       : ""}
@@ -324,6 +354,9 @@ export const NewProjectWrap = styled.div`
 
   display: flex;
   justify-content: end;
+  animation: ${Opacity} 1.5s ease-in-out;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
 `;
 export const NewProject = styled.div`
   width: 48px;
@@ -371,6 +404,7 @@ export const MainSubWrap = styled.div<Props>`
     scrolly >= 1350
       ? css`
           animation: ${Opacity} 1.5s ease-in-out;
+
           animation-fill-mode: forwards;
         `
       : ""}

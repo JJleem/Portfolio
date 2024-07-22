@@ -2,11 +2,21 @@ import React, { useEffect, useRef } from "react";
 import * as THREE from "three";
 import purple from "../img/bg/purplecloud.png";
 import smoke from "../img/bg/smoke-1.png";
+import { useMediaQuery } from "react-responsive";
+
 const CloudAnimation: any = () => {
+  const isHeight = useMediaQuery({ maxWidth: 744 });
+  let ResponsiveHeight: number;
+  if (isHeight) {
+    ResponsiveHeight = 670;
+  } else {
+    ResponsiveHeight = 670;
+  }
+
   const canvasRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     const width = 1920;
-    const height = 670;
+    const height = ResponsiveHeight;
     const cloudParticles: THREE.Mesh[] = [];
     const scene = new THREE.Scene();
     const renderer = new THREE.WebGLRenderer();

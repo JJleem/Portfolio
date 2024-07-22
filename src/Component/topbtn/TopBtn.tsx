@@ -3,7 +3,7 @@ import styled from "styled-components";
 import more from "../../assets/img/icon/expand_more.png";
 const TopBtn = () => {
   const [scrollY, setScrollY] = useState(0);
-  console.log(scrollY);
+
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);

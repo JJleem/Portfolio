@@ -7,6 +7,7 @@ import {
   ItemWrapper,
   Logo,
   MainDesc,
+  MainDescTitle,
   MainInfo,
   MainItem,
   MainItemDesc,
@@ -32,6 +33,7 @@ import { numberState } from "../../atom/atom";
 import { newNumberState } from "../../atom/atom";
 import { useRecoilState } from "recoil";
 import TopBtn from "../../Component/topbtn/TopBtn";
+import CurrentTime from "./CurrentTime";
 const MainHome = () => {
   //
   const [scrollY, setScrollY] = useState(0);
@@ -44,7 +46,7 @@ const MainHome = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  console.log(scrollY);
+
   //
   const navigate = useNavigate();
   const goConnect = () => {
@@ -77,8 +79,16 @@ const MainHome = () => {
             </MainTitle>
             <SubTitle>Frontend LeemJaeJun Portfolio</SubTitle>
             <MainDesc>
-              2024년 7월, MOLTSPACE 차원의 문이 열리기 시작했습니다! <br />
-              신입 프론트엔드 개발자 포트폴리오 입니다.
+              <MainDescTitle>
+                <CurrentTime />
+                <div>
+                  <span className="molt">MOLT</span>SPACE 차원의 문이 열리기
+                  시작했습니다!
+                </div>
+              </MainDescTitle>
+              <div>
+                신입 프론트엔드 개발자 <span>임재준</span> 의 포트폴리오 입니다.
+              </div>
             </MainDesc>
           </MainInfo>
           <ItemWrapper>
@@ -87,8 +97,10 @@ const MainHome = () => {
                 <Logo type="ts" />
               </MainItemLogo>
               <MainItemDesc>
-                BOASPACE는 <br />
-                보스아고라 메인넷 기반의 NFT 마켓플레이스입니다.
+                <div>
+                  <span>Typescript</span> <br />를 기반으로 다양한 프로젝트들을
+                  개발하였습니다.
+                </div>
               </MainItemDesc>
             </MainItem>
             <MainItem>
@@ -96,8 +108,10 @@ const MainHome = () => {
                 <Logo type="react" />
               </MainItemLogo>
               <MainItemDesc>
-                BOASPACE는 <br />
-                보스아고라 메인넷 기반의 NFT 마켓플레이스입니다.
+                <div>
+                  <span>React</span> <br />를 기반으로 다양한 프로젝트들을
+                  개발하였습니다.
+                </div>
               </MainItemDesc>
             </MainItem>
             <MainItem>
@@ -105,8 +119,10 @@ const MainHome = () => {
                 <Logo type="js" />
               </MainItemLogo>
               <MainItemDesc>
-                BOASPACE는 <br />
-                보스아고라 메인넷 기반의 NFT 마켓플레이스입니다.
+                <div>
+                  <span> Javascript</span> <br />를 기반으로 다양한 프로젝트들을
+                  개발하였습니다.
+                </div>
               </MainItemDesc>
             </MainItem>
             <MainItem>
@@ -114,28 +130,23 @@ const MainHome = () => {
                 <Logo type="github" />
               </MainItemLogo>
               <MainItemDesc>
-                BOASPACE는 <br />
-                보스아고라 메인넷 기반의 NFT 마켓플레이스입니다.
-              </MainItemDesc>
-            </MainItem>
-            <MainItem>
-              <MainItemLogo>
-                <Logo />
-              </MainItemLogo>
-              <MainItemDesc>
-                BOASPACE는 <br />
-                보스아고라 메인넷 기반의 NFT 마켓플레이스입니다.
+                <div>
+                  <span>Github</span> <br />를 통해 효율적인 프로젝트관리를
+                  하였습니다.
+                </div>
               </MainItemDesc>
             </MainItem>
           </ItemWrapper>
-          {/* <Btn
-            bgColor={theme.colors.primary_V}
-            text="CONNECT WALLET"
-            size="p15c"
-            onClick={goConnect}
-          /> */}
+
           <MainProjectWrap>
             <FirstProjectWrap>
+              <Btn
+                bgColor={theme.colors.primary_V}
+                text="CONNECT"
+                size="p15c"
+                onClick={goConnect}
+                linkto={"/collection"}
+              />
               <ProjectTitle scrolly={scrollY}>
                 <span>PROJECTS </span>
                 <NewProjectWrap>
@@ -147,19 +158,24 @@ const MainHome = () => {
           </MainProjectWrap>
           <MainSubWrap scrolly={scrollY}>
             <MainSub>
-              곧, BOASPACE의 차원의 문이 활짝 열릴 예정입니다! <br />
-              차원의 문이 활짝 열리면 <br />
-              <span>NFT 민팅, 판매, 전송, 거래</span>가 가능해집니다.
+              <span>Typescript, React, Javascript</span>등 여러가지 프로젝트를
+              작업하였습니다.
+              <br />
+              많은 기능을 구현하려 노력하였습니다.
+              <br />
+              <br />
+              MOLTSPACE의 여러가지 프로젝트들을 탐험해보세요.
             </MainSub>
             <MainSub>
-              BOASPACE의 우주는 계속 진화합니다. <br /> 차별화된 다양한
-              편의기능이 <br /> 수시로 업데이트 될 예정입니다.
+              MOLTSPACE의 우주는 계속 진화합니다. <br /> 다양한 기능들이 <br />{" "}
+              수시로 업데이트 될 예정입니다.
             </MainSub>
             <Btn
               bgColor={theme.colors.primary_V}
-              text="CONNECT WALLET"
+              text="CONNECT"
               size="p15c"
               onClick={goConnect}
+              linkto={"/collection"}
             />
           </MainSubWrap>
         </HomeGrid>

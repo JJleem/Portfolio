@@ -24,6 +24,15 @@ export const SkillStackContainer = styled.div<ClickedProps>`
   height: 87%;
 
   padding-top: 200px;
+  @media ${({ theme }) => theme.mediaSize.md} {
+    height: 93%;
+  }
+  @media ${({ theme }) => theme.mediaSize.sm} {
+    height: 91%;
+  }
+  @media ${({ theme }) => theme.mediaSize.xs} {
+    height: 91%;
+  }
 `;
 export const SkillStackBox = styled.div<ClickedProps>`
   position: relative;
@@ -49,9 +58,13 @@ export const SkillStackSection = styled(motion.div)<ClickedProps>`
   border-radius: 100%;
   background-color: rgba(0, 0, 0, 1);
   transition: background-color 0.5s ease-in-out;
-  transform: rotate(-30deg) skewX(20deg);
+  transform: rotate(-32deg) skewX(20deg);
   cursor: pointer;
-
+  @media ${({ theme }) => theme.mediaSize.xs} {
+    width: 200px;
+    height: 200px;
+    transform: rotate(-32deg) skewX(20deg);
+  }
   &:hover {
     box-shadow: -50px 100px 60px rgba(0, 0, 0, 0.3);
     & div:nth-child(1) {
@@ -178,12 +191,15 @@ export const SkillInner = styled.div<logoProps>`
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   top: 30%;
   left: 35%;
-
   background: rgba(0, 0, 0, 0.3);
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 15px;
+  @media ${({ theme }) => theme.mediaSize.xs} {
+    width: 75px;
+    height: 75px;
+  }
 `;
 export const SkillSectionlayout = styled(motion.div)<logoProps>`
   width: 100%;
@@ -238,7 +254,17 @@ export const ModalSkill = styled.div<ClickedProps>`
 
   @media ${({ theme }) => theme.mediaSize.md} {
     font-size: ${({ theme }) => theme.fontSize.p14};
-    top: 80%;
+    top: 87%;
+  }
+  @media ${({ theme }) => theme.mediaSize.sm} {
+    top: 85%;
+  }
+  @media ${({ theme }) => theme.mediaSize.xs} {
+    top: 50%;
+    right: -50%;
+    padding: 8px -5px;
+    transform: rotate(-90deg);
+    text-align: center;
   }
 `;
 export const Logo = styled(motion.div)`
