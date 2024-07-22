@@ -27,7 +27,7 @@ const Introduction = () => {
             <PdfSection>
               <PdfLink
                 to={
-                  "https://github.com/JJleem/Portfolio/raw/master/paper/jaejunIntroduction.zip"
+                  "https://raw.githubusercontent.com/JJleem/Portfolio/master/paper/%EC%9E%84%EC%9E%AC%EC%A4%80%20%EC%9D%B4%EB%A0%A5%EC%84%9C(PDF).pdf"
                 }
               >
                 <PdfLogo logo={pdf}></PdfLogo>
@@ -44,7 +44,7 @@ const Introduction = () => {
             <PdfSection>
               <PdfLink
                 to={
-                  "https://github.com/JJleem/Portfolio/raw/master/paper/jaejunIntroduction.zip"
+                  "https://raw.githubusercontent.com/JJleem/Portfolio/master/paper/%EC%9E%84%EC%9E%AC%EC%A4%80%20%EC%9E%85%EC%82%AC%EC%A7%80%EC%9B%90%EC%84%9C(HWP).hwp"
                 }
               >
                 <PdfLogo logo={hwp}></PdfLogo>
