@@ -1,46 +1,254 @@
-# Getting Started with Create React App
+# 🌌MOLTSPACE🌌
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Skill
 
-## Available Scripts
+Typescript
 
-In the project directory, you can run:
+## 라이브러리
 
-### `npm start`
+`react-router-dom`
+`recoil`
+`styeld-components`
+`react-responsive`
+`react-hook-form`
+`react-helmet`
+`framer-motion`
+`emailjs`
+`three`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 페이지 구성
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<details>
+    <summary>구성 펼치기</summary>
 
-### `npm test`
+📦src
+<br />
+┣ 📂@types
+<br />
+┃ ┣ 📜image.d.ts
+<br />
+┃ ┗ 📜styled.d.ts
+<br />
+┣ 📂assets
+<br />
+┃ ┣ 📂img
+<br />
+┃ ┃ ┣ 📂bg
+<br />
+┃ ┃ ┣ 📂icon
+<br />
+┃ ┃ ┣ 📂item
+<br />
+┃ ┃ ┣ 📂logo
+<br />
+┃ ┃ ┗ 📂skill
+<br />
+┃ ┣ 📂theme
+<br />
+┃ ┃ ┣ 📜global-style.ts
+<br />
+┃ ┃ ┗ 📜theme.ts
+<br />
+┃ ┗ 📂three
+<br />
+┃ ┃ ┗ 📜CloudAnimation.tsx
+<br />
+┣ 📂atom
+<br />
+┃ ┗ 📜atom.ts
+<br />
+┣ 📂Component
+<br />
+┃ ┣ 📂activity
+<br />
+┃ ┃ ┣ 📜Activity.tsx
+<br />
+┃ ┃ ┗ 📜StyleActivity.tsx
+<br />
+┃ ┣ 📂aside
+<br />
+┃ ┃ ┣ 📜Gaside.tsx
+<br />
+┃ ┃ ┗ 📜StyleGaside.tsx
+<br />
+┃ ┣ 📂box
+<br />
+┃ ┃ ┣ 📜Box.tsx
+<br />
+┃ ┃ ┗ 📜StyleBox.tsx
+<br />
+┃ ┣ 📂btn
+<br />
+┃ ┃ ┣ 📜Btn.tsx
+<br />
+┃ ┃ ┗ 📜StlyeBtn.tsx
+<br />
+┃ ┣ 📂contact
+<br />
+┃ ┃ ┣ 📜Contact.tsx
+<br />
+┃ ┃ ┗ 📜StyleContact.tsx
+<br />
+┃ ┣ 📂footer
+<br />
+┃ ┃ ┣ 📜Footer.tsx
+<br />
+┃ ┃ ┗ 📜StlyeFooter.tsx
+<br />
+┃ ┣ 📂gnb
+<br />
+┃ ┃ ┣ 📜ExploreGnb.tsx
+<br />
+┃ ┃ ┣ 📜Gnb.tsx
+<br />
+┃ ┃ ┣ 📜StyledExploreGnb.tsx
+<br />
+┃ ┃ ┣ 📜StyleGnb.tsx
+<br />
+┃ ┃ ┗ 📜WhichGnb.tsx
+<br />
+┃ ┣ 📂introduction
+<br />
+┃ ┃ ┣ 📜Introduction.tsx
+<br />
+┃ ┃ ┗ 📜StyleIntroduction.tsx
+<br />
+┃ ┣ 📂itemTabs
+<br />
+┃ ┃ ┗ 📜ItemTabs.tsx
+<br />
+┃ ┣ 📂mainproject
+<br />
+┃ ┃ ┣ 📜MainProject.tsx
+<br />
+┃ ┃ ┗ 📜StyleMainProject.tsx
+<br />
+┃ ┣ 📂skillstack
+<br />
+┃ ┃ ┣ 📜SkillStack.tsx
+<br />
+┃ ┃ ┗ 📜StyleSkillStack.tsx
+<br />
+┃ ┗ 📂topbtn
+<br />
+┃ ┃ ┗ 📜TopBtn.tsx
+<br />
+┣ 📂data
+<br />
+┃ ┣ 📜db.d.ts
+<br />
+┃ ┗ 📜db.json
+<br />
+┣ 📂pages
+<br />
+┃ ┣ 📂collection
+<br />
+┃ ┃ ┣ 📜Collection.tsx
+<br />
+┃ ┃ ┗ 📜StyleCollection.tsx
+<br />
+┃ ┣ 📂detail
+<br />
+┃ ┃ ┣ 📜Detail.tsx
+<br />
+┃ ┃ ┗ 📜StyleDetail.tsx
+<br />
+┃ ┣ 📂directory
+<br />
+┃ ┃ ┣ 📜Directory.tsx
+<br />
+┃ ┃ ┗ 📜StyleDirectory.tsx
+<br />
+┃ ┗ 📂mainhome
+<br />
+┃ ┃ ┣ 📜CurrentTime.tsx
+<br />
+┃ ┃ ┣ 📜MainHome.tsx
+<br />
+┃ ┃ ┗ 📜StyleMainHome.tsx
+<br />
+┣ 📜App.tsx
+<br />
+┗ 📜index.tsx
+<br />
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+</details>
+                      <span>@types: </span>
+                      TypeScript 타입 정의 파일들이 포함되어 있습니다. 여기에는
+                      image.d.ts와 styled.d.ts가 있습니다.
 
-### `npm run build`
+                      <span>assets: </span>
+                      프로젝트에 사용되는 이미지, 테마, 애니메이션 등의 리소스
+                      파일들이 포함되어 있습니다.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+                      <span>atom: </span>
+                      Recoil 라이브러리를 사용하여 상태 관리를 하여서
+                      Atom파일들이 포함되어있습니다.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+                    <li>
+                      <span> Component: </span>
+                      프로젝트의 모든 React 컴포넌트들이 포함되어 있습니다. 각
+                      컴포넌트는 별도의 디렉토리에 있으며, 컴포넌트 파일과
+                      스타일 파일이 함께 있습니다.
+                    </li>
+                    <li>
+                      <span> data: </span>
+                      프로젝트에 사용되는 데이터 파일들이 포함되어 있습니다.
+                      여기에는 db.d.ts와 db.json 파일이 있습니다.
+                    </li>
+                    <li>
+                      <span> pages: </span>
+                      프로젝트의 페이지 컴포넌트들이 포함되어 있습니다. 각
+                      페이지는 별도의 디렉토리에 있으며, 페이지 컴포넌트 파일과
+                      스타일 파일이 함께 있습니다.
+                    </li>
+                    <li>
+                      <span> App.tsx: </span>
+                      프로젝트의 루트 컴포넌트입니다.
+                    </li>
+                    <li>
+                      <span> index.tsx: </span>
+                      프로젝트의 진입점입니다. 여기에서 React 애플리케이션이
+                      렌더링됩니다.
+                    </li>
+                  </ul>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 주요 기능
 
-### `npm run eject`
+### 제 학습예제와 프로젝트, 그리고 저를 소개하는 포트폴리오 프로젝트 입니다.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### 라우팅 기능:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+React Router DOM (router-dom)을 사용하여 라우팅 기능을 구현하였습니다. 이를 통해 여러 페이지 간의 이동이 가능합니다.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+#### API 호출:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+직접 구축한 JSON 파일을 API로 활용하여 데이터를 호출하였습니다. 이 데이터를 기반으로 Detail 페이지와 Collection 페이지를 구현하였습니다.
 
-## Learn More
+##### 반응형 디자인:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+반응형 웹 디자인을 구현하였습니다. 이를 위해 react-responsive 라이브러리를 사용하여 화면 크기에 따른 변수 설정을 처리하였습니다.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### 상태 관리:
+
+useState와 Recoil을 사용하여 상태 관리를 하였습니다. 이를 통해 컴포넌트 간의 데이터 전달과 상태 관리가 가능하도록 구현하였습니다.
+
+#### 애니메이션:
+
+framer-motion 라이브러리를 활용하여 애니메이션 효과를 구현하였습니다.
+
+##### Collection
+
+페이지 배경: Three.js 라이브러리를 사용하여 Collection 페이지의 커버 배경을 구현하였습니다.
+
+#### Contact 페이지:
+
+emailjs 라이브러리를 활용하여 Contact 페이지의 이메일 전송 기능을 구현하였습니다.
+
+#### UI/UX 디자인:
+
+프로젝트의 전반적인 UI와 UX 디자인이 사용자 친화적이고 일관성 있게 구현되었습니다. 이를 통해 사용자가 쉽게 서비스를 탐색하고 이용할 수 있도록 하였습니다.
+
+##### 코드 구조화:
+
+컴포넌트, 페이지, 유틸리티 함수 등 코드를 체계적으로 구조화하여 유지보수성과 확장성을 높였습니다.
