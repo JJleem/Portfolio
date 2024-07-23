@@ -4,6 +4,9 @@
 
 Typescript
 
+<br />
+<br />
+
 ## 라이브러리
 
 `react-router-dom`
@@ -15,6 +18,9 @@ Typescript
 `framer-motion`
 `emailjs`
 `three`
+
+<br />
+<br />
 
 ## 페이지 구성
 
@@ -174,6 +180,9 @@ Typescript
 
 </details>
 
+
+<br />
+
 #### @types:
 
 TypeScript 타입 정의 파일들이 포함되어 있습니다. 여기에는 image.d.ts와 styled.d.ts가 있습니다.
@@ -205,6 +214,9 @@ Recoil 라이브러리를 사용하여 상태 관리를 하여서 Atom파일들�
 #### index.tsx:
 
 프로젝트의 진입점입니다. 여기에서 React 애플리케이션이 렌더링됩니다.
+
+<br />
+<br />
 
 ## 주요 기능
 
