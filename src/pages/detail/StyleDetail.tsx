@@ -28,6 +28,16 @@ export const DetailWrapper = styled.div`
   flex-direction: column;
   gap: 18px;
   padding: 0px 0px 300px 0px;
+  @media ${({ theme }) => theme.mediaSize.xl} {
+    height: 100%;
+
+    margin-bottom: 180px;
+  }
+  @media ${({ theme }) => theme.mediaSize.lg} {
+    height: fit-content;
+
+    margin-bottom: 420px;
+  }
   @media ${({ theme }) => theme.mediaSize.sm} {
     padding-bottom: 150px;
   }
@@ -123,7 +133,7 @@ export const ImgSection = styled.div<Props>`
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: calc(100vh - 160px);
+  height: 100vh;
   border-radius: 0px 0px 8px 8px;
   transition: background-position ${({ transition }) => transition}s;
   &:hover {
@@ -131,7 +141,7 @@ export const ImgSection = styled.div<Props>`
   }
   position: relative;
   @media ${({ theme }) => theme.mediaSize.md} {
-    height: 50vh;
+    height: 500px;
   }
   @media ${({ theme }) => theme.mediaSize.xs} {
     &:hover {
