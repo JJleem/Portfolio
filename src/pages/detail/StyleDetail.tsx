@@ -135,8 +135,9 @@ export const ImgSection = styled.div<Props>`
   }
   @media ${({ theme }) => theme.mediaSize.xs} {
     &:hover {
-      background-position: top;
+      background-position: inherit;
     }
+    transition: none;
   }
 `;
 export const ModalCursor = styled.div<Props>`

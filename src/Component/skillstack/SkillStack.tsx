@@ -1,4 +1,3 @@
-import React from "react";
 import {
   ItemContainer,
   ItemSection,
@@ -45,7 +44,6 @@ import figma from "../../assets/img/skill/figma.png";
 import firebase from "../../assets/img/skill/Firebase.png";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
 
 const SkillStack = () => {
   const [isClicked, setIsClicked] = useState(false);

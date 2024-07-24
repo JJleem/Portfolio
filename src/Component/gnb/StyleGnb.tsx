@@ -6,7 +6,7 @@ import account from "../../assets/img/icon/account.png";
 import info from "../../assets/img/icon/info.png";
 import toggle from "../../assets/img/icon/toggle.png";
 import close from "../../assets/img/icon/close.png";
-import list from "../../assets/img/icon/list.png";
+
 type GasideProps = {
   isClick?: boolean;
 };

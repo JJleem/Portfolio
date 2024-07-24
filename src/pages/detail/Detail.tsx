@@ -1,4 +1,3 @@
-import React from "react";
 import Footer from "../../Component/footer/Footer";
 import description from "../../assets/img/icon/description.png";
 import skill from "../../assets/img/icon/skill.png";
