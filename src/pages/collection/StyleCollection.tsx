@@ -303,6 +303,9 @@ export const InputWrap = styled.div`
   margin-top: -20px;
   align-items: center;
   justify-content: space-between;
+  @media ${({ theme }) => theme.mediaSize.sm} {
+    animation: none;
+  }
 `;
 export const LogoContainer = styled.div<Props>`
   transition: all 0.5s;
@@ -485,6 +488,7 @@ export const ItemContainer = styled.div`
 
   @media ${({ theme }) => theme.mediaSize.xs} {
     padding-bottom: 50px;
+    animation: none;
   }
 `;
 export const ItemSection = styled.div`

@@ -68,6 +68,9 @@ export const MainLogo = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   animation: ${Opacity} 1.5s ease-in-out;
+  @media ${({ theme }) => theme.mediaSize.xs} {
+    animation: none;
+  }
 `;
 export const MainTitle = styled.div`
   font-size: 80px;
@@ -87,11 +90,12 @@ export const MainTitle = styled.div`
   }
   @media ${({ theme }) => theme.mediaSize.xs} {
     font-size: 58px;
+    animation: none;
   }
 `;
 export const SubTitle = styled.div`
   animation: ${Opacity} 1.5s ease-in-out;
-  animation-delay: 0.6s;
+  animation-delay: 0.1s;
   animation-fill-mode: forwards;
   opacity: 0;
   font-size: ${({ theme }) => theme.fontSize.p11};
@@ -105,6 +109,7 @@ export const SubTitle = styled.div`
   @media ${({ theme }) => theme.mediaSize.xs} {
     font-size: ${({ theme }) => theme.fontSize.p8};
     letter-spacing: 6px;
+    animation: none;
   }
 `;
 export const MainDesc = styled.div`
@@ -132,6 +137,7 @@ export const MainDesc = styled.div`
   @media ${({ theme }) => theme.mediaSize.xs} {
     font-size: ${({ theme }) => theme.fontSize.p16};
     white-space: nowrap;
+    animation: none;
   }
 `;
 export const MainDescTitle = styled.div`
@@ -165,6 +171,9 @@ export const ItemWrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     align-content: center;
+  }
+  @media ${({ theme }) => theme.mediaSize.xs} {
+    animation: none;
   }
 `;
 export const MainItem = styled.div`
@@ -319,6 +328,9 @@ export const FirstProjectWrap = styled.div`
   animation-delay: 1.2s;
   animation-fill-mode: forwards;
   opacity: 0;
+  @media ${({ theme }) => theme.mediaSize.xs} {
+    animation: none;
+  }
 `;
 export const ProjectTitle = styled.div<Props>`
   margin-top: 50px;
@@ -349,6 +361,9 @@ export const ProjectTitle = styled.div<Props>`
     font-size: ${({ theme }) => theme.fontSize.p25};
     padding: 0 15px;
   }
+  @media ${({ theme }) => theme.mediaSize.xs} {
+    animation: none;
+  }
 `;
 export const NewProjectWrap = styled.div`
   width: 100%;
@@ -358,6 +373,9 @@ export const NewProjectWrap = styled.div`
   animation: ${Opacity} 1.5s ease-in-out;
   animation-delay: 0.5s;
   animation-fill-mode: forwards;
+  @media ${({ theme }) => theme.mediaSize.xs} {
+    animation: none;
+  }
 `;
 export const NewProject = styled.div`
   width: 48px;
@@ -416,5 +434,8 @@ export const MainSubWrap = styled.div<Props>`
     &:nth-of-type(2) {
       margin-bottom: 50px;
     }
+  }
+  @media ${({ theme }) => theme.mediaSize.xs} {
+    animation: none;
   }
 `;

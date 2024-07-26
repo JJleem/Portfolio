@@ -37,6 +37,8 @@ export const ProjectWrap = styled.div<LogoProps>`
   @media ${({ theme }) => theme.mediaSize.xs} {
     width: 372px;
     height: 1052px;
+
+    animation: none;
   }
 `;
 export const Inner = styled.div`

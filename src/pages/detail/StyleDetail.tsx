@@ -38,8 +38,14 @@ export const DetailWrapper = styled.div`
 
     margin-bottom: 420px;
   }
+  @media ${({ theme }) => theme.mediaSize.md} {
+    margin-bottom: 0px;
+
+    padding: 0px 0px 100px 0px;
+  }
   @media ${({ theme }) => theme.mediaSize.sm} {
     padding-bottom: 150px;
+    margin-bottom: 0px;
   }
 `;
 export const TopSection = styled.div`
