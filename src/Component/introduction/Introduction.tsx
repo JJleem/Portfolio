@@ -14,9 +14,9 @@ import {
   PdfSection,
   PdfText,
 } from "./StyleIntroduction";
-
 import pdf from "../../assets/img/icon/pdf.png";
 import hwp from "../../assets/img/icon/hwp.png";
+
 const Introduction = () => {
   return (
     <ItemContainer>
