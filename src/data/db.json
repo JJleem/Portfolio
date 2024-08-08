@@ -45,9 +45,47 @@
     },
     {
       "id": 2,
+      "img": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/item/mancity.png",
+      "title": "Manchester City Renewal",
+      "maintitle": "#2 Mancity",
+      "skill": "ts",
+      "language": "TYPESCRIPT",
+      "transition": "10",
+      "sub": "맨체스터시티 홈페이지 리뉴얼 및 클론코딩",
+      "mainsub": "맨체스터시티 리뉴얼 및 클론코딩",
+      "projecttype": "개인 프로젝트",
+      "date": "24.07~24.07",
+      "library": {
+        "one": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Youtube_logo.png",
+        "onetitle": "React-youtube",
+        "two": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Styledcomponents.png",
+        "twotitle": "StyledComponent",
+        "three": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Router.png",
+        "threetitle": "Router-dom",
+        "four": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/recoilll.png",
+        "fourtitle": "Recoil",
+        "five": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/React.png",
+        "fivetitle": "Slick"
+      },
+      "detail": {
+        "desc": "맨체스터시티 공식홈페이지 리뉴얼 및 클론코딩 한 사이트입니다.",
+        "desc2": "각 데이터들을 json으로 구축하여 그에따른 기능을 구현하였습니다.",
+        "onedesc": "Youtube라이브러리를 통하여 그에따른 비디오를 호출하였습니다.",
+        "twodesc": "Styled-component를 사용하여 컴포넌트 단위로 스타일을 관리할 수 있어 더 유지보수하기 쉬운 코드를 작성할 수 있었습니다.",
+        "twodesc2": " 또한 createGlobalStyle을 사용하여 전역 스타일을 적용하였습니다.",
+        "threedesc": "동적 라우팅: 필요에 따라 동적 라우팅을 구현했습니다. useParams Hook을 사용하여 URL 파라미터에 접근할 수 있었습니다. ",
+        "threedesc2": "URL파라미터 값으로 각 News의 id값에 접근해 수월하게 작업할수있었습니다.  ",
+        "fourdesc": "Recoil을 사용하여  애플리케이션의 상태를 효율적으로 관리하였습니다.  상태 구독을 통해 상태 변화에 따른 UI 업데이트를 자동으로 처리하였습니다.",
+        "fivedesc": "React-Slick을 통하여 슬라이더를 구현하였습니다."
+      },
+      "github": "https://github.com/JJleem/mancity",
+      "site": "https://manchestercity-renewal-clone.web.app/"
+    },
+    {
+      "id": 3,
       "img": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/item/videoplatform.png",
       "title": "VideoPlatform",
-      "maintitle": "#2 VideoPlatform",
+      "maintitle": "#3 VideoPlatform",
       "skill": "ts",
       "language": "TYPESCRIPT",
       "transition": "10",
@@ -87,10 +125,10 @@
       "site": "https://videoplatform-55aea.web.app"
     },
     {
-      "id": 3,
+      "id": 4,
       "img": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/item/global.png",
       "title": "Global Map",
-      "maintitle": "#3 Global Map",
+      "maintitle": "#4 Global Map",
       "skill": "ts",
       "language": "TYPESCRIPT",
       "transition": "7",
@@ -128,10 +166,10 @@
       "site": "https://globalmap-jjleem.web.app/"
     },
     {
-      "id": 4,
+      "id": 5,
       "img": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/item/login.png",
       "title": "NAVER Login",
-      "maintitle": "#4 NAVER Login",
+      "maintitle": "#5 NAVER Login",
       "skill": "ts",
       "language": "TYPESCRIPT",
       "transition": "5",
@@ -163,10 +201,10 @@
       "site": "https://naverlogin-jjleem.web.app/"
     },
     {
-      "id": 5,
+      "id": 6,
       "img": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/item/kanbanboard.png",
       "title": "D&D TODOLIST",
-      "maintitle": "#5 D&D TODOLIST",
+      "maintitle": "#6 D&D TODOLIST",
       "skill": "ts",
       "language": "TYPESCRIPT",
       "transition": "5",
@@ -203,10 +241,10 @@
       "site": "https://kanbanboard-jjleem.web.app/"
     },
     {
-      "id": 6,
+      "id": 7,
       "img": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/item/Bitcoin.png",
       "title": "BITCOIN",
-      "maintitle": "#6 BITCOIN",
+      "maintitle": "#7 BITCOIN",
       "skill": "ts",
       "language": "TYPESCRIPT",
       "transition": "5",
@@ -242,10 +280,10 @@
       "site": "https://bitcoin-jjleem.web.app/"
     },
     {
-      "id": 7,
+      "id": 8,
       "img": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/item/moltspace-min.png",
       "title": "MOLTSPACE",
-      "maintitle": "#7 MOLTSPACE",
+      "maintitle": "#8 MOLTSPACE",
       "skill": "ts",
       "language": "TYPESCRIPT",
       "transition": "30",
@@ -287,10 +325,10 @@
       "site": "https://moltspace-frontenddeveloper-pf.web.app/"
     },
     {
-      "id": 8,
+      "id": 9,
       "img": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/item/gecko.png",
       "title": "BREEDING DIARY",
-      "maintitle": "#8 BREEDING DIARY",
+      "maintitle": "#9 BREEDING DIARY",
       "skill": "react",
       "language": "REACT",
       "transition": "10",
@@ -323,10 +361,10 @@
       "site": "https://geckodiary-jjleem.web.app/"
     },
     {
-      "id": 9,
+      "id": 10,
       "img": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/item/mbti.png",
       "title": "MBTI",
-      "maintitle": "#9 MBTI",
+      "maintitle": "#10 MBTI",
       "skill": "react",
       "language": "REACT",
       "transition": "7",
@@ -359,10 +397,10 @@
       "site": "https://mbti-jjleem.web.app/"
     },
     {
-      "id": 10,
+      "id": 11,
       "img": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/item/netflix.png",
       "title": "NETFLIX",
-      "maintitle": "#10 NETFLIX",
+      "maintitle": "#11 NETFLIX",
       "skill": "react",
       "language": "REACT",
       "transition": "5",
@@ -399,10 +437,10 @@
       "site": "https://netflix-jjleem-e4b56.web.app/"
     },
     {
-      "id": 11,
+      "id": 12,
       "img": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/item/JJportfoliooo.png",
       "title": "JJPORTFOLIO",
-      "maintitle": "#11 JJPORTFOLIO",
+      "maintitle": "#12 JJPORTFOLIO",
       "skill": "react",
       "language": "REACT",
       "transition": "10",
@@ -439,10 +477,10 @@
       "site": "https://jjportfolio-4bcc2.web.app/"
     },
     {
-      "id": 12,
+      "id": 13,
       "img": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/item/theventi.png",
       "title": "THE VENTI",
-      "maintitle": "#12 THE VENTI",
+      "maintitle": "#13 THE VENTI",
       "skill": "js",
       "language": "JAVASCRIPT",
       "transition": "10",
@@ -475,10 +513,10 @@
       "site": "https://theventi-d1217.web.app/common/common.html"
     },
     {
-      "id": 13,
+      "id": 14,
       "img": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/item/lotto.png",
       "title": "LOTTO GENERATOR",
-      "maintitle": "#13 LOTTO GENERATOR",
+      "maintitle": "#14 LOTTO GENERATOR",
       "skill": "js",
       "language": "JAVASCRIPT",
       "transition": "5",
@@ -511,10 +549,10 @@
       "site": "https://lotto-generator-jjleem.web.app/"
     },
     {
-      "id": 14,
+      "id": 15,
       "img": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/item/slecto.png",
       "title": "SELECTO 커피 매장찾기",
-      "maintitle": "#14 SELECTO 커피 매장찾기",
+      "maintitle": "#15 SELECTO 커피 매장찾기",
       "skill": "js",
       "language": "JAVASCRIPT",
       "transition": "5",

@@ -37,6 +37,20 @@ import { tabsState } from "../../atom/atom";
 import { Helmet } from "react-helmet";
 
 const Collection = () => {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+  console.log(scrollY);
   const [isModal, setIsModal] = useState(true);
   const handleIsModal = () => {
     const newIsModal = !isModal;
@@ -175,7 +189,7 @@ const Collection = () => {
             <DataList>
               <Data>
                 <span>Typescript.</span>
-                <p>7</p>
+                <p>8</p>
               </Data>
               <Data>
                 <span>React.</span>

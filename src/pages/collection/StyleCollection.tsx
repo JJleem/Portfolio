@@ -40,7 +40,7 @@ export const Section = styled.div`
 export const TopCover = styled.div`
   width: 100%;
   height: 330px;
-  background: ${({ theme }) => theme.colors.login_BOXline};
+
   @media ${({ theme }) => theme.mediaSize.sm} {
     height: 310px;
   }
