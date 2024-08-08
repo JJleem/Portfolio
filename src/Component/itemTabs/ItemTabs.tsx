@@ -27,6 +27,7 @@ import Box from "../../Component/box/Box";
 import ts from "../../assets/img/skill/Typescript.png";
 import react from "../../assets/img/skill/reactSmall.png";
 import js from "../../assets/img/skill/JavaScript.png";
+import node from "../../assets/img/skill/Node.png";
 import { useRecoilState } from "recoil";
 import { filterState, searchTermState } from "../../atom/atom";
 import Db from "../../data/db.json";
@@ -34,6 +35,7 @@ import Db from "../../data/db.json";
 const ItemTabs = () => {
   const [check, setCheck] = useState({
     ts: false,
+    node: false,
     react: false,
     js: false,
     all: true,
@@ -42,6 +44,7 @@ const ItemTabs = () => {
   const tsItems = Db.items.filter((item) => item.skill === "ts");
   const reactItems = Db.items.filter((item) => item.skill === "react");
   const jsItems = Db.items.filter((item) => item.skill === "js");
+  const nodeItems = Db.items.filter((item) => item.skill === "node");
 
   const handleSkillClick = (checks: string) => {
     setCheck((prevCheck) => ({
@@ -51,6 +54,7 @@ const ItemTabs = () => {
       react: checks === "react",
       js: checks === "js",
       all: checks === "all",
+      node: checks === "node",
     }));
   };
 
@@ -76,6 +80,9 @@ const ItemTabs = () => {
     item.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
   const filteredJsItems = jsItems.filter((item) =>
+    item.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+  const filteredNodeItems = nodeItems.filter((item) =>
     item.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
   return (
@@ -116,6 +123,14 @@ const ItemTabs = () => {
               ></FilterCheckBox>
             </FilterItem>
             <FilterItem>
+              <FilterLogo logo={node}></FilterLogo>
+              <FilterTitle>Node</FilterTitle>
+              <FilterCheckBox
+                onClick={() => handleSkillClick("node")}
+                isClick={check.node}
+              ></FilterCheckBox>
+            </FilterItem>
+            <FilterItem>
               <FilterLogo logo={react}></FilterLogo>
               <FilterTitle>REACT</FilterTitle>
               <FilterCheckBox
@@ -142,6 +157,29 @@ const ItemTabs = () => {
               </SkillTitle>
               <ItemWrap isFilter={filter}>
                 {filteredTsItems.map((item) => (
+                  <Box
+                    key={item.id}
+                    itemImg={item.img}
+                    skill={item.skill}
+                    title={item.title}
+                    transition={item.transition}
+                    sub={item.sub}
+                    linkto={""}
+                    github={item.github}
+                    go={item.id}
+                  />
+                ))}
+              </ItemWrap>
+            </ItemList>
+          )}
+
+          {filteredNodeItems.length > 0 && (check.all || check.node) && (
+            <ItemList isFilter={filter}>
+              <SkillTitle isFilter={filter}>
+                <LogoSpan logo={node}></LogoSpan>Node
+              </SkillTitle>
+              <ItemWrap isFilter={filter}>
+                {filteredNodeItems.map((item) => (
                   <Box
                     key={item.id}
                     itemImg={item.img}

@@ -192,6 +192,10 @@ const Collection = () => {
                 <p>8</p>
               </Data>
               <Data>
+                <span>Node.</span>
+                <p>1</p>
+              </Data>
+              <Data>
                 <span>React.</span>
                 <p>4</p>
               </Data>

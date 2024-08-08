@@ -403,3 +403,6 @@ export const DetailsItems = styled.div<Props>`
     }
   }
 `;
+export const NodeImgSection = styled.div<Props>`
+
+`;

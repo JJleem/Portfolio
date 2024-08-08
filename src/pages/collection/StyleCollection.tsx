@@ -471,7 +471,7 @@ export const LogoSpan = styled.span<logoProps>`
   background-image: url(${({ logo }) => logo});
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   width: 48px;
   height: 48px;
   @media ${({ theme }) => theme.mediaSize.sm} {

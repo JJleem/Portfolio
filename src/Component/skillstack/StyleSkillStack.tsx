@@ -174,6 +174,10 @@ export const SkillStackSection = styled(motion.div)<ClickedProps>`
       transform: translate(440px, -440px);
       opacity: 1;
     }
+    & div:nth-child(27) {
+      transform: translate(440px, -440px);
+      opacity: 1;
+    }
   }
 `;
 export const SkillItem = styled(motion.div)<logoProps>`

@@ -122,7 +122,7 @@
         "sixdesc2": " 이 라이브러리를 사용하여 YouTube 동영상을  컴포넌트로 쉽게 통합할 수 있었습니다."
       },
       "github": "https://github.com/JJleem/videoPlatform",
-      "site": "https://videoplatform-55aea.web.app"
+      "site": "https://videoplatform-study.web.app/"
     },
     {
       "id": 4,
@@ -580,6 +580,59 @@
         "threedesc": "전체적인 페이지 구조와 각 요소의 크기, 위치, 정렬 등을 CSS로 세밀하게 조정했습니다.",
         "threedesc2": "버튼의 크기, 모양, 색상, 호버 효과 등을 CSS로 설정했습니다.",
         "fourdesc": " Firebase를 사용하여 해당 프로젝트 사이트를 배포하였으며, Firebase CLI를 사용하여 쉽게 애플리케이션을 배포할 수 있었습니다."
+      },
+      "github": "https://github.com/JJleem/EZEN-FRONT-UIUX/tree/master/portfolio%20%EC%98%88%EC%A0%9C/portfolio%20%EC%98%88%EC%A0%9C/%EC%85%80%EB%A0%89%ED%86%A0%20%EB%A7%A4%EC%9E%A5%EC%B0%BE%EA%B8%B0",
+      "site": "https://selecto-map-jjleem.web.app/"
+    },
+    {
+      "id": 16,
+      "img": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/node/register.png",
+      "imgtwo": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/node/login.png",
+      "imgthree": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/node/all.png",
+      "imgfour": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/node/add.png",
+      "imgfive": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/node/update.png",
+      "imgsix": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/node/all4.png",
+      "imgsub": "회원가입 부분 구현",
+      "imgsubtwo": "로그인 기능 구현",
+      "imgsubthree": "전체 연락처 및 로그인여부 사용자 이름 구현",
+      "imgsubfour": "연락처 데이터 추가",
+      "imgsubfive": "연락처 데이터 수정",
+      "imgsubsix": "추가 및 수정된 데이터 확인",
+      "title": "TS-Node 연락처DB",
+      "maintitle": "#16 TS-Node 연락처 DB",
+      "skill": "node",
+      "language": "Typescript + Node",
+      "transition": "5",
+      "sub": "Node와 TS, MongoDB를 활용하여 작업한 연락처 DB입니다.",
+      "mainsub": "Ts-Node 연락처 DB",
+      "projecttype": "개인 프로젝트",
+      "date": "24.08~24.08",
+      "library": {
+        "one": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/mongo.png",
+        "two": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Typescript.png",
+        "three": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Node.png",
+        "onetitle": "MongoDB",
+        "twotitle": "TypeScript",
+        "threetitle": "Node",
+        "four": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/express.png",
+        "fourtitle": "Express",
+        "five": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/jwt.png",
+        "fivetitle": "Jsonwebtoken",
+        "six": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/bycrypt.png",
+        "sixtitle": "Bcrypt"
+      },
+      "detail": {
+        "desc": "TS-Node를 활용해 연락처를 CRUD할수있는 기능을 구현한 예제입니다.",
+        "desc2": "MongoDB를 통하여 DB를 구축하였고 Server와 Client를 연결하는 학습에 도움이되었습니다. 현재 배포부분은 학습중입니다.",
+        "onedesc": "MongoDB를통하여 DB를 구축하였고 Mongoose를통하여 DB와 상호작용하였습니다.",
+
+        "twodesc": " TS를통하여 Front부분을 작업하였습니다.",
+
+        "threedesc": "Node를 통하여 Proxy서버를 구축 Front와 연결,및 상호작용하였습니다.",
+        "threedesc2": "또한 Nodemon 을 활용하여 실시간 으로 서버를 확인하며 작업하였습니다.",
+        "fourdesc": " Express를 통하여 서버를 구현하였습니다.",
+        "fivedesc": "jwt 를 활용하여 로그인시에 토큰을 발생하고 그 토큰을통하여 사용자의 id와 세션만료시간 로그인여부를 구현하였습니다.",
+        "sixdesc": " bcrypt 라이브러리를 사용하여 비밀번호를 안전하게 해싱하고 확인하였습니다."
       },
       "github": "https://github.com/JJleem/EZEN-FRONT-UIUX/tree/master/portfolio%20%EC%98%88%EC%A0%9C/portfolio%20%EC%98%88%EC%A0%9C/%EC%85%80%EB%A0%89%ED%86%A0%20%EB%A7%A4%EC%9E%A5%EC%B0%BE%EA%B8%B0",
       "site": "https://selecto-map-jjleem.web.app/"

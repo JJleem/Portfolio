@@ -4,6 +4,8 @@ import skill from "../../assets/img/icon/skill.png";
 import detail from "../../assets/img/icon/detail.png";
 import github from "../../assets/img/skill/githubWhite.png";
 import opne from "../../assets/img/icon/open.png";
+
+
 import {
   StyleDetail,
   DetailWrapper,
@@ -38,6 +40,7 @@ import Db from "../../data/db.json";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import TopBtn from "../../Component/topbtn/TopBtn";
 import { Helmet } from "react-helmet";
+import NodeSlider from "./NodeSlider";
 
 const Detail = () => {
   const [isDescClick, setIsDescClick] = useState(false);
@@ -116,32 +119,39 @@ const Detail = () => {
             <span>MOLT's Project</span>
             <div>{ChooseData?.maintitle}</div>
           </HideTitle>
-          <ImgWrap>
-            <ImgHeader>
-              <HeartLogo isClick={isClick} onClick={handleClicked}></HeartLogo>
-            </ImgHeader>
+          {ChooseData?.skill === "node" && <NodeSlider />}
+          {ChooseData?.skill !== "node" && (
+            <ImgWrap>
+              <ImgHeader>
+                <HeartLogo
+                  isClick={isClick}
+                  onClick={handleClicked}
+                ></HeartLogo>
+              </ImgHeader>
 
-            {ChooseData?.site && (
-              <ImgSection
-                img={ChooseData?.img}
-                transition={ChooseData?.transition}
-                onClick={() => goSite(ChooseData?.site)}
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-              >
-                <ModalCursor
-                  isHover={isHovered}
-                  style={{
-                    pointerEvents: "none",
-                    left: mousePosition.x + 20,
-                    top: mousePosition.y - 40,
-                  }}
+              {ChooseData?.site && ChooseData?.skill !== "node" && (
+                <ImgSection
+                  img={ChooseData?.img}
+                  transition={ChooseData?.transition}
+                  onClick={() => goSite(ChooseData?.site)}
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
                 >
-                  클릭하여 사이트로 이동해보세요
-                </ModalCursor>
-              </ImgSection>
-            )}
-          </ImgWrap>
+                  <ModalCursor
+                    isHover={isHovered}
+                    style={{
+                      pointerEvents: "none",
+                      left: mousePosition.x + 20,
+                      top: mousePosition.y - 40,
+                    }}
+                  >
+                    클릭하여 사이트로 이동해보세요
+                  </ModalCursor>
+                </ImgSection>
+              )}
+            </ImgWrap>
+          )}
+
           <DescWrap>
             <Title>
               <span>MOLT's Project</span>
