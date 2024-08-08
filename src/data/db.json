@@ -634,8 +634,8 @@
         "fivedesc": "jwt 를 활용하여 로그인시에 토큰을 발생하고 그 토큰을통하여 사용자의 id와 세션만료시간 로그인여부를 구현하였습니다.",
         "sixdesc": " bcrypt 라이브러리를 사용하여 비밀번호를 안전하게 해싱하고 확인하였습니다."
       },
-      "github": "https://github.com/JJleem/EZEN-FRONT-UIUX/tree/master/portfolio%20%EC%98%88%EC%A0%9C/portfolio%20%EC%98%88%EC%A0%9C/%EC%85%80%EB%A0%89%ED%86%A0%20%EB%A7%A4%EC%9E%A5%EC%B0%BE%EA%B8%B0",
-      "site": "https://selecto-map-jjleem.web.app/"
+      "github": "https://github.com/JJleem/TS--Node",
+      "site": "https://github.com/JJleem/TS--Node"
     }
   ]
 }
