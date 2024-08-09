@@ -123,7 +123,7 @@ const Gnb: React.FC = () => {
         </InputWrap>
         <MenuWrap>
           <Links to="/">MainHome</Links>
-          <Links to="/collection/7">Detail</Links>
+          <Links to="/collection/8">Detail</Links>
           <Links to="/directory">Directory</Links>
           <Links to="/directory"></Links>
           <Links to="/collection" onClick={IntrouctionClick}></Links>
