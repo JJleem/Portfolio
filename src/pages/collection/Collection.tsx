@@ -50,7 +50,7 @@ const Collection = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  console.log(scrollY);
+
   const [isModal, setIsModal] = useState(true);
   const handleIsModal = () => {
     const newIsModal = !isModal;

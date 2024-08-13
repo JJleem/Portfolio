@@ -184,7 +184,7 @@ export const ModalContent = styled.div`
   background: ${({ theme }) => theme.colors.nav_BG};
   border-radius: 8px;
   position: absolute;
-  bottom: 30px;
+  bottom: 70px;
   right: 30px;
   padding: 10px 12px;
   animation: ${Opacity} 1.5s ease-in-out;

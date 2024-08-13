@@ -76,10 +76,6 @@ const Gnb: React.FC = () => {
   const SkillStackClick = () => {
     handleTabClick("skillstack");
   };
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    handleTabClick("items");
-  };
 
   const [clickedToggle, setClickedToggle] = useRecoilState(toggleState);
   const handleClick = () => {
@@ -101,6 +97,14 @@ const Gnb: React.FC = () => {
       window.removeEventListener("keydown", handleKeydown);
     };
   }, []);
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (inputRef.current) {
+      inputRef.current.value = "";
+    }
+    handleTabClick("items");
+    navigate("/collection");
+  };
 
   return (
     <StyledGnb>
