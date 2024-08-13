@@ -31,6 +31,7 @@ import node from "../../assets/img/skill/Node.png";
 import { useRecoilState } from "recoil";
 import { filterState, searchTermState } from "../../atom/atom";
 import Db from "../../data/db.json";
+import { AddSvg, AddSvgContainer } from "../box/StyleBox";
 
 const ItemTabs = () => {
   const [check, setCheck] = useState({
@@ -85,6 +86,9 @@ const ItemTabs = () => {
   const filteredNodeItems = nodeItems.filter((item) =>
     item.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
+  const goAdd = () => {
+    setSearchTerm("");
+  };
   return (
     <>
       <InputWrap>
@@ -169,6 +173,32 @@ const ItemTabs = () => {
                     go={item.id}
                   />
                 ))}
+                {filteredTsItems.length < 5 && (
+                  <AddSvgContainer onClick={goAdd}>
+                    <AddSvg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <mask
+                        id="mask0_51_125"
+                        maskUnits="userSpaceOnUse"
+                        x="0"
+                        y="0"
+                        width="24"
+                        height="24"
+                      >
+                        <rect width="24" height="24" fill="#D9D9D9" />
+                      </mask>
+                      <g mask="url(#mask0_51_125)">
+                        <path
+                          d="M11 19V13H5V11H11V5H13V11H19V13H13V19H11Z"
+                          fill="#6f36ff"
+                        />
+                      </g>
+                    </AddSvg>
+                  </AddSvgContainer>
+                )}
               </ItemWrap>
             </ItemList>
           )}
@@ -192,6 +222,34 @@ const ItemTabs = () => {
                     go={item.id}
                   />
                 ))}
+                {filteredJsItems.length === 0 &&
+                  filteredTsItems.length === 0 &&
+                  filteredReactItems.length === 0 && (
+                    <AddSvgContainer onClick={goAdd}>
+                      <AddSvg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <mask
+                          id="mask0_51_125"
+                          maskUnits="userSpaceOnUse"
+                          x="0"
+                          y="0"
+                          width="24"
+                          height="24"
+                        >
+                          <rect width="24" height="24" fill="#D9D9D9" />
+                        </mask>
+                        <g mask="url(#mask0_51_125)">
+                          <path
+                            d="M11 19V13H5V11H11V5H13V11H19V13H13V19H11Z"
+                            fill="#6f36ff"
+                          />
+                        </g>
+                      </AddSvg>
+                    </AddSvgContainer>
+                  )}
               </ItemWrap>
             </ItemList>
           )}
@@ -215,6 +273,32 @@ const ItemTabs = () => {
                     go={item.id}
                   />
                 ))}
+                {filteredReactItems.length < 4 && (
+                  <AddSvgContainer onClick={goAdd}>
+                    <AddSvg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <mask
+                        id="mask0_51_125"
+                        maskUnits="userSpaceOnUse"
+                        x="0"
+                        y="0"
+                        width="24"
+                        height="24"
+                      >
+                        <rect width="24" height="24" fill="#D9D9D9" />
+                      </mask>
+                      <g mask="url(#mask0_51_125)">
+                        <path
+                          d="M11 19V13H5V11H11V5H13V11H19V13H13V19H11Z"
+                          fill="#6f36ff"
+                        />
+                      </g>
+                    </AddSvg>
+                  </AddSvgContainer>
+                )}
               </ItemWrap>
             </ItemList>
           )}
@@ -238,6 +322,32 @@ const ItemTabs = () => {
                     go={item.id}
                   />
                 ))}
+                {filteredJsItems.length < 3 && (
+                  <AddSvgContainer onClick={goAdd}>
+                    <AddSvg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <mask
+                        id="mask0_51_125"
+                        maskUnits="userSpaceOnUse"
+                        x="0"
+                        y="0"
+                        width="24"
+                        height="24"
+                      >
+                        <rect width="24" height="24" fill="#D9D9D9" />
+                      </mask>
+                      <g mask="url(#mask0_51_125)">
+                        <path
+                          d="M11 19V13H5V11H11V5H13V11H19V13H13V19H11Z"
+                          fill="#6f36ff"
+                        />
+                      </g>
+                    </AddSvg>
+                  </AddSvgContainer>
+                )}
               </ItemWrap>
             </ItemList>
           )}

@@ -200,3 +200,21 @@ export const Info = styled.div`
   gap: 10px;
   cursor: pointer;
 `;
+export const AddSvg = styled.svg`
+  width: 100px;
+  height: 100px;
+`;
+export const AddSvgContainer = styled.div`
+  width: 100%;
+  border: 1px solid ${({ theme }) => theme.colors.detail_BG};
+  border-radius: 12px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background: ${({ theme }) => theme.colors.detail_BG};
+  &:hover {
+    opacity: 0.6;
+  }
+`;
