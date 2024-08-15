@@ -72,7 +72,7 @@ const Footer = () => {
             </li>
 
             <li>
-              <Link to="/collection/7">Page Detail</Link>
+              <Link to="/collection/8">Page Detail</Link>
             </li>
             <li>
               <Link to="/collection" onClick={ContactClick}>

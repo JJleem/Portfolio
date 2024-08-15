@@ -40,7 +40,7 @@ export const Section = styled.div`
 export const TopCover = styled.div`
   width: 100%;
   height: 330px;
-  background: ${({ theme }) => theme.colors.login_BOXline};
+
   @media ${({ theme }) => theme.mediaSize.sm} {
     height: 310px;
   }
@@ -471,7 +471,7 @@ export const LogoSpan = styled.span<logoProps>`
   background-image: url(${({ logo }) => logo});
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   width: 48px;
   height: 48px;
   @media ${({ theme }) => theme.mediaSize.sm} {

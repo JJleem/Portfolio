@@ -42,6 +42,7 @@ import pug from "../../assets/img/skill/pug.png";
 import babel from "../../assets/img/skill/babel.png";
 import figma from "../../assets/img/skill/figma.png";
 import firebase from "../../assets/img/skill/Firebase.png";
+import mongo from "../../assets/img/skill/mongo.png";
 
 import { useState } from "react";
 
@@ -148,6 +149,9 @@ const SkillStack = () => {
               </SkillInner>
               <SkillInner>
                 <SkillItem logo={query} layoutId="query"></SkillItem>
+              </SkillInner>
+              <SkillInner>
+                <SkillItem logo={mongo} layoutId="mongo"></SkillItem>
               </SkillInner>
               <SkillInner>
                 <SkillItem logo={react} layoutId="react"></SkillItem>
@@ -466,6 +470,18 @@ const SkillStack = () => {
                     }}
                   ></SkillItemlayout>
                   <LogoDesc>NODE</LogoDesc>
+                </Logo>
+                <Logo>
+                  <SkillItemlayout
+                    logo={mongo}
+                    layoutId="mongo"
+                    transition={{
+                      type: "tween",
+                      duration: 0.5,
+                      delay: 0.4,
+                    }}
+                  ></SkillItemlayout>
+                  <LogoDesc>MongoDB</LogoDesc>
                 </Logo>
                 <Logo>
                   <SkillItemlayout

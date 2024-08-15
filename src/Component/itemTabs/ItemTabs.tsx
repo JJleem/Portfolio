@@ -27,13 +27,16 @@ import Box from "../../Component/box/Box";
 import ts from "../../assets/img/skill/Typescript.png";
 import react from "../../assets/img/skill/reactSmall.png";
 import js from "../../assets/img/skill/JavaScript.png";
+import node from "../../assets/img/skill/Node.png";
 import { useRecoilState } from "recoil";
 import { filterState, searchTermState } from "../../atom/atom";
 import Db from "../../data/db.json";
+import { AddSvg, AddSvgContainer } from "../box/StyleBox";
 
 const ItemTabs = () => {
   const [check, setCheck] = useState({
     ts: false,
+    node: false,
     react: false,
     js: false,
     all: true,
@@ -42,6 +45,7 @@ const ItemTabs = () => {
   const tsItems = Db.items.filter((item) => item.skill === "ts");
   const reactItems = Db.items.filter((item) => item.skill === "react");
   const jsItems = Db.items.filter((item) => item.skill === "js");
+  const nodeItems = Db.items.filter((item) => item.skill === "node");
 
   const handleSkillClick = (checks: string) => {
     setCheck((prevCheck) => ({
@@ -51,6 +55,7 @@ const ItemTabs = () => {
       react: checks === "react",
       js: checks === "js",
       all: checks === "all",
+      node: checks === "node",
     }));
   };
 
@@ -78,6 +83,12 @@ const ItemTabs = () => {
   const filteredJsItems = jsItems.filter((item) =>
     item.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
+  const filteredNodeItems = nodeItems.filter((item) =>
+    item.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+  const goAdd = () => {
+    setSearchTerm("");
+  };
   return (
     <>
       <InputWrap>
@@ -113,6 +124,14 @@ const ItemTabs = () => {
               <FilterCheckBox
                 onClick={() => handleSkillClick("ts")}
                 isClick={check.ts}
+              ></FilterCheckBox>
+            </FilterItem>
+            <FilterItem>
+              <FilterLogo logo={node}></FilterLogo>
+              <FilterTitle>Node</FilterTitle>
+              <FilterCheckBox
+                onClick={() => handleSkillClick("node")}
+                isClick={check.node}
               ></FilterCheckBox>
             </FilterItem>
             <FilterItem>
@@ -154,6 +173,83 @@ const ItemTabs = () => {
                     go={item.id}
                   />
                 ))}
+                {filteredTsItems.length < 5 && (
+                  <AddSvgContainer onClick={goAdd}>
+                    <AddSvg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <mask
+                        id="mask0_51_125"
+                        maskUnits="userSpaceOnUse"
+                        x="0"
+                        y="0"
+                        width="24"
+                        height="24"
+                      >
+                        <rect width="24" height="24" fill="#D9D9D9" />
+                      </mask>
+                      <g mask="url(#mask0_51_125)">
+                        <path
+                          d="M11 19V13H5V11H11V5H13V11H19V13H13V19H11Z"
+                          fill="#6f36ff"
+                        />
+                      </g>
+                    </AddSvg>
+                  </AddSvgContainer>
+                )}
+              </ItemWrap>
+            </ItemList>
+          )}
+
+          {filteredNodeItems.length > 0 && (check.all || check.node) && (
+            <ItemList isFilter={filter}>
+              <SkillTitle isFilter={filter}>
+                <LogoSpan logo={node}></LogoSpan>Node
+              </SkillTitle>
+              <ItemWrap isFilter={filter}>
+                {filteredNodeItems.map((item) => (
+                  <Box
+                    key={item.id}
+                    itemImg={item.img}
+                    skill={item.skill}
+                    title={item.title}
+                    transition={item.transition}
+                    sub={item.sub}
+                    linkto={""}
+                    github={item.github}
+                    go={item.id}
+                  />
+                ))}
+                {filteredJsItems.length === 0 &&
+                  filteredTsItems.length === 0 &&
+                  filteredReactItems.length === 0 && (
+                    <AddSvgContainer onClick={goAdd}>
+                      <AddSvg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <mask
+                          id="mask0_51_125"
+                          maskUnits="userSpaceOnUse"
+                          x="0"
+                          y="0"
+                          width="24"
+                          height="24"
+                        >
+                          <rect width="24" height="24" fill="#D9D9D9" />
+                        </mask>
+                        <g mask="url(#mask0_51_125)">
+                          <path
+                            d="M11 19V13H5V11H11V5H13V11H19V13H13V19H11Z"
+                            fill="#6f36ff"
+                          />
+                        </g>
+                      </AddSvg>
+                    </AddSvgContainer>
+                  )}
               </ItemWrap>
             </ItemList>
           )}
@@ -177,6 +273,32 @@ const ItemTabs = () => {
                     go={item.id}
                   />
                 ))}
+                {filteredReactItems.length < 4 && (
+                  <AddSvgContainer onClick={goAdd}>
+                    <AddSvg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <mask
+                        id="mask0_51_125"
+                        maskUnits="userSpaceOnUse"
+                        x="0"
+                        y="0"
+                        width="24"
+                        height="24"
+                      >
+                        <rect width="24" height="24" fill="#D9D9D9" />
+                      </mask>
+                      <g mask="url(#mask0_51_125)">
+                        <path
+                          d="M11 19V13H5V11H11V5H13V11H19V13H13V19H11Z"
+                          fill="#6f36ff"
+                        />
+                      </g>
+                    </AddSvg>
+                  </AddSvgContainer>
+                )}
               </ItemWrap>
             </ItemList>
           )}
@@ -200,6 +322,32 @@ const ItemTabs = () => {
                     go={item.id}
                   />
                 ))}
+                {filteredJsItems.length < 3 && (
+                  <AddSvgContainer onClick={goAdd}>
+                    <AddSvg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <mask
+                        id="mask0_51_125"
+                        maskUnits="userSpaceOnUse"
+                        x="0"
+                        y="0"
+                        width="24"
+                        height="24"
+                      >
+                        <rect width="24" height="24" fill="#D9D9D9" />
+                      </mask>
+                      <g mask="url(#mask0_51_125)">
+                        <path
+                          d="M11 19V13H5V11H11V5H13V11H19V13H13V19H11Z"
+                          fill="#6f36ff"
+                        />
+                      </g>
+                    </AddSvg>
+                  </AddSvgContainer>
+                )}
               </ItemWrap>
             </ItemList>
           )}

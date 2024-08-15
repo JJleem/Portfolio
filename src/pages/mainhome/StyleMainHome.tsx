@@ -6,6 +6,7 @@ import react from "../../assets/img/skill/React.png";
 import ts from "../../assets/img/skill/Typescript.png";
 import js from "../../assets/img/skill/JavaScript.png";
 import githubWhite from "../../assets/img/skill/githubWhite.png";
+import node from "../../assets/img/skill/Node.png";
 
 import replace from "../../assets/img/icon/Refresh_2@2x.png";
 import { Opacity } from "../collection/StyleCollection";
@@ -257,6 +258,20 @@ export const Logo = styled.div<Props>`
       case "github":
         return css`
           background: url(${githubWhite});
+          background-position: center;
+          background-size: contain;
+          background-repeat: no-repeat;
+          opacity: 0.8;
+          transform-origin: center;
+          &:hover {
+            transition: all 3s;
+            transform: rotateY(360deg);
+            opacity: 1;
+          }
+        `;
+      case "node":
+        return css`
+          background: url(${node});
           background-position: center;
           background-size: contain;
           background-repeat: no-repeat;

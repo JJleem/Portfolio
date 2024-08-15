@@ -60,8 +60,8 @@ const MainHome = () => {
     useRecoilState<number>(newNumberState);
 
   const generateNewNumbers = () => {
-    const newRandomNumber: number = Math.floor(Math.random() * 14);
-    const newNewRandomNumber: number = Math.floor(Math.random() * 14);
+    const newRandomNumber: number = Math.floor(Math.random() * 16);
+    const newNewRandomNumber: number = Math.floor(Math.random() * 16);
 
     setRandomNumber(newRandomNumber);
     setNewRandomNumber(newNewRandomNumber);
@@ -122,6 +122,17 @@ const MainHome = () => {
               <MainItemDesc>
                 <div>
                   <span> Javascript</span> <br />를 기반으로 다양한 프로젝트들을
+                  개발하였습니다.
+                </div>
+              </MainItemDesc>
+            </MainItem>
+            <MainItem>
+              <MainItemLogo>
+                <Logo type="node" />
+              </MainItemLogo>
+              <MainItemDesc>
+                <div>
+                  <span>Node</span> <br />를 기반으로 프로젝트들을
                   개발하였습니다.
                 </div>
               </MainItemDesc>
