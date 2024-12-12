@@ -5,7 +5,6 @@ import detail from "../../assets/img/icon/detail.png";
 import github from "../../assets/img/skill/githubWhite.png";
 import opne from "../../assets/img/icon/open.png";
 
-
 import {
   StyleDetail,
   DetailWrapper,
@@ -119,8 +118,10 @@ const Detail = () => {
             <span>MOLT's Project</span>
             <div>{ChooseData?.maintitle}</div>
           </HideTitle>
-          {ChooseData?.skill === "node" && <NodeSlider />}
-          {ChooseData?.skill !== "node" && (
+          {(ChooseData?.skill === "node" || ChooseData?.skill === "native") && (
+            <NodeSlider />
+          )}
+          {ChooseData?.skill !== "node" && ChooseData?.skill !== "native" && (
             <ImgWrap>
               <ImgHeader>
                 <HeartLogo
@@ -129,7 +130,8 @@ const Detail = () => {
                 ></HeartLogo>
               </ImgHeader>
 
-              {ChooseData?.site && ChooseData?.skill !== "node" && (
+              {((ChooseData?.site && ChooseData?.skill !== "node") ||
+                (ChooseData?.site && ChooseData?.skill !== "native")) && (
                 <ImgSection
                   img={ChooseData?.img}
                   transition={ChooseData?.transition}

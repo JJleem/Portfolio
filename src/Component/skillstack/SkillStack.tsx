@@ -43,7 +43,8 @@ import babel from "../../assets/img/skill/babel.png";
 import figma from "../../assets/img/skill/figma.png";
 import firebase from "../../assets/img/skill/Firebase.png";
 import mongo from "../../assets/img/skill/mongo.png";
-
+import native from "../../assets/img/skill/native.png";
+import expo from "../../assets/img/skill/expo.png";
 import { useState } from "react";
 
 const SkillStack = () => {
@@ -78,6 +79,12 @@ const SkillStack = () => {
               }}
               isClick={isClicked}
             >
+              <SkillInner>
+                <SkillItem logo={native} layoutId="native"></SkillItem>
+              </SkillInner>
+              <SkillInner>
+                <SkillItem logo={expo} layoutId="expo"></SkillItem>
+              </SkillInner>
               <SkillInner>
                 <SkillItem logo={html} layoutId="html"></SkillItem>
               </SkillInner>
@@ -170,6 +177,30 @@ const SkillStack = () => {
             <StackSection>
               <h1>많이사용해봤어요</h1>
               <StackInner>
+                <Logo>
+                  <SkillItemlayout
+                    logo={native}
+                    layoutId="native"
+                    transition={{
+                      type: "tween",
+                      duration: 0.5,
+                      delay: 0,
+                    }}
+                  ></SkillItemlayout>
+                  <LogoDesc>React-Native</LogoDesc>
+                </Logo>
+                <Logo>
+                  <SkillItemlayout
+                    logo={expo}
+                    layoutId="expo"
+                    transition={{
+                      type: "tween",
+                      duration: 0.5,
+                      delay: 0,
+                    }}
+                  ></SkillItemlayout>
+                  <LogoDesc>Expo</LogoDesc>
+                </Logo>
                 <Logo>
                   <SkillItemlayout
                     logo={ts}

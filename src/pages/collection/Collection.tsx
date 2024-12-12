@@ -188,6 +188,10 @@ const Collection = () => {
             </FoldText>
             <DataList>
               <Data>
+                <span>React-Native.</span>
+                <p>2</p>
+              </Data>
+              <Data>
                 <span>Typescript.</span>
                 <p>8</p>
               </Data>

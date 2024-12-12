@@ -95,6 +95,17 @@ const MainHome = () => {
           <ItemWrapper>
             <MainItem>
               <MainItemLogo>
+                <Logo type="native" />
+              </MainItemLogo>
+              <MainItemDesc>
+                <div>
+                  <span>React-Native</span> <br />를 통해 안드로이드
+                  어플리케이션을 개발하였습니다.
+                </div>
+              </MainItemDesc>
+            </MainItem>
+            <MainItem>
+              <MainItemLogo>
                 <Logo type="ts" />
               </MainItemLogo>
               <MainItemDesc>
@@ -134,17 +145,6 @@ const MainHome = () => {
                 <div>
                   <span>Node</span> <br />를 기반으로 프로젝트들을
                   개발하였습니다.
-                </div>
-              </MainItemDesc>
-            </MainItem>
-            <MainItem>
-              <MainItemLogo>
-                <Logo type="github" />
-              </MainItemLogo>
-              <MainItemDesc>
-                <div>
-                  <span>Github</span> <br />를 통해 효율적인 프로젝트관리를
-                  하였습니다.
                 </div>
               </MainItemDesc>
             </MainItem>

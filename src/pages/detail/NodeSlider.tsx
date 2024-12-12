@@ -47,10 +47,12 @@ const NodeSlider = () => {
           <NodeImgSection imgs={ChooseData?.imgfive}></NodeImgSection>
           <SliderSub>{ChooseData?.imgsubfive}</SliderSub>
         </SliderContent>
-        <SliderContent>
-          <NodeImgSection imgs={ChooseData?.imgsix}></NodeImgSection>
-          <SliderSub>{ChooseData?.imgsubsix}</SliderSub>
-        </SliderContent>
+        {ChooseData?.imgsix ? (
+          <SliderContent>
+            <NodeImgSection imgs={ChooseData?.imgsix}></NodeImgSection>
+            <SliderSub>{ChooseData?.imgsubsix}</SliderSub>
+          </SliderContent>
+        ) : null}
       </Slider>
     </SliderContainer>
   );

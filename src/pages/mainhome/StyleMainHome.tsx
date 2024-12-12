@@ -7,7 +7,7 @@ import ts from "../../assets/img/skill/Typescript.png";
 import js from "../../assets/img/skill/JavaScript.png";
 import githubWhite from "../../assets/img/skill/githubWhite.png";
 import node from "../../assets/img/skill/Node.png";
-
+import native from "../../assets/img/skill/native.png";
 import replace from "../../assets/img/icon/Refresh_2@2x.png";
 import { Opacity } from "../collection/StyleCollection";
 type Props = {
@@ -272,6 +272,20 @@ export const Logo = styled.div<Props>`
       case "node":
         return css`
           background: url(${node});
+          background-position: center;
+          background-size: contain;
+          background-repeat: no-repeat;
+          opacity: 0.8;
+          transform-origin: center;
+          &:hover {
+            transition: all 3s;
+            transform: rotateY(360deg);
+            opacity: 1;
+          }
+        `;
+      case "native":
+        return css`
+          background: url(${native});
           background-position: center;
           background-size: contain;
           background-repeat: no-repeat;

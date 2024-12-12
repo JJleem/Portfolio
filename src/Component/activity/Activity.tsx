@@ -83,6 +83,11 @@ const Activity = () => {
               </ActivitySection>
               <ActivitySection>
                 <ActivityText logo={company}>
+                  <span></span>(주)미디어그룹 사람과숲
+                </ActivityText>
+              </ActivitySection>
+              <ActivitySection>
+                <ActivityText logo={company}>
                   <span></span>영전엔지니어링주식회사
                 </ActivityText>
               </ActivitySection>
@@ -94,6 +99,11 @@ const Activity = () => {
             </ActivityInner>
             <ActivityInner>
               <ActivityTitle>담당 업무</ActivityTitle>
+              <ActivitySection>
+                <ActivityText logo={person}>
+                  <span></span>프론트엔드 개발
+                </ActivityText>
+              </ActivitySection>
               <ActivitySection>
                 <ActivityText logo={person}>
                   <span></span>영업지원부
@@ -112,6 +122,11 @@ const Activity = () => {
             </ActivityInner>
             <ActivityInner>
               <ActivityTitle>활동 기간</ActivityTitle>
+              <ActivitySection>
+                <ActivityText logo={calandar}>
+                  <span></span>2024.09.02 ~
+                </ActivityText>
+              </ActivitySection>
               <ActivitySection>
                 <ActivityText logo={calandar}>
                   <span></span>2022.10.04~2024.01.01

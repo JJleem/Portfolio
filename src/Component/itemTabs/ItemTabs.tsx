@@ -24,6 +24,7 @@ import {
 import { useState } from "react";
 import Box from "../../Component/box/Box";
 
+import native from "../../assets/img/skill/native.png";
 import ts from "../../assets/img/skill/Typescript.png";
 import react from "../../assets/img/skill/reactSmall.png";
 import js from "../../assets/img/skill/JavaScript.png";
@@ -39,6 +40,7 @@ const ItemTabs = () => {
     node: false,
     react: false,
     js: false,
+    native: false,
     all: true,
   });
 
@@ -46,6 +48,7 @@ const ItemTabs = () => {
   const reactItems = Db.items.filter((item) => item.skill === "react");
   const jsItems = Db.items.filter((item) => item.skill === "js");
   const nodeItems = Db.items.filter((item) => item.skill === "node");
+  const nativeItems = Db.items.filter((item) => item.skill === "native");
 
   const handleSkillClick = (checks: string) => {
     setCheck((prevCheck) => ({
@@ -56,6 +59,7 @@ const ItemTabs = () => {
       js: checks === "js",
       all: checks === "all",
       node: checks === "node",
+      native: checks === "native",
     }));
   };
 
@@ -84,6 +88,9 @@ const ItemTabs = () => {
     item.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
   const filteredNodeItems = nodeItems.filter((item) =>
+    item.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+  const filteredNativeItems = nativeItems.filter((item) =>
     item.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
   const goAdd = () => {
@@ -127,8 +134,16 @@ const ItemTabs = () => {
               ></FilterCheckBox>
             </FilterItem>
             <FilterItem>
+              <FilterLogo logo={native}></FilterLogo>
+              <FilterTitle>NATIVE</FilterTitle>
+              <FilterCheckBox
+                onClick={() => handleSkillClick("native")}
+                isClick={check.native}
+              ></FilterCheckBox>
+            </FilterItem>
+            <FilterItem>
               <FilterLogo logo={node}></FilterLogo>
-              <FilterTitle>Node</FilterTitle>
+              <FilterTitle>NODE</FilterTitle>
               <FilterCheckBox
                 onClick={() => handleSkillClick("node")}
                 isClick={check.node}
@@ -154,6 +169,54 @@ const ItemTabs = () => {
         </FilterSection>
 
         <ItemSection>
+          {filteredNativeItems.length > 0 && (check.all || check.native) && (
+            <ItemList isFilter={filter}>
+              <SkillTitle isFilter={filter}>
+                <LogoSpan logo={native}></LogoSpan>React-Native
+              </SkillTitle>
+              <ItemWrap isFilter={filter}>
+                {filteredNativeItems.map((item) => (
+                  <Box
+                    key={item.id}
+                    itemImg={item.img}
+                    skill={item.skill}
+                    title={item.title}
+                    transition={item.transition}
+                    sub={item.sub}
+                    linkto={""}
+                    github={item.github}
+                    go={item.id}
+                  />
+                ))}
+                {filteredNativeItems.length < 0 && (
+                  <AddSvgContainer onClick={goAdd}>
+                    <AddSvg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <mask
+                        id="mask0_51_125"
+                        maskUnits="userSpaceOnUse"
+                        x="0"
+                        y="0"
+                        width="24"
+                        height="24"
+                      >
+                        <rect width="24" height="24" fill="#D9D9D9" />
+                      </mask>
+                      <g mask="url(#mask0_51_125)">
+                        <path
+                          d="M11 19V13H5V11H11V5H13V11H19V13H13V19H11Z"
+                          fill="#6f36ff"
+                        />
+                      </g>
+                    </AddSvg>
+                  </AddSvgContainer>
+                )}
+              </ItemWrap>
+            </ItemList>
+          )}
           {filteredTsItems.length > 0 && (check.all || check.ts) && (
             <ItemList isFilter={filter}>
               <SkillTitle isFilter={filter}>
