@@ -60,8 +60,8 @@ const MainHome = () => {
     useRecoilState<number>(newNumberState);
 
   const generateNewNumbers = () => {
-    const newRandomNumber: number = Math.floor(Math.random() * 16);
-    const newNewRandomNumber: number = Math.floor(Math.random() * 16);
+    const newRandomNumber: number = Math.floor(Math.random() * 18);
+    const newNewRandomNumber: number = Math.floor(Math.random() * 18);
 
     setRandomNumber(newRandomNumber);
     setNewRandomNumber(newNewRandomNumber);

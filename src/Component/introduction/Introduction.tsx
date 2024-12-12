@@ -27,7 +27,7 @@ const Introduction = () => {
             <PdfSection>
               <PdfLink
                 to={
-                  "https://raw.githubusercontent.com/JJleem/Portfolio/master/paper/%EC%9E%84%EC%9E%AC%EC%A4%80%20%EC%9D%B4%EB%A0%A5%EC%84%9C(PDF).pdf"
+                  "https://raw.githubusercontent.com/JJleem/Portfolio/master/paper/%EC%9E%84%EC%9E%AC%EC%A4%80%20%EC%9D%B4%EB%A0%A5%EC%84%9C(PDF)_v.2412.pdf"
                 }
               >
                 <PdfLogo logo={pdf}></PdfLogo>
