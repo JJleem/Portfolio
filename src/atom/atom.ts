@@ -14,12 +14,12 @@ export const filterState = atom({
   key: "filter",
   default: false,
 });
-const initialRandomNumber: number = Math.floor(Math.random() * 14);
+const initialRandomNumber: number = Math.floor(Math.random() * 19);
 
 const excludedNumbers = [initialRandomNumber];
 let initialNewRandomNumber: number;
 do {
-  initialNewRandomNumber = Math.floor(Math.random() * 14);
+  initialNewRandomNumber = Math.floor(Math.random() * 19);
 } while (excludedNumbers.includes(initialNewRandomNumber));
 excludedNumbers.push(initialNewRandomNumber);
 

@@ -744,6 +744,43 @@
       },
       "github": "https://github.com/JJleem",
       "site": "https://github.com/JJleem"
+    },
+    {
+      "id": 19,
+      "img": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/next3.png",
+      "title": "Next.js 를 활용한 책 정보 관리 시스템",
+      "maintitle": "#19 Next.js 를 활용한 책 정보 관리 시스템",
+      "skill": "next",
+      "language": "NEXT + Typescript",
+      "transition": "5",
+      "sub": "책 정보를 관리하고 판매 및 재고 데이터를 기록할 수 있는 도서 관리 시스템입니다.",
+      "mainsub": "Next.js 를 활용한 책 정보 관리 시스템",
+      "projecttype": "개인 프로젝트",
+      "date": "24.12~24.12",
+      "library": {
+        "one": "https://img.icons8.com/fluent-systems-filled/200/FFFFFF/nextjs.png",
+        "two": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Typescript.png",
+        "three": "https://www.cdnlogo.com/logos/t/34/tailwind-css.svg",
+        "onetitle": "NEXT",
+        "twotitle": "TYPESCRIPT",
+        "threetitle": "Tailwind CSS",
+        "four": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/portfolio/skill/Redux.png",
+        "fourtitle": "Redux"
+      },
+      "detail": {
+        "desc": "책 정보를 관리하고 판매 및 재고 데이터를 기록할 수 있는 도서 관리 시스템입니다.",
+        "desc2": "사용자는 책의 기본 정보(제목, 저자, 출판사, 출판일 등)와 이미지, 판매 수량, 재고 수량을 효율적으로 관리할 수 있습니다.",
+        "desc3": " 주요 기능으로는 도서 정보 추가, 수정, 삭제와 Cloudinary API를 이용한 이미지 업로드 및 Redux 기반의 상태 관리가 포함되어 있습니다.",
+
+        "onedesc": "NEXT.js 의 App Router를 활용하여 간단한 파일 기반 라우팅을 구현하였습니다.",
+        "onedesc2": "또한 다양한 렌더링방식으로 성능과 SEO 최적화 기능을 구현하였습니다..",
+        "twodesc": "Typescript를 활용하여 타입오류를 막고 백엔드와의 연결을 수월하게 구현하였습니다.",
+        "threedesc": "tailwind css 를 활용하여 코드를 간결화하고 디자인의 일관성을 유지하였습니다.",
+        "fourdesc": "모-자식 간의 복잡한 prop drilling을 제거, 컴포넌트가 필요로 하는 상태만 선택적으로 구독 가능하게 구현하였습니다.",
+        "fourdesc2": "전역에서 상태를 관리하였습니다."
+      },
+      "github": "https://github.com/JJleem/BookApplication",
+      "site": "https://rgt-task-12-13-mke9-livid.vercel.app/"
     }
   ]
 }

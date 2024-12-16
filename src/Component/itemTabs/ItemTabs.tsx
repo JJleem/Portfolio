@@ -29,6 +29,7 @@ import ts from "../../assets/img/skill/Typescript.png";
 import react from "../../assets/img/skill/reactSmall.png";
 import js from "../../assets/img/skill/JavaScript.png";
 import node from "../../assets/img/skill/Node.png";
+import next from "../../assets/img/skill/nextwhite.png";
 import { useRecoilState } from "recoil";
 import { filterState, searchTermState } from "../../atom/atom";
 import Db from "../../data/db.json";
@@ -41,6 +42,7 @@ const ItemTabs = () => {
     react: false,
     js: false,
     native: false,
+    next: false,
     all: true,
   });
 
@@ -49,6 +51,7 @@ const ItemTabs = () => {
   const jsItems = Db.items.filter((item) => item.skill === "js");
   const nodeItems = Db.items.filter((item) => item.skill === "node");
   const nativeItems = Db.items.filter((item) => item.skill === "native");
+  const nextItems = Db.items.filter((item) => item.skill === "next");
 
   const handleSkillClick = (checks: string) => {
     setCheck((prevCheck) => ({
@@ -60,6 +63,7 @@ const ItemTabs = () => {
       all: checks === "all",
       node: checks === "node",
       native: checks === "native",
+      next: checks === "next",
     }));
   };
 
@@ -91,6 +95,9 @@ const ItemTabs = () => {
     item.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
   const filteredNativeItems = nativeItems.filter((item) =>
+    item.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+  const filteredNextItems = nextItems.filter((item) =>
     item.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
   const goAdd = () => {
@@ -139,6 +146,14 @@ const ItemTabs = () => {
               <FilterCheckBox
                 onClick={() => handleSkillClick("native")}
                 isClick={check.native}
+              ></FilterCheckBox>
+            </FilterItem>
+            <FilterItem>
+              <FilterLogo logo={next}></FilterLogo>
+              <FilterTitle>NEXT</FilterTitle>
+              <FilterCheckBox
+                onClick={() => handleSkillClick("next")}
+                isClick={check.next}
               ></FilterCheckBox>
             </FilterItem>
             <FilterItem>
@@ -237,6 +252,54 @@ const ItemTabs = () => {
                   />
                 ))}
                 {filteredTsItems.length < 5 && (
+                  <AddSvgContainer onClick={goAdd}>
+                    <AddSvg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <mask
+                        id="mask0_51_125"
+                        maskUnits="userSpaceOnUse"
+                        x="0"
+                        y="0"
+                        width="24"
+                        height="24"
+                      >
+                        <rect width="24" height="24" fill="#D9D9D9" />
+                      </mask>
+                      <g mask="url(#mask0_51_125)">
+                        <path
+                          d="M11 19V13H5V11H11V5H13V11H19V13H13V19H11Z"
+                          fill="#6f36ff"
+                        />
+                      </g>
+                    </AddSvg>
+                  </AddSvgContainer>
+                )}
+              </ItemWrap>
+            </ItemList>
+          )}
+          {filteredNextItems.length > 0 && (check.all || check.ts) && (
+            <ItemList isFilter={filter}>
+              <SkillTitle isFilter={filter}>
+                <LogoSpan logo={next}></LogoSpan>Next.js
+              </SkillTitle>
+              <ItemWrap isFilter={filter}>
+                {filteredNextItems.map((item) => (
+                  <Box
+                    key={item.id}
+                    itemImg={item.img}
+                    skill={item.skill}
+                    title={item.title}
+                    transition={item.transition}
+                    sub={item.sub}
+                    linkto={""}
+                    github={item.github}
+                    go={item.id}
+                  />
+                ))}
+                {filteredNextItems.length < 5 && (
                   <AddSvgContainer onClick={goAdd}>
                     <AddSvg
                       viewBox="0 0 24 24"

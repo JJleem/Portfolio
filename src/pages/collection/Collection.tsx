@@ -204,6 +204,10 @@ const Collection = () => {
                 <p>4</p>
               </Data>
               <Data>
+                <span>Next.</span>
+                <p>1</p>
+              </Data>
+              <Data>
                 <span>Javascript.</span>
                 <p>3</p>
               </Data>
