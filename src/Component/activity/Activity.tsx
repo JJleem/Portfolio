@@ -78,6 +78,11 @@ const Activity = () => {
               <ActivityTitle>기관 명</ActivityTitle>
               <ActivitySection>
                 <ActivityText logo={company}>
+                  <span></span>(주) 캐리마
+                </ActivityText>
+              </ActivitySection>
+              <ActivitySection>
+                <ActivityText logo={company}>
                   <span></span>(주)미디어그룹 사람과숲
                 </ActivityText>
               </ActivitySection>
@@ -99,6 +104,11 @@ const Activity = () => {
             </ActivityInner>
             <ActivityInner>
               <ActivityTitle>담당 업무</ActivityTitle>
+              <ActivitySection>
+                <ActivityText logo={person}>
+                  <span></span>프론트엔드/디자인/기획
+                </ActivityText>
+              </ActivitySection>
               <ActivitySection>
                 <ActivityText logo={person}>
                   <span></span>프론트엔드 개발
@@ -124,7 +134,12 @@ const Activity = () => {
               <ActivityTitle>활동 기간</ActivityTitle>
               <ActivitySection>
                 <ActivityText logo={calandar}>
-                  <span></span>2024.09.02 ~
+                  <span></span>2025.01.14~
+                </ActivityText>
+              </ActivitySection>
+              <ActivitySection>
+                <ActivityText logo={calandar}>
+                  <span></span>2024.09.02~2025.01.01
                 </ActivityText>
               </ActivitySection>
               <ActivitySection>
