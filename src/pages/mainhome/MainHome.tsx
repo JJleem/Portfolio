@@ -88,7 +88,7 @@ const MainHome = () => {
                 </div>
               </MainDescTitle>
               <div>
-                신입 프론트엔드 개발자 <span>임재준</span> 의 포트폴리오 입니다.
+                프론트엔드 개발자 <span>임재준</span> 의 포트폴리오 입니다.
               </div>
             </MainDesc>
           </MainInfo>
